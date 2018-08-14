@@ -33,6 +33,19 @@ O aluno pode entrar com um requerimento da prova da 2º chamada a partir do envi
 *Desempenho*
 Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em consideração dos outros trimestres. 
 
+### RF 07
+
+*Visualização de horas de estágio*
+O aluno do curso técnico em informática poderá visualizar as horas de estágio correntes até o momento
+
+### RF 08
+*Reporte de erros*
+O aluno poderá reportar erros de suas notas e justificar o porquê.
+
+### RF 09
+*Reporte de bugs*
+Todos que encontrarem bugs no Software, poderão reportar para a Assistência técnica.
+
 ## Requisitos não-funcionais
 
 ### RNF 01
