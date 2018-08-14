@@ -53,6 +53,23 @@ sinalizando a secretaria dentro do prazo notificado no caledário, caso seja env
 
 Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em consideração dos outros trimestres. 
 
+## Requisitos não-funcionais
+
+*RNF 01*
+
+### O software possui 5 tipos de acesso, sendo:
+ 
+Tipo 1: Aluno - O Aluno pode visualizar suas notas, horários e arquivos além de notificar erros.
+ 
+Tipo 2: Professor - O Professor é o responsável pelo lançamento das notas da sua respectiva assinatura, podendo apenas lançar e editar as informações dentro de um prazo já dito somente para seus alunos.
+
+Tipo 3: Secretaria - A Secretaria pode visualizar e editar todas as notas e arquivos na direção.
+
+Tipos 4, 5, 6: SESOP, NAPNE, DIREÇÃO - Podem visualizar e "subir" arquivos.
+
+### Segurança tipo HTTPS
+
+### Haverão uma série de perguntas de segurança para caso o usuário precise recuperar sua conta 
  
 
 
