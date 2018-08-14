@@ -39,13 +39,13 @@ Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em c
 
 *O software possui 5 tipos de acesso, sendo:*
  
-*Tipo 1: Aluno - O Aluno pode visualizar suas notas, horários e arquivos além de notificar erros.
+* Tipo 1: Aluno - O Aluno pode visualizar suas notas, horários e arquivos além de notificar erros.
  
-*Tipo 2: Professor - O Professor é o responsável pelo lançamento das notas da sua respectiva assinatura, podendo apenas lançar e editar as informações dentro de um prazo já dito somente para seus alunos.
+* Tipo 2: Professor - O Professor é o responsável pelo lançamento das notas da sua respectiva assinatura, podendo apenas lançar e editar as informações dentro de um prazo já dito somente para seus alunos.
 
-*Tipo 3: Secretaria - A Secretaria pode visualizar e editar todas as notas e arquivos na direção.
+* Tipo 3: Secretaria - A Secretaria pode visualizar e editar todas as notas e arquivos na direção.
 
-*Tipos 4, 5, 6: SESOP, NAPNE, DIREÇÃO - Podem visualizar e "subir" arquivos.
+* Tipos 4, 5, 6: SESOP, NAPNE, DIREÇÃO - Podem visualizar e "subir" arquivos.
 
 ### RNF 02
 *Segurança tipo HTTPS*
