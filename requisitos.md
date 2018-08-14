@@ -1,5 +1,5 @@
 # Requisitos
-# EspecificaÃ§Ã£o de Requisitos
+# Especificação de Requisitos
 
 ## Requisitos funcionais
 
