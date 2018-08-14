@@ -40,6 +40,7 @@ O aluno do curso técnico em informática poderá visualizar as horas de estági
 
 ### RF 08
 *Reporte de erros*
+
 O aluno poderá reportar erros de suas notas e justificar o porquê.
 
 ### RF 09
