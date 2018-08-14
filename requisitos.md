@@ -1,14 +1,4 @@
 # Requisitos
-
-## Requisitos não-funcionais
-
-*RNF 01* O sistema possui três tipos de usuários/papéis
-- "Administrador": Pode editar, excluir....
-- "Usuário comum": Pode apenas visualizar, sem editar os cadastros
-- "": 
-
-*RNF 02* O sistema deve usar HTTPS em todas as transações
-
 # EspecificaÃ§Ã£o de Requisitos
 
 ## Requisitos funcionais
@@ -67,8 +57,11 @@ Tipo 3: Secretaria - A Secretaria pode visualizar e editar todas as notas e arqu
 
 Tipos 4, 5, 6: SESOP, NAPNE, DIREÇÃO - Podem visualizar e "subir" arquivos.
 
+*RNF 02*
+
 ### Segurança tipo HTTPS
 
+*RNF 03*
 ### Haverão uma série de perguntas de segurança para caso o usuário precise recuperar sua conta 
  
 
