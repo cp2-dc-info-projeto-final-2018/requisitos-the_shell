@@ -2,7 +2,7 @@
 
 ## Requisitos funcionais
 
-###*RF O1*
+### RF O1
 *Sistema de Acesso* 
 Página de login solicitando um número de cadastro e uma senha, para a diferenciação do conteúdo exibido pós login. 
 Ex.: Um funcionário da secretaria após seu login tem ações diferentes das de um aluno.
@@ -21,21 +21,21 @@ Direção/SESOP/ tem acesso apenas para a visualização.
 Página que conta com a data de provas e eventos do colegio. 
 Notifica ao aluno o prazo para requerimento da 2º chamada e quando o professor lançar notas no mapa de notas.
 
-###RF 04
+### RF 04
 *Mapa de notas*
 Exibe todas as notas do aluno logado e dá a opção do mesmo reclamar de alguma nota errada ou ausência de nota.
 
-###RF 05
+### RF 05
 *Requerimento de 2º chamada*
 O aluno pode entrar com um requerimento da prova da 2º chamada a partir do envio de uma justificativa juntamente com a disciplina desejada sinalizando a secretaria dentro do prazo notificado no caledário, caso seja enviado fora do prazo será exibido uma mensagem de fim do prazo. 
 
-###RF 06
+### RF 06
 *Desempenho*
 Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em consideração dos outros trimestres. 
 
 ## Requisitos não-funcionais
 
-###RNF 01
+### RNF 01
 
 *O software possui 5 tipos de acesso, sendo:*
  
@@ -47,11 +47,11 @@ Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em c
 
 *Tipos 4, 5, 6: SESOP, NAPNE, DIREÇÃO - Podem visualizar e "subir" arquivos.
 
-###RNF 02
+### RNF 02
 *Segurança tipo HTTPS*
 Segurança tipo criptografia em todo o sofware
 
-###RNF 03
+### RNF 03
 Haverão uma série de perguntas de segurança para caso o usuário precise recuperar sua conta 
  
 
