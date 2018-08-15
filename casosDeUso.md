@@ -3,7 +3,7 @@
 # Sumário
 
 # CDU 01 - Reporte de bugs
-**Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professores, Secretaria e Sistema.
+**Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professore, Secretaria e Sistema.
 
 **Pré-condições:** Nenhuma.
 
@@ -14,7 +14,7 @@
 4. Sistema envia a mensagem à Assistência Técnica
 
 # CDU 02 - Autenticação
-**Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professores, Secretaria e Sistema.
+**Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professore, Secretaria e Sistema.
 
 **Pré-condições:** Possuir cadastro.
 
