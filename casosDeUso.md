@@ -2,18 +2,7 @@
 
 # Sumário
 
-# CDU 01 - Reporte de bugs
-**Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professore, Secretaria e Sistema.
-
-**Pré-condições:** Nenhuma.
-
-**Fluxo principal:**
-1. Usuário clica no botão "Reporte uma falha".
-2. Sistema apresenta um campo de texto para que seja digitada a falha e outro para que ela seja descrita com detalhes.
-3. Usuário clica no botão "Enviar".
-4. Sistema envia a mensagem à Assistência Técnica
-
-# CDU 02 - Autenticação
+# CDU 01 - Autenticação
 **Atores:** Aluno, Assistência Técnica, SESOP, NAPNE, Direção, Professore, Secretaria e Sistema.
 
 **Pré-condições:** Possuir cadastro.
