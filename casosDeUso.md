@@ -12,7 +12,7 @@
 2. Usuário digita Login e Senha e clica no botão "Fazer Login".
 3. Sistema verifica as informações e, caso estejam corretas, redireciona para a tela principal.
 
-# CDU 03 -  Gerenciamento de calendário
+# CDU 02 -  Gerenciamento de calendário
 **Atores:** Direção e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -25,7 +25,7 @@
 5. Ao terminar as alterações, usuário clica no botão "Salvar alterações".
 6. Sistema salva as alterações.
 
-# CDU 04 - Visualização de calendário
+# CDU 03 - Visualização de calendário
 **Atores:** Aluno, SESOP, NAPNE e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -34,7 +34,7 @@
 1. Usuário clica no botão "Calendário".
 2. Sistema redireciona o usuário para uma página apresentando o calendário.
 
-# CDU 05 - Gerenciamento de horários
+# CDU 04 - Gerenciamento de horários
 **Atores:** Direção, SESOP, NAPNE e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -47,7 +47,7 @@
 5. Ao terminar as alterações, usuário clica no botão "Salvar alterações".
 6. Sistema salva as alterações.
 
-# CDU 06 - Visualização de horários
+# CDU 05 - Visualização de horários
 **Atores:** Aluno, Professor, SESOP e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -56,7 +56,7 @@
 1. Usuário clica no botão "Horários".
 2. Sistema redireciona o usuário para uma página apresentando os horários.
 
-# CDU 07 - Visualização de horas de estágio
+# CDU 06 - Visualização de horas de estágio
 **Atores:** Aluno e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -66,7 +66,7 @@
 2. Usuário clica no botão "Horas de estágio".
 3. Sistema redireciona o usuário para uma página apresentando as horas de estágio que o usuário possui, assim como a especificação de cada atividade feita e o número de horas que esta o garantiu.
 
-# CDU 08 - Esqueci minha senha
+# CDU 07 - Esqueci minha senha
 **Atores:** Aluno, Direção, SESOP, NAPNE, Secretaria, Professores e Sistema.
 
 **Pré-condições:** Possuir um cadastro.
@@ -82,7 +82,7 @@
 8. Após preencher os campos, o usuário clica em "Alterar senha".
 9. Sistema valida as informações, e caso sejam válidas, emite um aviso afirmando que a senha foi alterada, e redireciona o usuário para a tela de login.
 
-# CDU 09 - Gerenciamento de faltas
+# CDU 08 - Gerenciamento de faltas
 **Atores:** Direção, SESOP, NAPNE, Professores e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -99,7 +99,7 @@
 9. Após fazer alterações, usuário clica em "Salvar alterações".
 10. Sistema salva as alterações.
 
-# CDU 10 - Reporte de erros
+# CDU 09 - Reporte de erros
 **Atores:** Aluno, SESOP e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -110,7 +110,7 @@
 3. Após preencher todos os campos, usuário clica em "Enviar".
 4. Sistema valida os campos, e envia a notificação ao SESOP de que um erro foi reportado, contendo informações a respeito do assunto e da matéria.
 
-# CDU 11 - Gerenciamento de horas de estágio
+# CDU 10 - Gerenciamento de horas de estágio
 **Atores:** Professor e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -129,7 +129,7 @@
 11. Usuário faz as alterações, e clica em "Salvar alterações".
 12. Sistema salva as alterações.
 
-# CDU 12 - Emitir avisos e notificações
+# CDU 11 - Emitir avisos e notificações
 **Atores:** Direção, Secretaria, Professor, Aluno, SESOP, NAPNE e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -140,7 +140,7 @@
 3. Usuário preenche todos os campos e clica em "Enviar aviso".
 4. Sistema envia o aviso aos destinatários.
 
-# CDU 13 - Gerenciamento de notas
+# CDU 12 - Gerenciamento de notas
 **Atores:** Direção, Secretaria e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -159,7 +159,7 @@
 11. Ao terminar as alterações, usuário clica no botão "Salvar alterações".
 12. Sistema salva as alterações.
 
-# CDU 14 - Gerenciamento de professores
+# CDU 13 - Gerenciamento de professores
 **Atores:** Direção, Secretaria e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -174,7 +174,7 @@
 7. Ao realizar as mudanças, usuário clica em "Salvar alterações".
 8. Sistema salva as alterações.
 
-# CDU 15 - Cadastrar disciplina
+# CDU 14 - Cadastrar disciplina
 **Atores:** Direção, Secretaria e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -187,7 +187,7 @@
 5. Ao preencher todos os campos, usuário clica em "Cadastrar disciplina".
 6. Sistema valida informações, e cadastra a disciplina.
 
-# CDU 16 - Cadastrar avaliações
+# CDU 15 - Cadastrar avaliações
 **Atores:** Direção, Secretaria e Sistema.
 
 **Pré-condições:** Estar logado.
@@ -200,7 +200,7 @@
 5. Ao preencher todos os campos, usuário clica em "Cadastrar disciplina".
 6. Sistema valida informações, e cadastra a disciplina.
 
-# CDU 17 - Solicitar segunda chamada
+# CDU 16 - Solicitar segunda chamada
 **Atores:** Aluno, Secretaria e Sistema.
 
 **Pré-condições:** Estar logado e dentro do prazo para a realização de segunda chamada.
