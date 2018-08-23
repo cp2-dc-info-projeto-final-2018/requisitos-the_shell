@@ -148,3 +148,8 @@ Ao tentar realizar um pull request do outro branch para o `master` ocorrerá um 
 ### Markdown
 - [Guia rápido de Markdown do GitHub (ENG)](https://guides.github.com/features/mastering-markdown/)
 - [Página oficial (ENG)](https://daringfireball.net/projects/markdown/)
+
+#1
+mojombo#1
+mojombo/github-flavored-markdown#1
+
