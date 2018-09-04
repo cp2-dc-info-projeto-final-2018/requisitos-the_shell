@@ -1,5 +1,3 @@
-# tabelas 
-
 CREATE TABLE Usuario (
 
 		id_usuario INT NOT NULL,
