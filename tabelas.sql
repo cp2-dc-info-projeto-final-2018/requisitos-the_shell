@@ -41,7 +41,6 @@ CREATE TABLE Aluno (
 		id_usuario INT,
 		matricula VARCHAR(50),
 		id_turma INT,
-		horas_estagio FLOAT,
 		PRIMARY KEY (id_aluno),
 		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
 		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
@@ -85,6 +84,43 @@ CREATE TABLE Professor_Turma (
 		PRIMARY KEY (id_professor, id_turma),
 		FOREIGN KEY (id_professor) REFERENCES Professor(id_professor),
 		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma)
+);
+
+CREATE TABLE Disciplina (
+
+		id_disciplina INT NOT NULL,
+		nome VARCHAR(50),
+		PRIMARY KEY (id_disciplina)
+);
+
+CREATE TABLE Turma_Disciplina (
+
+		id_turma INT NOT NULL,
+		id_disciplina INT NOT NULL, 
+		PRIMARY KEY (id_turma),
+		PRIMARY KEY (id_disciplina),
+		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
+		FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
+);
+
+CREATE TABLE Horario (
+
+		id_horario INT NOT NULL,
+		id_disciplina INT,
+		hora_inicio DATETIME, 
+		hora_fim DATETIME, 
+		PRIMARY KEY (id_horario),
+		FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
+);
+
+CREATE TABLE Turma_Horario(
+
+		id_turma INT NOT NULL,
+		id_horario INT NOT NULL,
+		PRIMARY KEY (id_turma),
+		PRIMARY KEY (id_horario),
+		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
+		FOREIGN KEY (id_horario) REFERENCES Horario(id_horario)
 );
 
 
