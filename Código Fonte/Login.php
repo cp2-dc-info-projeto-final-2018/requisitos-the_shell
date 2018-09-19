@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<?php
+
+$BD = CriaConexãoBD();
+
+?>
+
 <html>
 
 <head>
@@ -19,19 +25,25 @@
   <form id="Login_Form">
     <div>
       Login: <br/>
-      <input type="text" id="Login"/><br/>
+      <input type="text" id="Login_TXT" name="Login"/><br/>
       Senha: <br/>
-      <input type="password" id="Senha"/><br/>
-      <input type="radio" id="Manter_me_Logado"/>Manter-me logado<br/>
+      <input type="password" id="Senha_TXT" name="Senha"/><br/>
+      <input type="radio" id="Manter_Logado" name="Manter_Logado"/>Manter-me logado<br/>
       <br/>
       <br>
       <br>
       <br>
       <br>
       <a href="">Esqueci minha senha</a>
-      <input type="submit" id="btn_Submit" value="Entrar"/>
+      <input type="submit" id="btn_Submit" name="Submit" value="Entrar"/>
     </div>
   </form>
 </body>
+
+<?php
+$Request = $_REQUEST;
+
+
+?>
 
 </html>
