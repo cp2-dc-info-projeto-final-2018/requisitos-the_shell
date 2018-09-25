@@ -52,4 +52,15 @@
 
 		$cmdSql->execute();
 	}
+
+	function RemoveContato(int $idContato)
+	{
+		$db = CriaConexãoBd();
+
+		$cmdSql = $db->prepare('DELETE FROM Contatos WHERE id = :valId');
+
+		$cmdSql->bindValue(':valId', $idContato);
+
+		$cmdSql->execute();
+	}
 ?>

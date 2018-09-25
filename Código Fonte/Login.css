@@ -1,23 +1,40 @@
-<style>
-
-.Cabeçalho {
-  background-color: black;
-  display: inline;
-  color: white;
-  padding: 30px;
-  font-family: arial;
+.cabecalho {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+		font-size: 13px;
+		font-family: "Times New Roman";
 }
 
-#CP2 {
-  float: left;
+.rodape {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+
 }
 
-#THE_SHELL {
-  float: right;
+#nome {
+		padding: 10px 15px 0px 0px;
+		font-size: 13px;
 }
 
-form {
-  text-align: center;
+.nomeCanto {
+		text-align: right;
 }
 
-</style>
+#nomeMenor{
+		font-size: 14px;
+}
+
+#log-acesso{
+		border: 2px solid black;
+		padding: 73px;
+		font-size: 20px;
+}
+
+body {
+		background-image: url("logo-cp2.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: powderblue;
+
+
+}

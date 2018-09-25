@@ -16,7 +16,7 @@
 				'nome' => [ 'filter' => FILTER_VALIDATE_REGEXP,
 				            'options' => [ 'regexp' => '/^[\p{L}\p{Mn}\p{Pd}\'\s]{3,255}$/u' ] ],
 				'tel' => [ 'filter' => FILTER_VALIDATE_REGEXP,
-				           'options' => [ 'regexp' => '/^(\d{3}-\d{3}-\d{3}$|^\d{4}-\d{4})$/' ] ],
+				           'options' => [ 'regexp' => '/^(\d{3}-?\d{3}-?\d{3}$|^\d{4}-?\d{4})$/' ] ],
 				'email' => FILTER_VALIDATE_EMAIL,
 				'dataNasc' => [ 'filter' => FILTER_VALIDATE_REGEXP,
 				                'options' => [ 'regexp' => '/^\d{4}-\d{2}-\d{2}$/' ] ],
@@ -53,7 +53,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Agenda de contatos</title>
-	<link rel="stylesheet" type="text/css" href="<?= basename(__FILE__, '.php') . '.css' ?>"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
 </head>
 <body>
 	<h1>Agenda de contatos</h1>
@@ -76,6 +76,7 @@
 	<?php foreach ($listaContatos as $contato) { ?>
 		<div>
 			<h2><?= $contato['nome'] ?></h2>
+
 			<dl>
 				<dt>Tel.</dt>
 				<dd><?= $contato['tel'] ?></dd>
@@ -86,20 +87,22 @@
 				<dt>Aniversário</dt>
 				<dd><?= $contato['dataNasc'] ?></dd>
 			</dl>
+
+			<a href="excluirContato.php?idContato=<?= $contato['id'] ?>"><small>Excluir</small></a>
 		</div>
 	<?php } ?>
 
 	<?php if (empty($listaContatos)) { ?>
-		<p style="color: Gray">Agenda vazia</p>
+		<p style="text-align: center; color: Gray">Agenda vazia</p>
 	<?php } ?>
 
 
 	<!-- Formulário para adicionar novo contato: -->
 	<h1>Adicionar contato</h1>
 	<form method="POST">
-		<label>Nome: <input name="nome" required type="text"/></label><br/>
-		<label>Tel.: <input name="tel" type="tel"/></label><br/>
-		<label>E-Mail: <input name="email" type="email"/></label><br/>
+		<label>Nome: <input name="nome" required type="text" minlength="3" maxlength="255" placeholder="João Silva"/></label><br/>
+		<label>Tel.: <input name="tel" type="tel" placeholder="222-222-222"/></label><br/>
+		<label>E-Mail: <input name="email" type="email" placeholder="joao@example.net"/></label><br/>
 		<label>Data Nasc.: <input name="dataNasc" type="date"/></label><br/>
 		<input type="submit" value="Adicionar"/>
 	</form>
