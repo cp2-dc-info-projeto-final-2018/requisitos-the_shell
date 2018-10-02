@@ -1,52 +1,138 @@
+<style>
+
+body {
+		background-image: url("logo-cp2.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: powderblue;
+}
+
+.group{
+		border: 2px solid black;
+}
+.botoes{
+		border: 1px solid black;
+		float:left;
+		margin: 30px;
+		padding: 30px;
+		margin-top: 52px;
+}
+#info_completa{
+		border: 1px solid black;
+		margin-left: 243px;
+		padding: 0px 30px 0px 150px;
+		float:left;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding-right: 10px;
+		width: 80%;
+		display: block;
+
+	
+		
+}
+#usuario_info{
+		border: 1px solid black;
+		padding-right: 381px;
+		padding-left: 15px;
+}
+
+#nome {
+		margin-left: 5px;
+}
+#img {
+		border: 1px solid black;
+		float:left;    
+		padding: 50px;
+		margin-left: -135;
+		margin-top: 10px;
+		margin-bottom: 15px;
+}
+#tela_info{
+		border: 1px solid black;
+		margin-left: 243px;
+		margin-right: 10px;
+		padding: 180px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width: 80%;
+		display: block;
+}
+#rodape{
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+}
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+</style>
+
 <!DOCTYPE html>
 
 <html>
 
 <head>
   <meta charset="utf-8"/>
-  <title>Página de Professor</title>
+  <title>Página do Professor</title>
 </head>
 
 <body>
 
-  <table class="Botões">
-    <tr>
-      <th><input type="button" id="btn_Notas" value="Notas"/></th>
-    </tr>
-    <tr>
-      <th><input type="button" id="btn_Disciplina" value="Disciplina"/></th>
-    </tr>
-    <tr>
-      <th><input type="button" id="btn_Professores" value="Professores"/></th>
-    </tr>
-    <tr>
-      <th><input type="button" id="btn_Turmas" value="Turmas"/></th>
-    </tr>
-  </table>
+	<br>
+	<div class="group">
 
-  <br>
+		<table class="botoes">
+			<tr>
+				<th><input type="button" id="btn_Notas" value="Notas"/></th>
+			</tr>
+			<tr>
+				<th><input type="button" id="btn_Disciplina" value="Disciplina"/></th>
+			</tr>
+			<tr>
+				<th><input type="button" id="btn_Turmas" value="Turmas"/></th>
+			</tr>
+		</table>
 
-  <div id="Info_Completa">
-    <img src="">
-    [NOME]<br>
-    <div id="Usuário_Info">
-      [DATA DE NASCIMENTO]<br>
-      [E-MAIL]<br>
-    </div>
-  </div>
+	<br>
+	
+	<div id="info_completa">
+		<div id="img">
+			<img src="">
+		</div>
+<br>
+	<label id="nome">
+		Nome:
+	</label>
+	
+		<br><br>
+		
+	<div id="usuario_info">
+		Data de nascimento:<br/><br/>
+		E-mail:<br/>
+	</div>
+	</div>
+	
 
-  <div>
-    [TELA DE INFORMAÇÕES]
-  </div>
 
-  <br>
+	<div id="tela_info">
+		[TELA DE INFORMAÇÕES]
+	</div>
 
-  <div>
-    [DESENVOLVEDORES]<br>
-    <br>
-    [Informações de Contato]
-  </div>
+	<br>
 
+	<div id="rodape">
+		<h2>Desenvolvedores</h2>
+		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
+	</div>
+	</div>
 </body>
 
 </html>
