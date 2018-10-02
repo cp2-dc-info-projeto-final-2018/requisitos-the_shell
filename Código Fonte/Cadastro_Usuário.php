@@ -2,7 +2,7 @@
 
 <?php
 
-require_once('Funções.php');
+require_once('Controlador/Funções.php');
 
 function ValidaTamanhoString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 {
@@ -18,7 +18,6 @@ function ValidaTamanhoString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
   }
 }
 
-$Erros = [];
 
 $Request = array_map('trim', $_REQUEST);
 
@@ -40,7 +39,12 @@ ValidaTamanhoString($Request['Tel'], "Tel", 8, 12);
 ValidaTamanhoString($Request['Email'], "Email", 4, 30);
 ValidaTamanhoString($Request['Senha'], "Senha", 2, 16);
 
-CadastraUsuario($Request);
+if (empty($Erros) == true)
+{
+  CadastraUsuario($Request);
+} else {
+  header("Location: Cadastro_Usuário.php")
+}
 
 ?>
 
@@ -59,7 +63,17 @@ CadastraUsuario($Request);
     <h2 id="nome">SHELL - Notas</h2>
   </div>
 
-  <form id="log-acesso" method="POST">
+  <div id="erro">
+    <p>
+      <?php
+        foreach ($Erros as $Erro) {
+          echo $Erro;
+        }
+      ?>
+    </p>
+  </div>
+
+  <form id="log-acesso" method="POST" action="Cadastro_Usuário.php">
     <h3>Cadastro de Usuário</h3>
     Login: <input name="Login" required type="text" placeholder="Ex: xXxARTHUR_MITOxXx"/>
     <br>
