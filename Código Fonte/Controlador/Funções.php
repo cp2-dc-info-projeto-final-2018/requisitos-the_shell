@@ -41,4 +41,25 @@ function CadastraUsuario($Info_Login)
   $SQL -> execute();
 }
 
+function ListaUsuarioPorLogin($Login_Usuario)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> query('SELECT *
+                       WHERE login = :login');
+
+  $SQL -> bindValue(':login', $Login_Usuario);
+
+  $SQL -> execute();
+
+  return $BD -> fetchAll();
+}
+
+function ValidaSenha($Senha_Usuario)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> query('SELECT ')
+}
+
 ?>
