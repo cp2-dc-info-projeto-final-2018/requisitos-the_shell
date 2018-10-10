@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 function CriaConexaoBD() : PDO
@@ -37,38 +39,27 @@ function CadastraUsuario($Info_Login)
   $SQL -> bindValue(':tel', $Info_Login['Tel']);
 
   $SQL -> execute();
-
-  header('Location: ../Login.php');
 }
 
 function ListaUsuarioPorLogin($Login_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('SELECT *
-                       FROM usuario
+  $SQL = $BD -> query('SELECT *
                        WHERE login = :login');
 
   $SQL -> bindValue(':login', $Login_Usuario);
 
   $SQL -> execute();
 
-  return $SQL -> fetch();
+  return $BD -> fetchAll();
 }
 
-function ListaClasseUsuario($Login_Usuario)
+function ValidaSenha($Senha_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $Usuario = $BD -> query('SELECT *
-                           FROM $usuario
-                           WHERE login = :login');
-
-  $Usuario -> bindValue(':login', $Login_Usuario);
-
-  $Usuario -> execute();
-
-  $Info_Usuario = $Usuario -> fetch();
+  $SQL = $BD -> query('SELECT ')
 }
 
 ?>
