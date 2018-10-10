@@ -71,4 +71,25 @@ function ListaClasseUsuario($Login_Usuario)
   $Info_Usuario = $Usuario -> fetch();
 }
 
+function ListaUsuarioPorLogin($Login_Usuario)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> query('SELECT *
+                       WHERE login = :login');
+
+  $SQL -> bindValue(':login', $Login_Usuario);
+
+  $SQL -> execute();
+
+  return $BD -> fetchAll();
+}
+
+function ValidaSenha($Senha_Usuario)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> query('SELECT ')
+}
+
 ?>
