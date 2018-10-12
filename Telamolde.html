@@ -5,8 +5,6 @@ body{
 	background-image: url("logo.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	/*margin-top: 0px;*/
-	/*margin-left: 40px;*/
 }
 
 
@@ -65,7 +63,6 @@ body{
         width:355px;
         height:65px;
 		background-color: #0000002e;
-		
 		box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
 		cursor:pointer;
 }
@@ -111,23 +108,39 @@ body{
 
 }
 
+#cabecalho {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#nome {
+		padding: 10px 15px 0px 0px;
+		font-size: 16px;
+}
+
 #rodape{
 		border: 2px solid black;
 		padding: 0px 0px 15px 10px;
 }
 </style>
 
-
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8"/>
+  <title>Molde</title>
 </head>
 <body>
+
+	<div id="cabecalho"> 
+		<h2>Colégio Pedro II</h2> 
+		<h2 id="nome">SHELL - Notas</h2>
+	</div>
+	
 	<div id="esquerda">
 		<div id="caixabotoes">
 			<form>
-				<input class="botoes" type="button" id="btn_Notas" value="Notas"/>
-				<input class="botoes" type="button" id="btn_Disciplina" value="Disciplina"/>
-				<input class="botoes" type="button" id="btn_Turmas" value="Turmas"/>
 				<input class="botoes" type="button" id="" value="Exemplo"/>
 				<input class="botoes" type="button" id="" value="Exemplo"/>
 			</form>
@@ -163,3 +176,4 @@ body{
 		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
 	</div>
 </body>
+</html>
