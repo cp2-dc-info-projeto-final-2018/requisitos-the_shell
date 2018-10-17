@@ -35,7 +35,6 @@ unset($_SESSION['erros']);
         }
 
         unset($Erro);
->>>>>>> 15c39f183265720dce6be20237de0703ed87e717
       }
 
       ?>

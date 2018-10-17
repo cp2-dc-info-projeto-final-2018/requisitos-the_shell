@@ -4,7 +4,6 @@ require_once('TabelaUsuários.php');
 
 session_start();
 
->>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 $Erro = null;
 
 $Request = array_map('trim', $_REQUEST);
@@ -48,6 +47,4 @@ else
   header("Location: ../Login.php");
 }
 
-
->>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 ?>
