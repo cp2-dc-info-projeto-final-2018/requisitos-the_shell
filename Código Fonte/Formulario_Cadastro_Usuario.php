@@ -33,12 +33,7 @@ unset($_SESSION['erros']);
         foreach ($Erros as $Erro) {
           echo $Erro;
         }
-
         unset($Erro);
-<<<<<<< HEAD
-=======
->>>>>>> 15c39f183265720dce6be20237de0703ed87e717
->>>>>>> 45778f8c8cbd02f9681944d171ceb7b117cf4dfd
       }
 
       ?>
