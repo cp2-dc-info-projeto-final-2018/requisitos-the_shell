@@ -1,0 +1,23 @@
+<style>
+
+.Cabeçalho {
+  background-color: black;
+  display: inline;
+  color: white;
+  padding: 30px;
+  font-family: arial;
+}
+
+#CP2 {
+  float: left;
+}
+
+#THE_SHELL {
+  float: right;
+}
+
+form {
+  text-align: center;
+}
+
+</style>
