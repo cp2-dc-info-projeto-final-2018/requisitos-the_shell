@@ -2,7 +2,7 @@
 
 <?php
 
-function CriaConexãoBD() : PDO
+function CriaConexaoBD() : PDO
 {
   $BD = new PDO('mysql:host=localhost;dbname=the_shell;charset=utf8', 'THE_SHELL', 'projetofinal');
 

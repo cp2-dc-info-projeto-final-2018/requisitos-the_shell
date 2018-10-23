@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 
+<?php
+
+session_start();
+
+$Erro = null;
+
+if (isset($_SESSION['Erro'])) {
+    $Erro = $_SESSION['Erro'];
+}
+
+unset($_SESSION['Erro']);
+
+?>
+
 <html>
 
 <head>
@@ -17,24 +31,32 @@
 
 		<div id="log-acesso">
 			<h1></h1>
-
-				<form method="POST" action="">
+				<form method="POST" action="Controlador/Entrar.php">
 					<label class="nomesCanto">Login</label>
-						<br/>
-							<input name="login" type="text"/>
-						<br/><br/>
+					<br/>
+						<input name="Login" type="text"/>
+					<br/>
+					<br/>
 					<label class="nomesCanto">Senha</label>
-						<br/>
-							<input name="senha" type="text" />
-						<br/>
-					<label id="nomeMenor"><input name="manterLogado" type="checkbox"/>Manter-me logado.</label>
+					<br/>
+						<input name="Senha" type="text"/>
+					<br/>
+					<label id="nomeMenor"><input name="ManterLogado" type="checkbox"/>Manter-me logado.</label>
 					<br/>
 					<br/>
 					<br/>
 					<input type="submit" value="Entrar"/>
 					<input type="submit" value="Esqueci minha senha"/>
 				</form>
+		</div>
 
+		<div class="Exibição_de_Erro">
+			<?php
+			if ($Erro != null)
+			{
+					echo $Erro;
+			}
+			?>
 		</div>
 
 	<div class="rodape">

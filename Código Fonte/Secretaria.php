@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8"/>
   <title>Página de Professor</title>
+  <link rel="stylesheet" type="text/css" href="Secretaria.css">
 </head>
 
 <body>
