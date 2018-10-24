@@ -53,9 +53,13 @@ function ListaClasseUsuario($Login_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $Usuario = $BD -> query('SELECT *
+  $Usuario = $BD -> query('SELECT
+                            classe.id_classe_usuario AS "id_classe",
+                            classe.classe AS "classe"
                            FROM $usuario
-                           WHERE login = :login');
+                           WHERE login = :login
+                           LEFT JOIN classe
+                           ON usuario.id_classe_usuario = classe.id_classe');
 
   $Usuario -> bindValue(':login', $Login_Usuario);
 

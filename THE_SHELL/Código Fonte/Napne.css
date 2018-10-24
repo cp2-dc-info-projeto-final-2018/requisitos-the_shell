@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+body {
+		background-image: url("logo-cp2.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: powderblue;
+}
+
+.group{
+		border: 2px solid black;
+}
+.botoes{
+		border: 1px solid black;
+		float:left;
+		margin: 30px;
+		padding: 30px;
+		margin-top: 52px;
+}
+#info_completa{
+		border: 1px solid black;
+		margin-left: 27px;
+		padding: 0px 30px 0px 150px;
+		float:left;
+		margin-top: 30px;
+		padding-right: 536px;
+
+
+}
+#usuario_info{
+		border: 1px solid black;
+		padding-right: 381px;
+		padding-left: 15px;
+
+}
+
+#nome {
+		margin-left: 5px;
+}
+#img {
+		border: 1px solid black;
+		float:left;
+		padding: 50px;
+		margin-left: -135;
+		margin-top: 10px;
+		margin-bottom: 15px;
+}
+#tela_info{
+		border: 1px solid black;
+		margin-left: 243px;
+		margin-right: 104px;
+		padding: 180px;
+		margin-top: 30px;
+}
+=======
 body{
 	background-color: powderblue;
 	background-image: url("logo.png");
@@ -107,4 +161,22 @@ body{
 	    margin-right: 173px;
 
 
+}
+
+>>>>>>> e2d3de5b268a3e2d6a35217dc479bf02e96865c3
+#rodape{
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+}
+<<<<<<< HEAD
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }

@@ -4,6 +4,7 @@ require_once('TabelaUsuários.php');
 
 session_start();
 
+>>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 $Erro = null;
 
 $Request = array_map('trim', $_REQUEST);
@@ -39,12 +40,39 @@ else if ($Senha == false)
 if (empty($Erro))
 {
   $_SESSION['Usuário'] = $Login;
-  header("Location: ../Verificação_de_Classe.html");
+
+  $Classe_Usuario = ListaClasseUsuario($Login);
+
+  #ID das classes:
+  #1 - Aluno
+  #2 - Professor
+  #3 - Diretor
+  #4 - Secretário
+  #5 - SESOP e NAPNE
+
+  if ($Classe_Usuario['id_classe'] = 1)
+  {
+    header("Location: ../Aluno.html");
+  } else if ($Classe_Usuario['id_classe'] = 2)
+  {
+    header("Location: ../Professor.html");
+  } else if ($Classe_Usuario['id_classe'] = 3)
+  {
+    header("Location: ../Direcao.html");
+  } else if ($Classe_Usuario['id_classe'] = 4)
+  {
+    header("Location: ../Secretaria.php");
+  } else if ($Classe_Usuario['id_classe'] = 5)
+  {
+    header("Location: ../Sesop.html");
+  }
 }
 else
 {
   $_SESSION['Erro'] = $Erro;
-  header("Location: ../Login.php");
+  header("Location: ../NewLogin.php");
 }
 
+
+>>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 ?>
