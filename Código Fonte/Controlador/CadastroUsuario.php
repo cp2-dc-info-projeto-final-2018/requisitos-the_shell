@@ -1,6 +1,7 @@
 <?php
 
-require_once('Funções.php');
+require_once('TabelaUsuários.php');
+require_once('Conexão_BD.php');
 
 function ValidaTamanhoString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 {

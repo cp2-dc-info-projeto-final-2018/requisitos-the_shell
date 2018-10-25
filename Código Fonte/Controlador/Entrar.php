@@ -1,10 +1,10 @@
 <?php
 
-<<<<<<< HEAD
-require_once('Funções.php');
+require_once('TabelaUsuários.php');
 
-=======
->>>>>>> e2d3de5b268a3e2d6a35217dc479bf02e96865c3
+session_start();
+
+>>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 $Erro = null;
 
 $Request = array_map('trim', $_REQUEST);
@@ -19,7 +19,6 @@ $Senha = $Request['Senha'];
 
 if ($Login == false)
 {
-<<<<<<< HEAD
   $Erro = "Login não informado.";
 }
 else if ($Senha == false)
@@ -32,36 +31,48 @@ else if ($Senha == false)
   {
     $Erro = "Nenhum usuário encontrado para este Login.";
   }
-  else if (! password_verify($Login, $Login_Correto['senha']))
+  else if (! password_verify($Senha, $Login_Correto['senha']))
   {
     $Erro = "Senha inválida.";
-  } else {
-    session_start();
-    header('Location: Verificação_de_Classe.html');
   }
 }
-=======
-  $Erro = "Login não informado";
-}
-else if (array_key_exists($Login, ListaUsuarioPorLogin($Login)) == false)
-{
-  $Erro = "Nenhum usuário encontrado para este Login";
-}
-else if ($Senha == false)
-{
-  $Erro = "Senha não informada";
-}
-else if (password_verify($Senha)) 
-{
 
+if (empty($Erro))
+{
+  $_SESSION['Usuário'] = $Login;
+
+  $Classe_Usuario = ListaClasseUsuario($Login);
+
+  #ID das classes:
+  #1 - Aluno
+  #2 - Professor
+  #3 - Diretor
+  #4 - Secretário
+  #5 - SESOP e NAPNE
+
+  if ($Classe_Usuario['id_classe'] = 1)
+  {
+    header("Location: ../Aluno.html");
+  } else if ($Classe_Usuario['id_classe'] = 2)
+  {
+    header("Location: ../Professor.html");
+  } else if ($Classe_Usuario['id_classe'] = 3)
+  {
+    header("Location: ../Direcao.html");
+  } else if ($Classe_Usuario['id_classe'] = 4)
+  {
+    header("Location: ../Secretaria.php");
+  } else if ($Classe_Usuario['id_classe'] = 5)
+  {
+    header("Location: ../Sesop.html");
+  }
 }
-// PENDENTE: Validar senha do usuário
-// PENDENTE: Redirecionar o usuário para a página de pedidos
 else
 {
-  $Erro = "Senha inválida";
+  $_SESSION['Erro'] = $Erro;
+  header("Location: ../NewLogin.php");
 }
 
->>>>>>> e2d3de5b268a3e2d6a35217dc479bf02e96865c3
 
+>>>>>>> 15c39f183265720dce6be20237de0703ed87e717
 ?>

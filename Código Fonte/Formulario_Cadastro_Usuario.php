@@ -30,14 +30,13 @@ unset($_SESSION['erros']);
       <?php
       if ($Erros != null)
       {
-        foreach ($Erros as $Erro) {
+
+        foreach ($Erros as $Erro)
+        {
           echo $Erro;
         }
-<<<<<<< HEAD
 
         unset($Erro);
-=======
->>>>>>> e2d3de5b268a3e2d6a35217dc479bf02e96865c3
       }
 
       ?>
