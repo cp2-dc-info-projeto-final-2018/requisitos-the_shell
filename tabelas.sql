@@ -120,15 +120,6 @@ CREATE TABLE Classe (
   PRIMARY KEY(id_classe),
 );
 
-CREATE TABLE Avaliacao (
-
-	id_avaliacao INT NOT NULL AUTO_INCREMENT,
-	id_disciplina INT NOT NULL,
-	avaliacao VARCHAR(100),
-	PRIMARY KEY (id_avaliacao),
-	FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
-);
-
 CREATE TABLE Boletim (
 	id_boletim INT NOT NULL AUTO_INCREMENT,
 	1a_cert DECIMAL,
