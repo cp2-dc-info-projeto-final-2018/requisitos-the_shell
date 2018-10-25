@@ -1,0 +1,51 @@
+<style>
+
+#cabecalho {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#rodape {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+
+}
+
+#nome {
+		padding: 10px 15px 0px 0px;
+		font-size: 16px;
+}
+
+.nomeCanto {	
+		text-align: right;
+}
+
+#nomeMenor{
+		font-size: 14px;
+}
+
+#log-acesso{
+		border: 2px solid black;
+		padding: 98px;
+		font-size: 20px;
+		text-align:center;
+}
+		
+body {
+		background-image: url("logo.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: powderblue;
+		
+		
+}
+
+
+
+
+	
+
+
+</style>
