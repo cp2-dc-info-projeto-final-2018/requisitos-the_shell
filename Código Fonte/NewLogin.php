@@ -34,15 +34,20 @@ unset($_SESSION['Erro']);
 
           <h1 id="H1_Login">Login</h1>
 
-					<label class="nomesCanto">Login</label>
+					<label class="nomesCanto">Usuário</label>
 						<br/>
 							<input class="txt" name="login" type="text"/>
 						<br/><br/>
 					<label class="nomesCanto">Senha</label>
 						<br/>
-							<input class="txt" name="senha" type="password" />
+							<input class="txt" name="senha" type="password"/>
 						<br/>
-					<label id="nomeMenor"><input name="manterLogado" type="checkbox"/>Manter-me logado.</label>
+					<label id="nomeMenor">
+            <legend id="manterLogado">
+              <input name="manterLogado" type="checkbox">
+              Manter-me logado.
+            </legend>
+          </label>
 					<br/><br/>
 
 					<input class="Btn" id="Entrar" type="submit" value="Entrar"/>
