@@ -5,38 +5,41 @@
 <head>
   <meta charset="utf-8"/>
   <title>Página de Login</title>
+  <link rel="stylesheet" type="text/css" href="Login.css">
 </head>
 
 <body>
 
-	<div id="cabecalho"> 
-		<h2>Colégio Pedro II</h2> 
-		<h2 id="nome">SHELL - Notas</h2>
+	<div id="cabecalho">
+		<h1 id="nomeColegio">Colégio Pedro II</h1>
+		<h2><font face="arial">SHELL - Notas</font></h2>
 	</div>
-	
+
 		<div id="log-acesso">
-			<h1></h1>
-				<form method="POST" action="">
-					<label class="nomesCanto">Login</label> 
+			<h1 id="Entrar">Login</h1>
+				<form id="log-acesso-form" method="POST" action="">
+					<label class="nomesCanto">Usuário</label>
 						<br/>
-							<input name="login" type="text"/>
+							<input id="Login" name="login" type="text"/>
 						<br/><br/>
-					<label class="nomesCanto">Senha</label> 
+					<label class="nomesCanto">Senha</label>
 						<br/>
-							<input name="senha" type="password" />
+							<input id="Senha" name="senha" type="password" />
 						<br/>
-					<label id="nomeMenor"><input name="manterLogado" type="checkbox"/>Manter-me logado.</label>
+					<label id="nomeMenor">
+            <input name="manterLogado" type="checkbox"/>Manter-me logado.
+          </label>
 					<br/><br/>
 
-					<input type="submit" value="Entrar"/>
-					<input type="submit" value="Esqueci minha senha"/> </br></br>
+					<input class="Botoes" type="submit" value="Entrar"/>
+					<input class="Botoes" type="submit" value="Esqueci minha senha"/> </br></br>
 
 				</form>
 		</div>
-		
-	<div id="rodape"> 
-		<h2>Desenvolvedores</h2>
-		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
+
+	<div id="rodape">
+		<h4 class="Desenvolvedores">Desenvolvedores</h4>
+		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
 	</div>
 </body>
 
