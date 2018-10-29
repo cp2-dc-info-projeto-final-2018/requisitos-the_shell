@@ -57,7 +57,7 @@ if (empty($Erro))
     header("Location: ../Professor.html");
   } else if ($Classe_Usuario['id_classe'] = 3)
   {
-    header("Location: ../Direcao.html");
+    header("Location: ../Direção.html");
   } else if ($Classe_Usuario['id_classe'] = 4)
   {
     header("Location: ../Secretaria.php");
@@ -69,7 +69,7 @@ if (empty($Erro))
 else
 {
   $_SESSION['Erro'] = $Erro;
-  header("Location: ../Novo_Login.php");
+  header("Location: ../Login.php");
 }
 
 

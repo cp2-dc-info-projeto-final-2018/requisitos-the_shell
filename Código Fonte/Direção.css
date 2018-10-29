@@ -15,6 +15,16 @@ body {
 		font-family: "Times New Roman";
 }
 
+#Rodape {
+		background-image: url("Imagens/Pinellas Blue Background.jpg");
+		background-size: cover;
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+}
+
 #Nome_do_Software {
 	padding: 15px;
 	margin-left: 10px;
@@ -36,16 +46,6 @@ body {
 	border: 5px groove black;
 	border-radius: 2px;
 	margin-right: 10px;
-}
-
-#Rodape {
-		background-image: url("Imagens/Pinellas Blue Background.jpg");
-		background-size: cover;
-		border: 5px groove black;
-		background-color: #64eae1;
-		padding: 10px 0px 90px 10px;
-		font-family: arial;
-		font-size: 15px;
 }
 
 
@@ -111,11 +111,7 @@ body {
 		padding: 50px;
 		font-size: 22px;
 
-}
 
-.Desenvolvedores {
-	margin: 7px;
-	font-style: italic;
 }
 
 </style>

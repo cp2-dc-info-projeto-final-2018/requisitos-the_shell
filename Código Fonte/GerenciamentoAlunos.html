@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Gerenciamento de Aluno</title>
+  <link rel="stylesheet" type="text/css" href="GerenciamentoAlunos.css">
+</head>
+
+<body>
+
+	<div id="Cabecalho">
+		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
+		<h2 id="Nome_do_Software">SHELL - Notas</h2>
+	</div>
+
+		<div id="Login-Acesso">
+			<fieldset>
+				<legend>Aluno</legend>
+					<form class="fonte">
+						<label for="nome">Nome: </label>
+						<input type="text" name="nome" size="25" required>
+						<label for="sobrenome">Sobrenome: </label>
+						<input type="text" name="sobrenome" size="25" required>
+						<br/><br/>
+						<label>Nascimento: </label>
+						<input type="text" name="dia" size="2" maxlength="2" placeholder="dd" required>
+						<input type="text" name="mes" size="2" maxlength="2" placeholder="mm" required>
+						<input type="text" name="ano" size="4" maxlength="4" placeholder="aaaa" required>
+						<br/><br/>
+						<label for="maticula">Matrícula: </label>
+						<input type="text" name="matricula" required>
+						<br/><br/>
+						<label for="numero">Número da chamada: </label>
+						<input type="text" name="numero" required>
+						<br/><br/>
+						<label>Turma: </label>
+						<input type="text" name="turma">
+						<br/><br/>
+						<label>Série: </label>
+						<input type="text" name="serie">
+					<form/>
+			</fieldset>
+
+			<form>
+				<br/><br/>
+				<input id="Botao" type="button" name="btn_adiciona" value="Adicionar">
+			<form/>
+		</div>
+
+	<div id="Rodape">
+		<h2>Desenvolvedores</h2>
+		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
+	</div>
+</body>
+
+</html>

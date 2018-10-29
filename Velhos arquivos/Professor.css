@@ -1,6 +1,6 @@
 <style>
 
-body {
+body{
 	background-color: powderblue;
 	background-image: url("logo.png");
 	background-repeat: no-repeat;
@@ -8,7 +8,7 @@ body {
 }
 
 
-#Esquerda {
+#esquerda {
   padding: 20px;
   width: 25%;
   display: table-cell;
@@ -17,13 +17,13 @@ body {
 
 }
 
-#Direita {
+#direita {
   padding: 20px;
   width: 80%;
   display: table-cell;
   margin: 25px;
   vertical-align: top;
-
+  
 }
 
 
@@ -31,7 +31,7 @@ body {
   clear: both;
 }
 
-#Caixa_de_Botoes {
+#caixabotoes{
 		border: 2px solid black;
 		float:left;
 		margin-top: 33px;
@@ -40,7 +40,7 @@ body {
 		width: 355px;
 }
 
-.Botoes{
+.botoes{
         font-size:20px;
         font-family:Times New Roman;
         font-weight:bold;
@@ -53,16 +53,16 @@ body {
 		cursor:pointer;
 }
 
-#Informaçoes_de_Usuario {
+#usuario_info{
 		border: 1.5px solid black;
 		width: 80%;
 		padding: 10px;
 		font-weight:bold;
 		margin-top: 33px;
-		font-size: 22px;
+		font-size: 22px;		
 }
 
-#Tela_de_Informaçoes {
+#tela_info{
 		border: 2px solid black;
 		height: 315px;
 		display: block;
@@ -73,21 +73,20 @@ body {
 
 }
 
-#Cabecalho {
+#cabecalho {
 		border: 2px solid black;
 		padding: 0px 0px 15px 10px;
 		font-size: 22px;
 		font-family: "Times New Roman";
 }
 
-#Nome_do_Software {
+#nome {
 		padding: 10px 15px 0px 0px;
 		font-size: 16px;
 }
 
-#Rodape{
+#rodape{
 		border: 2px solid black;
 		padding: 0px 0px 15px 10px;
 }
-
 </style>

@@ -14,10 +14,9 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 <head>
   <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="Secretaria.css">
-  <title>Portal da Secretaria</title>
+  <link rel="stylesheet" type="text/css" href="Aluno.css">
+  <title>Portal do Aluno</title>
 </head>
-
 <body>
 
 	<div id="Cabecalho">
@@ -28,15 +27,10 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
 			<form>
-				<input class="Botoes" onclick="Botao_Notas" type="button" id="btn_Notas" value="Notas"/>
-				<input class="Botoes" onclick="Botao_Dicisplina" type="button" id="btn_Disciplina" value="Disciplina"/>
-				<input class="Botoes" onclick="Botao_Turmas" type="button" id="btn_Turmas" value="Turmas"/>
-				<input class="Botoes" onclick="Botao_Alunos" type="button" id="" value="Alunos"/>
-				<input class="Botoes" onclick="Botao_Professores" type="button" id="" value="Professores"/>
+				<input class="Botoes" type="button" name="btn_Notas" onclick="Controlador/Botao_Notas.php" id="btn_Notas" value="Notas"/>
 			</form>
 		</div>
 	</div>
-
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
@@ -50,7 +44,7 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 				E-mail: <?= $Info_Usuario["Email"] ?>
         <br/>
         <br/>
-				Siape: <?= $Info_Usuario["Siape"] ?>
+				Matrícula: <?= $Info_Usuario["Matrícula"] ?>
         <br/>
         <br/>
 		</div>
@@ -61,7 +55,5 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 		<h2>Desenvolvedores</h2>
 		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
 	</div>
-
 </body>
-
 </html>

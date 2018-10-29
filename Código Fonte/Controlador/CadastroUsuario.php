@@ -24,6 +24,7 @@ $Request = filter_var_array(
   [
     'Login' => FILTER_DEFAULT,
     'Nome' => FILTER_DEFAULT,
+    'Data_Nasc' => FILTER_DEFAULT,
     'Tel' => FILTER_DEFAULT,
     'Email' => FILTER_VALIDATE_EMAIL,
     'Senha' => FILTER_DEFAULT
@@ -42,5 +43,5 @@ if (empty($Erros) == true)
 } else {
   session_start();
   $_SESSION['erros'] = $Erros;
-  header("Location: ../Formulario_Cadastro_Usuario.php");
+  header("Location: ../Cadastro.php");
 }

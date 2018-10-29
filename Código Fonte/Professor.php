@@ -14,25 +14,25 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 <head>
   <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="Secretaria.css">
-  <title>Portal da Secretaria</title>
+  <link rel="stylesheet" type="text/css" href="Professor.css">
+  <title>Portal do Professor</title>
 </head>
 
 <body>
 
-	<div id="Cabecalho">
-		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
+	<div class="Cabecalho">
+		<h2>Colégio Pedro II</h2>
 		<h2 id="Nome_do_Software">SHELL - Notas</h2>
 	</div>
 
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
 			<form>
-				<input class="Botoes" onclick="Botao_Notas" type="button" id="btn_Notas" value="Notas"/>
-				<input class="Botoes" onclick="Botao_Dicisplina" type="button" id="btn_Disciplina" value="Disciplina"/>
-				<input class="Botoes" onclick="Botao_Turmas" type="button" id="btn_Turmas" value="Turmas"/>
-				<input class="Botoes" onclick="Botao_Alunos" type="button" id="" value="Alunos"/>
-				<input class="Botoes" onclick="Botao_Professores" type="button" id="" value="Professores"/>
+				<input class="Botoes" type="button" id="btn_Notas" value="Notas"/>
+				<input class="Botoes" type="button" id="btn_Turmas" value="Turmas"/>
+				<input class="Botoes" type="button" id="" value="Lançar notas"/>
+
+
 			</form>
 		</div>
 	</div>
@@ -40,7 +40,8 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			Nome: <?= $Info_Usuario["Nome"] ?><br/>
+			Nome: <?= $Info_Usuario["Nome"] ?>
+      <br/>
 		</div>
 
 		<div id="Tela_de_Informaçoes">

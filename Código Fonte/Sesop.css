@@ -1,14 +1,12 @@
-body{
+body {
 	background-color: powderblue;
 	background-image: url("logo.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	margin-top: 0px;
-	margin-left: 40px;
 }
 
 
-#esquerda {
+#Esquerda {
   padding: 20px;
   width: 25%;
   display: table-cell;
@@ -17,7 +15,7 @@ body{
 
 }
 
-#direita {
+#Direita {
   padding: 20px;
   width: 80%;
   display: table-cell;
@@ -27,34 +25,20 @@ body{
 }
 
 
-#direita1 {
-
-  width: 65%;
-  display: table-cell;
-  margin: 25px;
-  vertical-align: top;
-
-}
-
 .clear {
   clear: both;
 }
 
-#caixabotoes{
+#Caixa_de_Botoes {
 		border: 2px solid black;
 		float:left;
 		margin-top: 33px;
 		padding-bottom: 453px;
 		height: 48px;
 		width: 355px;
-		/*padding-left: 100px;
-		padding-top: 10px;
-		padding-right: 100px;
-		margin-right: 0px;
-		margin-left: 45px;*/
 }
 
-.botoes{
+.Botoes{
         font-size:20px;
         font-family:Times New Roman;
         font-weight:bold;
@@ -63,53 +47,43 @@ body{
         width:355px;
         height:65px;
 		background-color: #0000002e;
-
 		box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
 		cursor:pointer;
 }
 
-
-#img {
-		border: 1.5px solid black;
-		float:left;
-		padding: 65px;
-		margin-top: 10px;
-
-}
-#info_completa{
-		border: 2px solid black;
-		padding: 15px;
-		padding-bottom: 0px;
-		width: 80%;
-		margin-top: 30px;
-
-
-}
-
-#usuario_info{
+#Informaçoes_de_Usuario {
 		border: 1.5px solid black;
 		width: 80%;
-		float:right;
-		margin-top: -120px;
-		margin-left:900px;
 		padding: 10px;
 		font-weight:bold;
-
-
-
+		margin-top: 33px;
+		font-size: 22px;
 }
 
-#tela_info{
+#Tela_de_Informaçoes {
 		border: 2px solid black;
-		padding:150px;
+		height: 315px;
 		display: block;
 		margin-top:45px;
-	    margin-right: 173px;
+		padding: 50px;
+		font-size: 22px;
 
 
 }
 
-#rodape{
+#Cabecalho {
+		border: 2px solid black;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#Nome_do_Software {
+		padding: 10px 15px 0px 0px;
+		font-size: 16px;
+}
+
+#Rodape{
 		border: 2px solid black;
 		padding: 0px 0px 15px 10px;
 }
@@ -125,4 +99,27 @@ body{
 
 .group {
      zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+#Informações_Completas {
+		border: 2px solid black;
+		padding: 15px;
+		padding-bottom: 0px;
+		width: 80%;
+		margin-top: 30px;
+}
+
+#Imagem {
+		border: 1.5px solid black;
+		float:left;
+		padding: 65px;
+		margin-top: 10px;
+
+}
+
+#Direita_1 {
+  width: 65%;
+  display: table-cell;
+  margin: 25px;
+  vertical-align: top;
 }
