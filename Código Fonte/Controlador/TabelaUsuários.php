@@ -20,14 +20,15 @@ function CadastraUsuario($Info_Login)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('INSERT INTO usuario(login, nome, senha, email, tel)
-                         VALUES (:login, :nome, :senha, :email, :tel);');
+  $SQL = $BD -> prepare('INSERT INTO usuario(login, nome, senha, email, tel, id_classe_usuario)
+                         VALUES (:login, :nome, :senha, :email, :tel, :classe);');
 
   $SQL -> bindValue(':nome', $Info_Login['Nome']);
   $SQL -> bindValue(':login', $Info_Login['Login']);
   $SQL -> bindValue(':senha', password_hash($Info_Login['Senha'], PASSWORD_DEFAULT));
   $SQL -> bindValue(':email', $Info_Login['Email']);
   $SQL -> bindValue(':tel', $Info_Login['Tel']);
+  $SQL -> bindValue(':classe', $Info_Login['id_classe']);
 
   $SQL -> execute();
 

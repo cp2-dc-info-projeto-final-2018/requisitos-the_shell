@@ -26,9 +26,7 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
-			<form>
-				<input class="Botoes" type="button" name="btn_Notas" onclick="Controlador/Botao_Notas.php" id="btn_Notas" value="Notas"/>
-			</form>
+			<link class="Botoes" href="GerenciamentoDeNotas.html" id="btn_Notas" value="Notas"/>
 		</div>
 	</div>
 	<div id="Direita">
