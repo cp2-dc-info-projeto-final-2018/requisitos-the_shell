@@ -1,4 +1,12 @@
-<!-- PENDENTE: Se o usuário já estiver logado, redirecioná-lo para a página de pedidos -->
+<?php
+	session_start();
+
+	if (empty($_SESSION['cliente']) == false)
+	{
+		header('Location: pedidos.php');
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +23,17 @@
 		<h1>Bem-vindo à Livraria CPII</h1>
 		<p>Por favor, identifique-se:</p>
 
-		<!-- PENDENTE: Exibir mensagens de erro de login vindas do servidor -->
+		<?php
+			if (empty($_SESSION['erro']) == false)
+			{
+		?>
+				<div class="alert alert-warning">
+					<p>Erro: <?= $_SESSION['erro'] ?></p>
+				</div>
+		<?php
+				unset($_SESSION['erro']);
+			}
+		?>
 
 		<form method="POST" action="Controladores/entrar.php">
 			<div class="form-group">

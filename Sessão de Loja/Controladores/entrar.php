@@ -1,5 +1,8 @@
 <?php
+
 	require_once('../Tabelas/dadosClientes.php');
+
+	session_start();
 
 	$erro = null;
 
@@ -25,12 +28,17 @@
 	{
 		$erro = "Senha não informada";
 	}
-	// PENDENTE: Validar senha do usuário
-	// PENDENTE: Redirecionar o usuário para a página de pedidos
+	else if (password_verify($senha, $dadosClientes[$email]['senha']))
+	{
+		$_SESSION['cliente'] = $email;
+
+		header("Location: ../pedidos.php");
+	}
 	else
 	{
 		$erro = "Senha inválida";
 	}
 
-	// PENDENTE: Redirecionar usuário para a página de login com as mensagens de erro a exibir
+	$_SESSION['erro'] = $erro;
+	header("Location: ../index.php");
 ?>
