@@ -60,7 +60,7 @@ function ListaClasseUsuario($Login_Usuario)
                            FROM $usuario
                            WHERE login = :login
                            LEFT JOIN classe
-                           ON usuario.id_classe_usuario = classe.id_classe');
+                           ON usuario.id_classe_usuario = classe.id_classe;');
 
   $Usuario -> bindValue(':login', $Login_Usuario);
 
