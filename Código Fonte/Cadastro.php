@@ -24,27 +24,28 @@ unset($_SESSION['erros']);
 
 	<div id="Cabecalho">
 		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
-		<h2 id="Nome_do_Software">SHELL - Notas</h2>
+		<h2 id="Nome_do_Software">SHELL</h2>
 	</div>
 
   <?php if ($Erros != null) { ?>
-    <div id="Exibicao_de_Erro">
-      <p>
-        <?php
-          if ($Erros != null)
+
+  <div id="Exibicao_de_Erro">
+    <p>
+      <?php
+        if ($Erros != null)
+        {
+          foreach ($Erros as $Erro)
           {
-
-            foreach ($Erros as $Erro)
-            {
-              echo $Erro;
-            }
-
-            unset($Erro);
+            echo $Erro;
           }
-        ?>
-        <br>
-      </p>
-    </div>
+
+          unset($Erro);
+        }
+      ?>
+      <br>
+    </p>
+  </div>
+
   <?php } ?>
 
 	<div id="Div_Cadastro">
@@ -54,24 +55,34 @@ unset($_SESSION['erros']);
       <fieldset>
         <label for="Login">Login: </label>
 				<input type="text" name="Login" size="25" required>
+
 				<label for="Nome">Nome: </label>
 				<input type="text" name="Nome" size="25" required>
+
 				<br/>
         <br/>
+
         <label for="Tel">Telefone: </label>
         <input type="text" name="Tel" required>
+
         <br/>
         <br/>
+
 				<label for="Data_Nasc">Data de Nascimento: </label>
         <input type="date" name="Data_Nasc" required>
+
 				<br/>
         <br/>
+
 				<label for="Email">E-mail: </label>
 				<input type="text" name="Email" size="30" maxlength="50" required>
+
 				<br/>
         <br/>
+
 				<label for="Senha">Digite uma senha: </label>
 				<input type="password" name="Senha" required>
+
 				<label for="Confirmar_Senha">Confirmar senha: </label>
 			  <input type="password" name="Confirmar_Senha" required>
 	    </fieldset>

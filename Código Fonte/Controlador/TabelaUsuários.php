@@ -28,11 +28,11 @@ function CadastraUsuario($Info_Login)
   $SQL -> bindValue(':senha', password_hash($Info_Login['Senha'], PASSWORD_DEFAULT));
   $SQL -> bindValue(':email', $Info_Login['Email']);
   $SQL -> bindValue(':tel', $Info_Login['Tel']);
-  $SQL -> bindValue(':classe', $Info_Login['id_classe']);
+  $SQL -> bindValue(':classe', $Info_Login['Classe']);
 
   $SQL -> execute();
 
-  header('Location: ../Login.php');
+  return $BD -> lastInsertId();
 }
 
 function ListaUsuarioPorLogin($Login_Usuario)
@@ -55,7 +55,7 @@ function ListaClasseUsuario($Login_Usuario)
   $BD = CriaConexaoBD();
 
   $Usuario = $BD -> query('SELECT
-                            classe.id_classe_usuario AS "id_classe",
+                            usuario.id_classe_usuario AS "id_classe",
                             classe.classe AS "classe"
                            FROM $usuario
                            WHERE login = :login
@@ -210,5 +210,6 @@ function ValidaSenha($Senha_Usuario)
 
   $SQL = $BD -> query('SELECT ');
 }
+
 
 ?>

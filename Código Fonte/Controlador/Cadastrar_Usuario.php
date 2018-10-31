@@ -28,7 +28,8 @@ $Request = filter_var_array(
     'Tel' => FILTER_DEFAULT,
     'Email' => FILTER_VALIDATE_EMAIL,
     'Senha' => FILTER_DEFAULT,
-    'Classe' => FILTER_DEFAULT
+    'Classe' => FILTER_DEFAULT,
+    'Confirmar_Senha' => FILTER_DEFAULT
   ]
 );
 
@@ -63,5 +64,10 @@ if (empty($Erros) == true)
 } else {
   session_start();
   $_SESSION['erros'] = $Erros;
-  header("Location: ../Cadastro.php");
+  if ($Request['Classe'] == 1)
+  {
+    header("Location: ../Escolher_Matrícula.php");
+  } else {
+    header("Location: ../Escolher_Siape.php");
+  }
 }

@@ -19,7 +19,7 @@ unset($_SESSION['Erro']);
 <head>
   <meta charset="utf-8"/>
   <title>Página de Login</title>
-  <link rel="stylesheet" type="text/css" href="Novo_Login.css">
+  <link rel="stylesheet" type="text/css" href="Login.css">
 </head>
 
 <body>
@@ -48,11 +48,11 @@ unset($_SESSION['Erro']);
 			<form id="Login-Acesso-Form" method="POST" action="Controlador/Entrar.php">
 				<label class="Label_Informaçoes">Usuário</label>
 					<br/>
-						<input id="Login" name="login" type="text"/>
+						<input id="Login" name="Login" type="text"/>
 					<br/><br/>
 				<label class="Label_Informaçoes">Senha</label>
 					<br/>
-						<input id="Senha" name="senha" type="password" />
+						<input id="Senha" name="Senha" type="password" />
 					<br/>
 				<label id="Label_Manter_Logado">
           <input name="manterLogado" type="checkbox"/>Manter-me logado.
