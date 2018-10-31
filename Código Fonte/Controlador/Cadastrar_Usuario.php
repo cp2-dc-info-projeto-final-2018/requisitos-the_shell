@@ -2,6 +2,7 @@
 
 require_once('TabelaUsuários.php');
 require_once('Conexão_BD.php');
+require_once('TabelaAlunos.php');
 
 function ValidaString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 {
@@ -60,7 +61,10 @@ if ($Request['Senha'] != $Request['Confirmar_Senha'])
 
 if (empty($Erros) == true)
 {
-  CadastraUsuario($Request);
+  if ($Request['Classe'] == 1)
+  {
+    CadastraAluno($Request);
+  }
 } else {
   session_start();
   $_SESSION['erros'] = $Erros;
