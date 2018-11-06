@@ -61,6 +61,7 @@ if ($Request['Senha'] != $Request['Confirmar_Senha'])
 
 if (empty($Erros) == true)
 {
+  session_start();
   if ($Request['Classe'] == 1)
   {
     header("Location: ../Escolher_Matrícula.php");
