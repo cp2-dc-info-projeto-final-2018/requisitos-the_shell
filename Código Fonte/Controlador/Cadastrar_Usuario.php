@@ -63,15 +63,11 @@ if (empty($Erros) == true)
 {
   if ($Request['Classe'] == 1)
   {
-    CadastraAluno($Request);
-  }
-} else {
-  session_start();
-  $_SESSION['erros'] = $Erros;
-  if ($Request['Classe'] == 1)
-  {
     header("Location: ../Escolher_Matrícula.php");
   } else {
     header("Location: ../Escolher_Siape.php");
   }
+} else {
+  session_start();
+  $_SESSION['erros'] = $Erros;
 }
