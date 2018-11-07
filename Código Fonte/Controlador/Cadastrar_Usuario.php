@@ -20,26 +20,44 @@ function ValidaString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 
 $Request = array_map('trim', $_REQUEST);
 
-$Request = filter_var_array(
-  $Request,
-  [
-    'Login' => FILTER_DEFAULT,
-    'Nome' => FILTER_DEFAULT,
-    'Data_Nasc' => FILTER_DEFAULT,
-    'Tel' => FILTER_DEFAULT,
-    'Email' => FILTER_VALIDATE_EMAIL,
-    'Senha' => FILTER_DEFAULT,
-    'Classe' => FILTER_DEFAULT,
-    'Confirmar_Senha' => FILTER_DEFAULT
-  ]
-);
+if ($_REQUEST['Classe'] == 1) {
+  $Request = filter_var_array(
+    $Request,
+    [
+      'Login' => FILTER_DEFAULT,
+      'Nome' => FILTER_DEFAULT,
+      'Data_Nasc' => FILTER_DEFAULT,
+      'Tel' => FILTER_DEFAULT,
+      'Email' => FILTER_VALIDATE_EMAIL,
+      'Senha' => FILTER_DEFAULT,
+      'Classe' => FILTER_DEFAULT,
+      'Confirmar_Senha' => FILTER_DEFAULT,
+      'Matricula' => FILTER_DEFAULT,
+      'Turma' => FILTER_DEFAULT
+    ]
+  );
+}
+else {
+  $Request = filter_var_array(
+    $Request,
+    [
+      'Login' => FILTER_DEFAULT,
+      'Nome' => FILTER_DEFAULT,
+      'Data_Nasc' => FILTER_DEFAULT,
+      'Tel' => FILTER_DEFAULT,
+      'Email' => FILTER_VALIDATE_EMAIL,
+      'Senha' => FILTER_DEFAULT,
+      'Classe' => FILTER_DEFAULT,
+      'Confirmar_Senha' => FILTER_DEFAULT,
+      'Siape' => FILTER_DEFAULT
+    ]
+  );
+}
 
 #ID das classes:
 #1 - Aluno
 #2 - Professor
-#3 - Diretor
-#4 - Secretário
-#5 - SESOP e NAPNE
+#3 - Secretário
 
 if (empty($Request['Classe']))
 {
@@ -49,7 +67,6 @@ if (empty($Request['Classe']))
 ValidaString($Request['Login'], "Login", 2, 32);
 ValidaString($Request['Nome'], "Nome", 2, 50);
 ValidaString($Request['Tel'], "Tel", 8, 12);
-ValidaString($Request['Data_Nasc'], "Data_Nasc", 10, 10);
 ValidaString($Request['Email'], "Email", 4, 30);
 ValidaString($Request['Senha'], "Senha", 2, 16);
 
@@ -64,9 +81,17 @@ if (empty($Erros) == true)
   session_start();
   if ($Request['Classe'] == 1)
   {
-    header("Location: ../Escolher_Matrícula.php");
-  } else {
-    header("Location: ../Escolher_Siape.php");
+    $id_usuario = CadastraUsuario($Request);
+    CadastraAluno($id_usuario);
+    header("Location: ../Aluno.php");
+  }
+  else if ($Request['Classe'] == 2)
+  {
+    header("Location: ../Professor.php");
+  }
+  else if ($Request['Classe'] == 3)
+  {
+    header("Location: ../Secretaria.php");
   }
 } else {
   session_start();

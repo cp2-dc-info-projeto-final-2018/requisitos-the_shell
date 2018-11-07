@@ -84,7 +84,23 @@ body {
 	opacity: 0.8;
 }
 
-#Siape, #Matricula
+#Professor_Secretaria, #Aluno
 {
 	display: none;
+}
+
+#Selecionar_Turma {
+	width: 170px;
+	margin-left: 46px;
+	margin-top: 10px;
+}
+
+.Digitar_Extra_Info {
+	width: 165px;
+	margin-left: 23px;
+}
+
+#Selecionar_Classe {
+	width: 150px;
+	margin: 10px;
 }

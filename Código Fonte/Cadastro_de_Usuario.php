@@ -2,6 +2,8 @@
 
 <?php
 
+require_once("Controlador/TabelaTurmas.php");
+
 session_start();
 $Erros = null;
 if (isset($_SESSION['erros'])) {
@@ -10,21 +12,23 @@ if (isset($_SESSION['erros'])) {
 
 unset($_SESSION['erros']);
 
+$Turmas = ListaTurmas();
+
 ?>
 
 <script>
 
 function ExibeExtraInfo(Valor)
 {
-  if (Valor = "1")
+  if (Valor == "1")
   {
-    document.getElementById("Matricula").style.display = "block";
-    document.getElementById("Siape").style.display = "none";
+    document.getElementById("Aluno").style.display = "block";
+    document.getElementById("Professor_Secretaria").style.display = "none";
   }
-  else if (Valor = "2" || Valor = "3")
+  else if ((Valor == "2") || (Valor == "3"))
   {
-    document.getElementById("Matricula").style.display = "none";
-    document.getElementById("Siape").style.display = "block";
+    document.getElementById("Aluno").style.display = "none";
+    document.getElementById("Professor_Secretaria").style.display = "block";
   }
 }
 
@@ -110,7 +114,7 @@ function ExibeExtraInfo(Valor)
 	    <fieldset>
 	      <legend>Especificação de Cadastro</legend>
 
-        <select onchange="ExibeExtraInfo(this.value)">
+        <select name="Classe" id="Selecionar_Classe" onchange="ExibeExtraInfo(this.value)">
           <option value=""></option>
           <option value="1">Aluno</option>
           <option value="2">Professor</option>
@@ -119,12 +123,24 @@ function ExibeExtraInfo(Valor)
 
         <br>
 
-        <div id="Matricula">
-          Matrícula: <input type="text" name="Matricula" required>
+        <div id="Aluno">
+          <br>
+          Matrícula: <input class="Digitar_Extra_Info" type="text" name="Matricula">
+          <br>
+          Turma:
+          <select name="Turma" id="Selecionar_Turma">
+            <option value=""></option>
+            <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
+
+              <option value="<?= $Turmas[$i]["nome"] ?>"><?= $Turmas[$i]["nome"] ?></option>
+
+            <?php } ?>
+          </select>
         </div>
 
-        <div id="Siape">
-          Siape: <input type="text" name="Siape" required>
+        <div id="Professor_Secretaria">
+          <br>
+          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
         </div>
 
       <br/>
