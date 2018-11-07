@@ -50,7 +50,6 @@ body {
 		border: 2px solid black;
 		padding: 73px;
 		font-size: 20px;
-		backgrount
 
 }
 
@@ -61,13 +60,6 @@ body {
 #Botao_Enviar {
 		width: 66px;
 		height: 31px;
-}
-
-body {
-		background-image: url("logo.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: powderblue;
 }
 
 #Exibicao_de_Erro {
@@ -90,4 +82,9 @@ body {
 
 #Exibicao_de_Erro:hover {
 	opacity: 0.8;
+}
+
+#Siape, #Matricula
+{
+	display: none;
 }

@@ -1,0 +1,110 @@
+<style>
+
+#cabecalho {
+		border: 2px solid black;
+		background-color: #9efff9;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#rodape {
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+}
+
+.Desenvolvedores {
+	margin: 7px;
+	font-style: italic;
+}
+
+#nome {
+		padding: 10px 15px 0px 0px;
+		font-size: 16px;
+		font-family: arial;
+}
+
+#nomeColegio {
+	font-family: arial;
+	background-color: #64eae1;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 30px;
+	border: 5px groove black;
+}
+
+.nomesCanto {
+		text-align: right;
+		font-family: arial;
+}
+
+#nomeMenor {
+		font-size: 14px;
+		font-family: arial;
+}
+
+#log-acesso {
+		border: 3px ridge black;
+		border-radius: 5px;
+		padding: 50px;
+		font-size: 20px;
+		margin: 56px;
+		text-align: center;
+		font-family: arial;
+}
+
+#log-acesso-form {
+	padding: 50px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+#Entrar {
+	background-color: #79fce4;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+
+body {
+		background-image: url("logo.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: powderblue;
+}
+
+#Login {
+	border: 2px groove black;
+	border-radius: 3px;
+	width: 170px;
+	margin-top: 5px;
+}
+
+#Senha {
+	border: 2px groove black;
+	border-radius: 3px;
+	width: 170px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.Botoes {
+	border: 3px double black;
+	padding: 3px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#Exibição_de_Erro {
+	border: 2px solid red;
+	padding: 5px;
+}
+
+
+
+</style>

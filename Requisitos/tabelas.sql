@@ -16,8 +16,8 @@ CREATE TABLE Turma (
 
 		id_turma INT NOT NULL AUTO_INCREMENT,
 		nome VARCHAR(100),
-		turno VARCHAR(50),
 		serie VARCHAR(50),
+		integrado BOOLEAN,
 		PRIMARY KEY (id_turma),
 		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
@@ -62,31 +62,6 @@ CREATE TABLE Secretaria (
 		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
 		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
-
-
-CREATE TABLE Direcao (
-
-		id_diretor INT NOT NULL AUTO_INCREMENT,
-		id_usuario INT,
-		id_classe_usuario INT,
-		siape VARCHAR(50),
-		PRIMARY KEY (id_diretor),
-		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
-		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
-);
-
-
-CREATE TABLE SESOP_NAPNE (
-
-		id_funcionario INT NOT NULL AUTO_INCREMENT,
-		id_usuario INT,
-		id_classe_usuario INT,
-		siape VARCHAR(50),
-		PRIMARY KEY (id_funcionario),
-		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
-		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
-);
-
 
 CREATE TABLE Professor_Turma (
 

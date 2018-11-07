@@ -14,5 +14,4 @@ function CadastraAluno($dadosNovoAluno)
 
   $SQL -> execute();
 }
-
 ?>

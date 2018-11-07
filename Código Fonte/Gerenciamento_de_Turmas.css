@@ -44,33 +44,67 @@ body {
 		padding: 10px 0px 90px 10px;
 		font-family: arial;
 		font-size: 15px;
+    margin-top: 50px;
 }
 
-#Div_Cadastro {
-		border: 2px solid black;
-		padding: 73px;
-		font-size: 20px;
-
+#Turmas {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  font-family: arial;
 }
 
-#Exibicao_de_Erro {
-	border: 5px solid black;
-	border-radius: 10px;
-	padding-top: 10px;
-	padding-bottom: 30px;
-	padding-left: 30px;
-	margin-top: 50px;
-	margin-left: 250px;
-	margin-right: 250px;
-	margin-bottom: 10px;
-	font-size: 20px;
-	font-family: arial;
-	text-align: center;
-	background-image: url("Imagens/Red Background.jpg");
-	background-size: contain;
-	background-position: center;
+.Nome_Coluna {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-#Exibicao_de_Erro:hover {
-	opacity: 0.8;
+.Celulas {
+  border: 1px solid black;
+  padding: 8px;
+  width: 200px;
+}
+
+#Botao_Cadastrar_Turma {
+  padding: 20px;
+  background-color: #49ff65;
+  border: 3px double black;
+  border-radius: 5px;
+  margin: 50px;
+  text-decoration: none;
+  font-family: arial;
+}
+
+#Botao_Cadastrar_Turma:link {
+  color: black;
+}
+
+#Botao_Cadastrar_Turma:visited {
+  color: black;
+}
+
+#Botao_Cadastrar_Turma:hover {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
+}
+
+
+#Botao_Cadastrar_Turma:active {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
+}
+
+#Campo_Turmas {
+  margin: 50px;
+  text-align: center;
 }

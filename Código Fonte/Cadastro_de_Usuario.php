@@ -12,6 +12,24 @@ unset($_SESSION['erros']);
 
 ?>
 
+<script>
+
+function ExibeExtraInfo(Valor)
+{
+  if (Valor = "1")
+  {
+    document.getElementById("Matricula").style.display = "block";
+    document.getElementById("Siape").style.display = "none";
+  }
+  else if (Valor = "2" || Valor = "3")
+  {
+    document.getElementById("Matricula").style.display = "none";
+    document.getElementById("Siape").style.display = "block";
+  }
+}
+
+</script>
+
 <html>
 
 <head>
@@ -92,12 +110,22 @@ unset($_SESSION['erros']);
 	    <fieldset>
 	      <legend>Especificação de Cadastro</legend>
 
-        <INPUT TYPE="radio" NAME="Classe" VALUE="1"> Alunos</input>
-			  <INPUT TYPE="radio" NAME="Classe" VALUE="2"> Professores</input>
-			  <INPUT TYPE="radio" NAME="Classe" VALUE="3"> Direção</input>
-			  <INPUT TYPE="radio" NAME="Classe" VALUE="4"> Secretaria</input>
-			  <INPUT TYPE="radio" NAME="Classe" VALUE="5"> SESOP/NAPNE</input>
-      </fieldset>
+        <select onchange="ExibeExtraInfo(this.value)">
+          <option value=""></option>
+          <option value="1">Aluno</option>
+          <option value="2">Professor</option>
+          <option value="3">Secretaria</option>
+        </select>
+
+        <br>
+
+        <div id="Matricula">
+          Matrícula: <input type="text" name="Matricula" required>
+        </div>
+
+        <div id="Siape">
+          Siape: <input type="text" name="Siape" required>
+        </div>
 
       <br/>
 
