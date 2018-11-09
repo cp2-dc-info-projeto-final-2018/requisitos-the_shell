@@ -81,8 +81,7 @@ if (empty($Erros) == true)
   session_start();
   if ($Request['Classe'] == 1)
   {
-    $id_usuario = CadastraUsuario($Request);
-    CadastraAluno($id_usuario);
+    CadastraUsuario($Request);
     header("Location: ../Aluno.php");
   }
   else if ($Request['Classe'] == 2)

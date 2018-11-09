@@ -32,7 +32,19 @@ function CadastraUsuario($Info_Login)
 
   $SQL -> execute();
 
-  return $BD -> lastInsertId();
+  $ID_Usuario = $BD -> lastInsertId();
+
+  if ($Info_Login['Classe'] = "1")
+  {
+    $Info_Aluno = $BD -> prepare('INSERT INTO aluno(id_usuario, matricula, id_turma, id_classe) VALUES
+                                  (:ID_Usuario, :Matricula, :ID_Turma, 1);');
+
+    $Info_Aluno -> bindValue(":ID_Usuario", $ID_Usuario);
+    $Info_Aluno -> bindValue(":Matricula", $Info_Login['Matricula']);
+    $Info_Aluno -> bindValue(":ID_Turma", $Info_Login['Turma']);
+
+    $Info_Aluno -> execute();
+  }
 }
 
 function ListaUsuarioPorLogin($Login_Usuario)

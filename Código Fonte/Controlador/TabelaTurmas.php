@@ -44,29 +44,41 @@ function ListaTurmas()
   return $SQL -> fetchAll();
 }
 
-function ListaAlunosDaTurma($Nome_Turma)
+function ListaAlunosDaTurma($ID_Turma)
 {
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          usuario.nome,
-                          usuario.data_nasc,
-                          usuario.email,
-                          usuario.tel,
                           aluno.matricula,
-                          turma.id_turma,
-                          turma.nome,
-                          turma.serie
+                          usuario.nome,
+                          usuario.email,
+                          usuario.tel
                          FROM aluno
-                         LEFT JOIN usuario ON aluno.id_usuario = usuario.id_usuario
-                         LEFT JOIN turma ON aluno.id_turma = turma.id_turma
-                         WHERE turma.nome = :nome_turma;');
+                         LEFT JOIN aluno.id_usuario = usuario.id_usuario
+                         AND aluno.id_turma = turma.id_turma
+                         WHERE aluno.id_turma = :ID_Turma;');
 
-  $SQL -> bindValue(":nome_turma", $Nome_Turma);
+  $SQL -> bindValue(":ID_Turma", $ID_Turma);
 
   $SQL -> execute();
 
   return $SQL -> fetchAll();
+}
+
+function ListaIDTurmaPorNome($Nome_Turma)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT
+                          id_turma
+                         FROM turma
+                         WHERE nome = :turma;');
+
+  $SQL -> bindValue(":turma", $Nome_Turma);
+
+  $SQL -> execute();
+
+  return $SQL -> fetch();
 }
 
 

@@ -130,11 +130,13 @@ function ExibeExtraInfo(Valor)
           Turma:
           <select name="Turma" id="Selecionar_Turma">
             <option value=""></option>
+
             <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
 
-              <option value="<?= $Turmas[$i]["nome"] ?>"><?= $Turmas[$i]["nome"] ?></option>
+              <option value="<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></option>
 
             <?php } ?>
+
           </select>
         </div>
 
@@ -143,7 +145,9 @@ function ExibeExtraInfo(Valor)
           Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
         </div>
 
-      <br/>
+      </fieldset>
+
+      <br>
 
       <input id="Botao_Cadastrar" type="submit" name="Botao_Enviar" value="Cadastrar">
 	  </form>
@@ -155,6 +159,7 @@ function ExibeExtraInfo(Valor)
 		<h2>Desenvolvedores</h2>
 		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
 	</div>
+  
 </body>
 
 </html>

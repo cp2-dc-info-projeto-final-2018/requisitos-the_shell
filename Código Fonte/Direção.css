@@ -1,0 +1,117 @@
+<style>
+
+body {
+	background-color: powderblue;
+	background-image: url("logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.Cabecalho {
+		border: 2px solid black;
+		background-color: #9efff9;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#Rodape {
+		background-image: url("Imagens/Pinellas Blue Background.jpg");
+		background-size: cover;
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+}
+
+#Nome_do_Software {
+	padding: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #11ffa8;
+	border: 1px dashed black;
+	border-radius: 30px;
+	text-align: center;
+	margin-top: -18px;
+}
+
+#Nome_do_Colegio {
+	font-family: arial;
+	background-image: url("Imagens/Blue Background.jpg");
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 30px;
+	border: 5px groove black;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+
+
+#Esquerda {
+  padding: 20px;
+  width: 25%;
+  display: table-cell;
+  margin: 25px;
+  vertical-align: top;
+
+}
+
+#Direita {
+  padding: 20px;
+  width: 80%;
+  display: table-cell;
+  margin: 25px;
+  vertical-align: top;
+
+}
+
+
+.clear {
+  clear: both;
+}
+
+#Caixa_de_Botoes {
+		border: 2px solid black;
+		float:left;
+		margin-top: 33px;
+		padding-bottom: 453px;
+		height: 48px;
+		width: 355px;
+}
+
+.Botoes{
+        font-size:20px;
+        font-family:Times New Roman;
+        font-weight:bold;
+        color:black;
+        border: 1px solid black;
+        width:355px;
+        height:65px;
+		background-color: #0000002e;
+		box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+		cursor:pointer;
+}
+
+#Informaçoes_de_Usuario {
+		border: 1.5px solid black;
+		width: 80%;
+		padding: 10px;
+		font-weight:bold;
+		margin-top: 33px;
+		font-size: 22px;
+}
+
+#Tela_de_Informaçoes {
+		border: 2px solid black;
+		height: 315px;
+		display: block;
+		margin-top:45px;
+		padding: 50px;
+		font-size: 22px;
+
+
+}
+
+</style>
