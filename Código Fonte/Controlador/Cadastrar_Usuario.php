@@ -86,13 +86,14 @@ if (empty($Erros) == true)
   }
   else if ($Request['Classe'] == 2)
   {
-    header("Location: ../Professor.php");
+    header("Location: ../Login.php");
   }
   else if ($Request['Classe'] == 3)
   {
-    header("Location: ../Secretaria.php");
+    header("Location: ../Login.php");
   }
 } else {
   session_start();
   $_SESSION['erros'] = $Erros;
+  header("Location: ../Cadastro_de_Usuario.php");
 }
