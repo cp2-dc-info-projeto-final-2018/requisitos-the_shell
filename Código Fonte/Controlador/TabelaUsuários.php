@@ -45,6 +45,26 @@ function CadastraUsuario($Info_Login)
 
     $Info_Aluno -> execute();
   }
+  else if ($Info_Login['Classe'] = "2")
+  {
+    $Info_Aluno = $BD -> prepare('INSERT INTO aluno(id_usuario, siape, id_classe) VALUES
+                                  (:ID_Usuario, :Siape, 2);');
+
+    $Info_Aluno -> bindValue(":ID_Usuario", $ID_Usuario);
+    $Info_Aluno -> bindValue(":Siape", $Info_Login['Siape']);
+
+    $Info_Aluno -> execute();
+  }
+  else if ($Info_Login['Classe'] = "3")
+  {
+    $Info_Aluno = $BD -> prepare('INSERT INTO aluno(id_usuario, siape, id_classe) VALUES
+                                  (:ID_Usuario, :Siape, 3);');
+
+    $Info_Aluno -> bindValue(":ID_Usuario", $ID_Usuario);
+    $Info_Aluno -> bindValue(":Siape", $Info_Login['Siape']);
+
+    $Info_Aluno -> execute();
+  }
 }
 
 function ListaUsuarioPorLogin($Login_Usuario)
