@@ -7,6 +7,23 @@ body {
 	background-position: center;
 }
 
+.Info_Label {
+	font-family: arial;
+	font-weight: bold;
+	border: 1px double black;
+	padding: 5px;
+	background-color: lightgrey;
+}
+
+.Info {
+	padding-left: 10px;
+}
+
+#Nome_Aluno {
+	font-weight: bold;
+	padding-left: 10px;
+}
+
 .Cabecalho {
 		border: 2px solid black;
 		background-color: #9efff9;

@@ -51,9 +51,20 @@ function ListaUsuarioPorLogin($Login_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('SELECT *
-                         FROM usuario
-                         WHERE login = :login');
+  $SQL = $BD -> prepare('SELECT
+                          usuario.id_usuario AS id_usuario,
+                          usuario.login AS Login,
+                          usuario.nome AS Nome,
+                          usuario.senha AS Senha,
+                          usuario.email AS Email,
+                          usuario.data_nasc AS Data_Nasc,
+                          usuario.tel AS Tel,
+                          usuario.id_classe_usuario AS id_classe,
+                          aluno.matricula AS Matricula
+                         FROM aluno
+                         LEFT JOIN usuario
+                         ON aluno.id_usuario = usuario.id_usuario
+                         WHERE login = :login;');
 
   $SQL -> bindValue(':login', $Login_Usuario);
 
@@ -66,19 +77,16 @@ function ListaClasseUsuario($Login_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $Usuario = $BD -> query('SELECT
-                            usuario.id_classe_usuario AS "id_classe",
-                            classe.classe AS "classe"
-                           FROM $usuario
-                           WHERE login = :login
-                           LEFT JOIN classe
-                           ON usuario.id_classe_usuario = classe.id_classe;');
+  $Usuario = $BD -> prepare('SELECT
+                              id_classe_usuario
+                             FROM usuario
+                             WHERE login = :login');
 
-  $Usuario -> bindValue(':login', $Login_Usuario);
+  $Usuario -> bindValue(":login", $Login_Usuario);
 
   $Usuario -> execute();
 
-  return $Info_Usuario = $Usuario -> fetch();
+  return $Usuario -> fetch();
 }
 
 function ListaInfoAluno($Login)

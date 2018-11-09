@@ -30,7 +30,7 @@ else if ($Senha == false)
   {
     $Erro = "Nenhum usuário encontrado para este Login.";
   }
-  else if (! password_verify($Senha, $Login_Correto['senha']))
+  else if (! password_verify($Senha, $Login_Correto['Senha']))
   {
     $Erro = "Senha inválida.";
   }
@@ -51,19 +51,13 @@ if (empty($Erro))
 
   if ($Classe_Usuario['id_classe'] = 1)
   {
-    header("Location: ../Aluno.html");
+    header("Location: ../Aluno.php");
   } else if ($Classe_Usuario['id_classe'] = 2)
   {
-    header("Location: ../Professor.html");
+    header("Location: ../Professor.php");
   } else if ($Classe_Usuario['id_classe'] = 3)
   {
-    header("Location: ../Direção.html");
-  } else if ($Classe_Usuario['id_classe'] = 4)
-  {
     header("Location: ../Secretaria.php");
-  } else if ($Classe_Usuario['id_classe'] = 5)
-  {
-    header("Location: ../Sesop.html");
   }
 }
 else

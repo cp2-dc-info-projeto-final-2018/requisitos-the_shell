@@ -32,17 +32,17 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			Nome: <?= $Info_Usuario["Nome"] ?><br/>
+			<label class="Info_Label">Nome</label><label id="Nome_Aluno"><?= $Info_Usuario["Nome"] ?></label><br/>
 		</div>
 
 		<div id="Tela_de_Informaçoes">
-				Data de nascimento: <?= $Info_Usuario["Data de Nascimento"] ?>
+				<label class="Info_Label">Data de nascimento</label> <label class="Info"><?= $Info_Usuario["Data_Nasc"] ?></label>
         <br/>
         <br/>
-				E-mail: <?= $Info_Usuario["Email"] ?>
+				<label class="Info_Label">E-mail</label> <label class="Info"><?= $Info_Usuario["Email"] ?></label>
         <br/>
         <br/>
-				Matrícula: <?= $Info_Usuario["Matrícula"] ?>
+				<label class="Info_Label">Matrícula</label> <label class="Info"><?= $Info_Usuario["Matricula"] ?></label>
         <br/>
         <br/>
 		</div>

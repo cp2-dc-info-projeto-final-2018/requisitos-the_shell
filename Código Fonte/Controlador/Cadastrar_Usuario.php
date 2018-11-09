@@ -82,7 +82,7 @@ if (empty($Erros) == true)
   if ($Request['Classe'] == 1)
   {
     CadastraUsuario($Request);
-    header("Location: ../Aluno.php");
+    header("Location: ../Turma.php");
   }
   else if ($Request['Classe'] == 2)
   {
