@@ -4,9 +4,9 @@
 
 require_once("Controlador/TabelaTurmas.php");
 
-$Alunos = ListaAlunosDaTurma($_SESSION["Turma_Escolhida"]);
-
 session_start();
+
+$Alunos = ListaAlunosDaTurma($_SESSION["Turma_Escolhida"]);
 
 ?>
 

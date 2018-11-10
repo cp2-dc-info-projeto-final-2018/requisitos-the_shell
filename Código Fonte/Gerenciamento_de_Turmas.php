@@ -41,7 +41,7 @@ session_start();
           <th class="Celulas">
             <?php
 
-            if (! empty($Turmas[$i]["1"])) {
+            if ($Turmas[$i]["integrado"] == 1) {
               echo "Sim";
             }
             else {

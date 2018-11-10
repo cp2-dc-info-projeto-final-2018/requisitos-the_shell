@@ -55,7 +55,7 @@ function ListaAlunosDaTurma($ID_Turma)
                           usuario.tel
                          FROM aluno
                          LEFT JOIN aluno.id_usuario = usuario.id_usuario
-                         AND aluno.id_turma = turma.id_turma
+                         LEFT JOIN aluno.id_turma = turma.id_turma
                          WHERE aluno.id_turma = :ID_Turma;');
 
   $SQL -> bindValue(":ID_Turma", $ID_Turma);

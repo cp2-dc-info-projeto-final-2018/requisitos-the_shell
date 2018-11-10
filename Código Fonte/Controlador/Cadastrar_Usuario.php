@@ -82,7 +82,10 @@ if (empty($Erros) == true)
   if ($Request['Classe'] == 1)
   {
     CadastraUsuario($Request);
-    header("Location: ../Turma.php");
+
+    $_SESSION["Turma_Escolhida"] = $Request['Turma'];
+
+    header("Location: ../Gerenciamento_de_Turmas.php");
   }
   else if ($Request['Classe'] == 2)
   {
