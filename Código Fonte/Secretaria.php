@@ -27,11 +27,19 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
-			<form>
+			<form method="get" action="GerenciamentoDeNotas.html">
 				<input class="Botoes" onclick="Botao_Notas" type="button" id="btn_Notas" value="Notas"/>
+      </form>
+      <form method="get" action="">
 				<input class="Botoes" onclick="Botao_Dicisplina" type="button" id="btn_Disciplina" value="Disciplina"/>
+      </form>
+      <form method="get" action="Gerenciamento_de_Turmas.php">
 				<input class="Botoes" onclick="Botao_Turmas" type="button" id="btn_Turmas" value="Turmas"/>
+      </form>
+      <form method="get" action="GerenciamentoAlunos.html">
 				<input class="Botoes" onclick="Botao_Alunos" type="button" id="" value="Alunos"/>
+      </form>
+      <form method="get" action="GerenciamentoDeNotas.html">
 				<input class="Botoes" onclick="Botao_Professores" type="button" id="" value="Professores"/>
 			</form>
 		</div>
