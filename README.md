@@ -48,12 +48,14 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  # Requisitos funcionais e não funcionais
   
   **Requisitos funcionais:**
-    - Sistema de Acesso
+   
+   - Sistema de Acesso
     - Obrigaçoes de cada diferente tipo de acesso
     - Mapa de notas
     - Status do aluno
   **Requisitos não funcionais:**
-    - Tipos de acessos(Aluno, Secretaria e Professor)
+   
+   - Tipos de acessos(Aluno, Secretaria e Professor)
     - Segurança tipo HTTPS
     - Sistema de "esqueci minha senha"
  
