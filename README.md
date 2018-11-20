@@ -28,6 +28,18 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    **diagrama de classes:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Diagrama_classes.png
   
   **Banco de dados:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Requisitos/tabelas.sql
+  
+  Todas as tabeas:
+   - Usuario
+   - Turma
+   - Professor
+   - Aluno
+   - Secretaria
+   - Professor_Turma 
+   - Disciplina 
+   - Turma_Disciplina 
+   - Classe 
+   - Boletim 
  
  
  # Manual
