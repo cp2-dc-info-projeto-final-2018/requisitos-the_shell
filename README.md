@@ -13,6 +13,19 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 
 # Propostas
   **descrição:** Sistema voltado para o gerenciamneto de notas em geral, focado na facilidade de permitir o acesso a notas por alunos, professores e outras entidades.
-  **stakeholders:** secretaria
+ 
+ **stakeholders:** secretaria
+ 
+ **links**
+ 
+ # CDU
+ 
+ 
+ 
+ # Modelagem
+ 
+ 
+ 
+ # Manual
   
 
