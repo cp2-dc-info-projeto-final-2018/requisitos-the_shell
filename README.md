@@ -62,9 +62,9 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    - Status do aluno
    
     # Sumário RNF
-- [1* RNF - Tipos de acessos](#1*-RNF---Tipos de acessos)
-- [2* RNF - Segurança tipo HTTPS](#2*-RNF---Segurança tipo HTTPS)
-- [3* RNF - Sistema de "esqueci minha senha"](#3*-RNF---Sistema de "esqueci minha senha")
+- [1* RNF - Tipos de acessos](#1*-RNF---TiposDeAcessos)
+- [2* RNF - Segurança tipo HTTPS](#2*-RNF---Segurança)
+- [3* RNF - Sistema de "esqueci minha senha"](#3*-RNF---PercaSenha)
 
   
   **Requisitos não funcionais:**
