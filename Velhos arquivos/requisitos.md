@@ -11,7 +11,7 @@ Caso ainda não se tenha cadastro, pode ser efetuado em poucas etapas dispondo a
 No caso de perda de acesso à conta pode-se recorrer a um sistema de recuperação de conta que dispõe de uma tela onde o usuário dirá sua matrícula e responderá as perguntas de segurança do mesmo modo q respondeu no cadastro, podendo após isso escolher uma nova senha.
 
 ### RF 02
-**Obrigaçoes de cada diferente tipo de acesso**
+**Privilégio de acessos**
 
 Professores tem acesso à ferramenta de edição de notas e lançamento da mesma no mapa de notas, por um prazo limitado.
 Secretaria tem acesso a mesma ferramenta 
