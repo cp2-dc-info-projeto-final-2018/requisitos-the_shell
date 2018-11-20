@@ -43,7 +43,15 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  
  
  # Manual
- 
+   **Sistema de cadastro e Login:**
+   
+   **Sistema de recupera senha:**
+   
+   **sistema de visualização de notas:**
+   
+   **Sistema de gerenciamento de notas:**
+   
+   
  
  # Requisitos funcionais e não funcionais
  
