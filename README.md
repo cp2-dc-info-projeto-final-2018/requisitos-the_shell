@@ -7,7 +7,7 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 
 # Sumário
 - [1* sessão - Proposta](#1*-sessão---Proposta)
-- [2* sessão - Casos de uso](#2*-sessão---Casos de uso)
+- [2* sessão - CDU](#2*-sessão---CDU)
 - [3* sessão - Modelagem](#3*-sessão---Modelagem)
 - [4* sessão - Manual](#4*-sessão---Manual)
 
