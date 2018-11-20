@@ -6,7 +6,7 @@
 Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar Nery, Carlos Eduardo França, Danilo Alexandre
 
 # Sumário
--Proposta
--Casos de uso
--Modelagem
--Manual
+- Proposta
+- Casos de uso
+- Modelagem
+- Manual
