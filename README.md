@@ -14,16 +14,20 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 # Propostas
   **descrição:** Sistema voltado para o gerenciamneto de notas em geral, focado na facilidade de permitir o acesso a notas por alunos, professores e outras entidades.
  
- **stakeholders:** secretaria
+ **stakeholders:** Secretaria e Direção
  
  **links**
  
  # CDU
- 
+   **diagramas de cdu:**
+   
+   **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/casosDeUso.md
  
  
  # Modelagem
- 
+   **diagrama de classes:**
+   
+   **Banco de dados:**
  
  
  # Manual
