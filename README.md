@@ -6,7 +6,8 @@
 Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar Nery, Carlos Eduardo França, Danilo Alexandre
 
 # Sumário
-- [1* sessão - Proposta] (#1*-sessão---Proposta)
-- [2* sessão - Casos de uso]
-- [3* sessão - Modelagem]
-- [4* sessão - Manual]
+- [1* sessão - Proposta](#1*-sessão---Proposta)
+- [2* sessão - Casos de uso](#2*-sessão---Casos de uso)
+- [3* sessão - Modelagem](#1*-sessão---Modelagem)
+- [4* sessão - Manual](#1*-sessão---Manual)
+
