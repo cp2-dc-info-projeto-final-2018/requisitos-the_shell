@@ -3,7 +3,7 @@
 ## Requisitos funcionais
 
 ### RF O1
-*Sistema de Acesso*
+**Sistema de Acesso**
 
 Página de login solicitando um número de cadastro e uma senha, para a diferenciação do conteúdo exibido pós login. 
 Ex.: Um funcionário da secretaria após seu login tem ações diferentes das de um aluno.
@@ -11,25 +11,26 @@ Caso ainda não se tenha cadastro, pode ser efetuado em poucas etapas dispondo a
 No caso de perda de acesso à conta pode-se recorrer a um sistema de recuperação de conta que dispõe de uma tela onde o usuário dirá sua matrícula e responderá as perguntas de segurança do mesmo modo q respondeu no cadastro, podendo após isso escolher uma nova senha.
 
 ### RF 02
-*Obrigaçoes de cada diferente tipo de acesso*
+**Obrigaçoes de cada diferente tipo de acesso**
 
 Professores tem acesso à ferramenta de edição de notas e lançamento da mesma no mapa de notas, por um prazo limitado.
 Secretaria tem acesso a mesma ferramenta 
 
 ### RF 03
-*Mapa de notas*
+**Mapa de notas**
 
 Exibe todas as notas do aluno logado e dá a opção do mesmo reclamar de alguma nota errada ou ausência de nota.
 
 ### RF 04
-*Desempenho*
+**Desempenho**
+
 Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em consideração dos outros trimestres. 
 
 ## Requisitos não-funcionais
 
 ### RNF 01
 
-*O software possui 5 tipos de acesso, sendo:*
+**O software possui 3 tipos de acesso, sendo:**
  
 * Tipo 1: Aluno - O Aluno pode visualizar suas notas, horários e arquivos além de notificar erros.
  
@@ -38,10 +39,11 @@ Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em c
 * Tipo 3: Secretaria - A Secretaria pode visualizar e editar todas as notas e arquivos na direção.
 
 ### RNF 02
-*Segurança tipo HTTPS*
+**Segurança tipo HTTPS**
 Segurança tipo criptografia em todo o sofware
 
 ### RNF 03
+**Sistema de "esqueci minha senha"**
 Haverão uma série de perguntas de segurança para caso o usuário precise recuperar sua conta 
  
 
