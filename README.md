@@ -19,7 +19,7 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  **links:**  https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell
  
  # CDU
-   **diagramas de cdu:** 
+   **diagramas de cdu:** file:///C:/Users/Dra.%20Marcia%20Val%C3%A9ria/Pictures/diagrama.png.png
    
    **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/casosDeUso.md
  
