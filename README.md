@@ -29,7 +29,7 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
   
   **Banco de dados:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Requisitos/tabelas.sql
   
-  Todas as tabeas:
+  Todas as tabelas:
    - Usuario
    - Turma
    - Professor
@@ -44,5 +44,14 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  
  # Manual
  
+ 
+ # Diagramas e suas Entidades
+ 
+ **entidades**
+  - Aluno
+  - Professor 
+  - Secretaria
+  - Turma
+  - Usuario
   
 
