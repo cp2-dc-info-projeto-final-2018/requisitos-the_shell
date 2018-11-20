@@ -49,11 +49,8 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  
  # Sumário RF
 - [1* RF - Sistema de Acesso](#1*-RF---Proposta)
-
 - [2* RF - Privilégio de acessos](#2*-RF---Privilégio de acessos)
-
 - [3* RF - Mapa de notas](#3*-RF---Mapa de notas)
-
 - [4* RF - Status do aluno](#4*-RF---Status do aluno)
   
   **Requisitos funcionais:**
@@ -63,6 +60,12 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    - Privilégio de acessos
    - Mapa de notas
    - Status do aluno
+   
+    # Sumário RNF
+- [1* RNF - Tipos de acessos](#1*-RNF---Tipos de acessos)
+- [2* RNF - Segurança tipo HTTPS](#2*-RNF---Segurança tipo HTTPS)
+- [3* RNF - Sistema de "esqueci minha senha"](#3*-RNF---Sistema de "esqueci minha senha")
+
   
   **Requisitos não funcionais:**
    
