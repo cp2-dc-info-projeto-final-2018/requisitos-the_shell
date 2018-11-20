@@ -49,21 +49,17 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
   
   **Requisitos funcionais:**
    
-   - Sistema de Acesso
    
-    - Obrigaçoes de cada diferente tipo de acesso
-    
-    - Mapa de notas
-    
-    - Status do aluno
+   - Sistema de Acesso
+   - Obrigaçoes de cada diferente tipo de acesso
+   - Mapa de notas
+   - Status do aluno
   
   **Requisitos não funcionais:**
    
    - Tipos de acessos(Aluno, Secretaria e Professor)
-   
-    - Segurança tipo HTTPS
-    
-    - Sistema de "esqueci minha senha"
+   - Segurança tipo HTTPS
+   - Sistema de "esqueci minha senha"
  
  **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Velhos%20arquivos/requisitos.md
  
