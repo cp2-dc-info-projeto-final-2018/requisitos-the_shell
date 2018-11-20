@@ -51,7 +51,11 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    
    **Sistema de gerenciamento de notas:**
    
+   **Sistema de gerenciamento de turma, aluno e professores:**
    
+   **Sistema de gerenciamento de disciplinas:**
+   
+   **sistema de cadastro:**
  
  # Requisitos funcionais e não funcionais
  
