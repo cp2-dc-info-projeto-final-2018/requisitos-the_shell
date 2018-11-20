@@ -47,7 +47,7 @@ body {
     margin-top: 50px;
 }
 
-#Disciplinas {
+#Boletim {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
@@ -59,19 +59,49 @@ body {
   font-family: arial;
 }
 
+#Botao_Alterar_Notas {
+  padding: 20px;
+  background-color: #49ff65;
+  border: 3px double black;
+  border-radius: 5px;
+  margin: auto;
+  width: 20%;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 25px;
+}
+
+#Botao_Alterar_Notas:link {
+  color: black;
+}
+
+#Botao_Alterar_Notas:visited {
+  color: black;
+}
+
+#Botao_Alterar_Notas:hover {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
+}
+
+
+#Botao_Alterar_Notas:active {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
+}
+
 .Nome_Coluna {
   border: 2px solid black;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .Celulas {
   border: 1px solid black;
   padding: 8px;
   width: 200px;
-}
-
-#Campo_Turmas {
-  margin: 50px;
-  text-align: center;
 }

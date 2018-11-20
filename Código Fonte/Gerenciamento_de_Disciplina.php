@@ -6,7 +6,9 @@
 
 require_once("Controlador/TabelaDisciplina.php");
 
-$Disciplinas[] = ListaDisciplinas();
+$Disciplinas = ListaDisciplinas();
+
+$Usuario_Logado = $_SESSION["Usuário"];
 
 session_start();
 
@@ -25,13 +27,10 @@ session_start();
   </div>
 
   <fieldset id="Campo_Turmas">
-    <table id="Turmas">
-      <tr>
-        <th class="Nome_Coluna">Disciplina</th>
-      </tr>
+    <table id="Disciplinas">
       <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
         <tr class="Linhas">
-          <th>
+          <th class="Celulas">
             <?= $Disciplinas[$i]["disciplina"] ?>
           </th>
         </tr>

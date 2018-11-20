@@ -102,5 +102,9 @@ CREATE TABLE Boletim (
 	3a_cert DECIMAL,
 	pfv DECIMAL,
 	media DECIMAL,
-	PRIMARY KEY (id_boletim)
-)
+	id_aluno INT,
+	id_disciplina INT,
+	PRIMARY KEY(id_boletim),
+	FOREIGN KEY(id_aluno) REFERENCES aluno(id_aluno),
+	FOREIGN KEY(id_disciplina) REFERENCES disciplina(id_disciplina)
+);
