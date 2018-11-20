@@ -40,10 +40,12 @@ Verificação do status do aluno, se foi aprovado ou reprovado e o feedback em c
 
 ### RNF 02
 **Segurança tipo HTTPS**
+
 Segurança tipo criptografia em todo o sofware
 
 ### RNF 03
 **Sistema de "esqueci minha senha"**
+
 Haverão uma série de perguntas de segurança para caso o usuário precise recuperar sua conta 
  
 
