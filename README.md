@@ -19,13 +19,13 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  **links:**  https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell
  
  # CDU
-   **diagramas de cdu:** file:///C:/Users/Dra.%20Marcia%20Val%C3%A9ria/Pictures/diagrama.png.png
+   **diagramas de cdu:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/C%C3%B3digo%20Fonte/Imagens/diagrama.png.png
    
    **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/casosDeUso.md
  
  
  # Modelagem
-   **diagrama de classes:** file:///C:/Users/Dra.%20Marcia%20Val%C3%A9ria/Pictures/Diagrama_classes.png
+   **diagrama de classes:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/C%C3%B3digo%20Fonte/Imagens/Diagrama_classes.png
   
   **Banco de dados:**
  
