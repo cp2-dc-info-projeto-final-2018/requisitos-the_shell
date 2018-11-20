@@ -53,6 +53,9 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 - [3* RF - Mapa de notas](#3*-RF---Mapa)
 - [4* RF - Status do aluno](#4*-RF---Status)
   
+  
+  
+  
   **Requisitos funcionais:**
    
    
@@ -67,7 +70,10 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 - [3* RNF - Sistema de "esqueci minha senha"](#3*-RNF---PercaSenha)
 
   
-  **Requisitos não funcionais:**
+ 
+ 
+ 
+ **Requisitos não funcionais:**
    
    - Tipos de acessos(Aluno, Secretaria e Professor)
    - Segurança tipo HTTPS
