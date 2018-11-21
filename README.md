@@ -44,19 +44,23 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
  
  # Manual
    **Sistema de cadastro e Login:**
+   ... Cadastro será realizado pela secretaria, que será responsavel de registrar devidos individuos, turmas, avaliações e disciplina no sistema, passando as informações e carateristicas das mesmas. 
+    ...Já o login irá ser realizado por cada individuo, de acordo com o que ele assinale o que é pedido na página.
    
    **Sistema de recupera senha:**
-   
+   ...Na pagina de Login haverá um botão escrito "esqueci minha senha", que irá fazer uma serie de perguntas de segurança para o caso de um usuario precisar recuperar sua devida senha.
    **sistema de visualização de notas:**
+   ...Cada entidade  terá acesso a visualização de notas, em cada perfil estará um botão que da acesso as médias.
    
    **Sistema de gerenciamento de notas:**
+   ...Algumas entidades terão privilégios unicos, como o de lançar e alterar notas.
    
    **Sistema de gerenciamento de turma, aluno e professores:**
+   ...A secretaria irá ser responsavel por gerenciar cada informação de cada entidade.
    
    **Sistema de gerenciamento de disciplinas:**
+   ...Caso determinada disciplina precisar ter certas alterações
    
-   **sistema de cadastro:**
- 
  # Requisitos funcionais e não funcionais
  
  # Sumário RF
