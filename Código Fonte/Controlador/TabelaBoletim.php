@@ -37,4 +37,25 @@ function ListaBoletimDoAluno($Aluno, $id_Disciplina)
 
   return $SQL -> fetch();
 }
+
+function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
+{
+  $BD = CriaConexaoBD();
+
+  $Disciplina = ListaDisciplinaPorID($id_Disciplina);
+
+  $Media = ($Notas["1cert/" . $Disciplina["disciplina"]] * 2 + $Notas["2cert/" . $Disciplina["disciplina"]] * 2 + $Notas["3cert/" . $Disciplina["disciplina"]] * 3) / 10;
+
+  $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina, prim_cert, segu_cert, terc_cert, media) VALUES
+                         (:id_Aluno, :id_Disciplina, :1cert, :2cert, :3cert, :media);');
+
+  $SQL -> bindValue(":id_Aluno", $id_Aluno);
+  $SQL -> bindValue(":id_Disciplina", $id_Disciplina);
+  $SQL -> bindValue(":1cert", $Notas["1cert/" . $Disciplina["disciplina"]]);
+  $SQL -> bindValue(":2cert", $Notas["2cert/" . $Disciplina["disciplina"]]);
+  $SQL -> bindValue(":3cert", $Notas["3cert/" . $Disciplina["disciplina"]]);
+  $SQL -> bindValue(":media", $Media);
+
+  $SQL -> execute();
+}
 ?>

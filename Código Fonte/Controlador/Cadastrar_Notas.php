@@ -3,15 +3,35 @@
 require_once('Conexão_BD.php');
 require_once('TabelaDisciplina.php');
 require_once('TabelaAlunos.php');
+require_once('TabelaBoletim.php');
+require_once('TabelaUsuários.php');
+
+session_start();
+
+$Disciplinas = ListaDisciplinas();
+
+$Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
 $Request = array_map("trim", $_REQUEST);
 
-$Request = filter_var_array(
-  $Request,
-  [
+for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
+{
+  $id_Disciplina = $Disciplinas[$i]["id_disciplina"];
 
-  ]
-);
+  $Request = filter_var_array(
+    $Request,
+    [
+      '1cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
+      '2cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
+      '3cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT
+    ]
+  );
+
+  CadastraBoletim($Usuario_Logado["id_usuario"], $id_Disciplina, $Request);
+}
+
+header("Location: ../Gerenciamento_de_Notas.php");
+
 
 
 ?>

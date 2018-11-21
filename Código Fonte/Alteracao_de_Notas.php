@@ -28,7 +28,7 @@ $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 
-  <form method="POST" action="Controlador/Alterar_Notas.php">
+  <form method="POST" action="Controlador/Cadastrar_Notas.php">
   	<table id="Boletim">
   		<tr>
   			<th class="Nome_Coluna">Disciplina</th>
@@ -44,48 +44,24 @@ $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
   		?>
   			<tr class="Linhas">
   				<th class="Celulas"><?= $Disciplinas[$i]["disciplina"] ?></th>
+  				<th class="Celulas"><input type="number" name="1cert/<?=$Disciplinas[$i]["disciplina"]?>"></input></th>
+  				<th class="Celulas"><input type="number" name="2cert/<?=$Disciplinas[$i]["disciplina"]?>"></input></th>
+  				<th class="Celulas"><input type="number" name="3cert/<?=$Disciplinas[$i]["disciplina"]?>"></input></th>
   				<th class="Celulas">
             <?php
-            if (empty($Boletim["1cert"])) { ?>
-              <input type="number" name="1cert"></input></th>
-            <?php
-            }
-            else {
-              echo $Boletim["1cert"];
-            }
-            ?>
-  				<th class="Celulas">
-            <?php
-            if (empty($Boletim["2cert"])) { ?>
-              <input type="number" name="2cert"></input></th>
-            <?php
-            }
-            else {
-              echo $Boletim["1cert"];
-            } ?>
-  				<th class="Celulas">
-            <?php
-            if (empty($Boletim["3cert"])) { ?>
-              <input type="number" name="3cert"></input></th>
-            <?php
-            }
-            else {
-              echo $Boletim["1cert"];
-            } ?>
-  				<th class="Celulas">
-            <?php
-            $Boletim["media"] = ($Boletim["1cert"] * 3 + $Boletim["2cert"] * 3 + $Boletim["3cert"] * 4)/10;
+            $Boletim["media"] = ($Boletim["1cert"] * 3 + $Boletim["2cert"] * 3 + $Boletim["3cert"] * 4) / 10;
 
             if ((! empty($Boletim["1cert"])) && (! empty($Boletim["2cert"])) && (! empty($Boletim["3cert"])))
             {
               echo $Boletim["media"];
             }
             ?>
+          </th>
   			</tr>
   		<?php } ?>
   	</table>
     <br>
-    <input type="submit" value="Alterar notas" id="Botao_Alterar_Notas"></input>
+    <input type="submit" name="Botao_Alterar_Notas" value="Alterar notas" id="Botao_Alterar_Notas"></input>
   </form>
 
 	<div id="Rodape">

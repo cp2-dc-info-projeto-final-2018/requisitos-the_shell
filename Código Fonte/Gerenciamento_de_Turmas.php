@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 
+<script>
+
+function VerTurma(<?php $Turma ?>)
+{
+  <?php
+
+  global $Turma_Escolhida;
+
+  $Turma_Escolhida = $Turma;
+
+  global $_SESSION["Turma_Escolhida"] = $Turma_Escolhida;
+
+  ?>
+}
+
+</script>
+
 <html>
 
 <?php
@@ -55,19 +72,6 @@ session_start();
       <?php } ?>
     </table>
   </fieldset>
-
-  <?php
-
-  function VerTurma($Turma)
-  {
-    global $Turma_Escolhida;
-
-    $Turma = $Turma_Escolhida;
-
-    $_SESSION["Turma_Escolhida"] = $Turma_Escolhida;
-  }
-
-  ?>
 
   <a id="Botao_Cadastrar_Turma" href="Cadastro_de_Turma.php">Cadastrar Turma</a>
 

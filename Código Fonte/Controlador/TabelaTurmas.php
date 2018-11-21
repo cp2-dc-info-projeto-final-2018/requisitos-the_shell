@@ -49,13 +49,13 @@ function ListaAlunosDaTurma($ID_Turma)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          aluno.matricula,
-                          usuario.nome,
-                          usuario.email,
-                          usuario.tel
+                          aluno.matricula AS matricula,
+                          usuario.nome AS nome,
+                          usuario.email AS email,
+                          usuario.tel AS tel
                          FROM aluno
-                         LEFT JOIN aluno.id_usuario = usuario.id_usuario
-                         LEFT JOIN aluno.id_turma = turma.id_turma
+                         JOIN usuario ON aluno.id_usuario = usuario.id_usuario
+                         JOIN turma ON turma.id_turma = aluno.id_turma
                          WHERE aluno.id_turma = :ID_Turma;');
 
   $SQL -> bindValue(":ID_Turma", $ID_Turma);

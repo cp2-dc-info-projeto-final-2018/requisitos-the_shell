@@ -6,7 +6,9 @@ require_once("Controlador/TabelaTurmas.php");
 
 session_start();
 
-$Alunos = ListaAlunosDaTurma($_SESSION["Turma_Escolhida"]);
+$ID_Turma = ListaIDTurmaPorNome($_SESSION["Turma_Escolhida"]);
+
+$Alunos = ListaAlunosDaTurma($ID_Turma["id_turma"]);
 
 ?>
 
@@ -14,7 +16,7 @@ $Alunos = ListaAlunosDaTurma($_SESSION["Turma_Escolhida"]);
 
 <head>
   <meta charset="utf-8">
-  <title><?= $Turma["nome"] ?></title>
+  <title><?= $_SESSION["Turma_Escolhida"] ?></title>
   <link rel="stylesheet" type="text/css" href="Turma.css">
 </head>
 
@@ -31,14 +33,20 @@ $Alunos = ListaAlunosDaTurma($_SESSION["Turma_Escolhida"]);
 
     <table>
       <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <?php
+        for ($i = 0; $i <= (count($Alunos) - 1); $i++) { ?>
+          <th><?= $Alunos[$i]["nome"]?></th>
+          <th><?= $Alunos[$i]["email"]?></th>
+          <th><?= $Alunos[$i]["tel"]?></th>
+          <th><?= $Alunos[$i]["matricula"]?></th>
+        <?php } ?>
       </tr>
     </table>
   </fieldset>
+
+  <br>
+
+  <a href="Gerenciamento_de_Notas.php">Gerenciamento_de_Notas</a>
 
 
   <div id="Rodape">

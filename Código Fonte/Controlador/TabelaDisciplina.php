@@ -26,6 +26,21 @@ function ListaDisciplinas()
   return $SQL -> fetchAll();
 }
 
+function ListaDisciplinaPorID($id_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT *
+                         FROM Disciplina
+                         WHERE id_disciplina = :id;');
+
+  $SQL -> bindValue(":id", $id_Disciplina);
+
+  $SQL -> execute();
+
+  return $SQL -> fetch();
+}
+
 
 
 ?>
