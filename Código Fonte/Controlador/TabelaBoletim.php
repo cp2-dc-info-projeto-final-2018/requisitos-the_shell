@@ -30,7 +30,7 @@ function ListaBoletimDoAluno($Aluno, $id_Disciplina)
                          WHERE usuario.login = :aluno
                          AND boletim.id_disciplina = :disciplina;');
 
-  $SQL -> bindValue(":aluno", $Aluno);
+  $SQL -> bindValue(":aluno", $Aluno['login']);
   $SQL -> bindValue(":disciplina", $id_Disciplina);
 
   $SQL -> execute();
@@ -58,4 +58,5 @@ function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
 
   $SQL -> execute();
 }
+
 ?>

@@ -32,6 +32,4 @@ for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
 
 header("Location: ../Gerenciamento_de_Notas.php");
 
-
-
 ?>

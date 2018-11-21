@@ -10,7 +10,7 @@ function VerTurma(<?php $Turma ?>)
 
   $Turma_Escolhida = $Turma;
 
-  global $_SESSION["Turma_Escolhida"] = $Turma_Escolhida;
+  $_SESSION["Turma_Escolhida"] = $Turma_Escolhida;
 
   ?>
 }

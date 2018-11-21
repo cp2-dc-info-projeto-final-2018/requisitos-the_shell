@@ -81,5 +81,4 @@ function ListaIDTurmaPorNome($Nome_Turma)
   return $SQL -> fetch();
 }
 
-
 ?>
