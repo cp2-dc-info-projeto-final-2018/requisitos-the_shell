@@ -47,7 +47,11 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    
    ... Cadastro será realizado pela secretaria, que será responsavel de registrar devidos individuos, turmas, avaliações e disciplina no sistema, passando as informações e carateristicas das mesmas. 
    
+   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4606.jpg
+   
    ...Já o login irá ser realizado por cada individuo, de acordo com o que ele assinale o que é pedido na página.
+   
+   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4610-1.jpg
    
    **Sistema de recupera senha:**
   
@@ -61,9 +65,14 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    
    ...Algumas entidades terão privilégios unicos, como o de lançar e alterar notas.
    
+   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4608.jpg
+   
    **Sistema de gerenciamento de turma, aluno e professores:**
    
    ...A secretaria irá ser responsavel por gerenciar cada informação de cada entidade.
+   
+   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4605.jpg
+    **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4609.jpg
    
    **Sistema de gerenciamento de disciplinas:**
   
