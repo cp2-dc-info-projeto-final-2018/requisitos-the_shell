@@ -72,7 +72,8 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    ...A secretaria irá ser responsavel por gerenciar cada informação de cada entidade.
    
    **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4605.jpg
-    **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4609.jpg
+    
+   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4609.jpg
    
    **Sistema de gerenciamento de disciplinas:**
   
