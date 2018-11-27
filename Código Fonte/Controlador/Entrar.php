@@ -2,8 +2,6 @@
 
 require_once('TabelaUsuários.php');
 
-session_start();
-
 $Erro = null;
 
 $Request = array_map('trim', $_REQUEST);
@@ -38,6 +36,8 @@ else if ($Senha == false)
 
 if (empty($Erro))
 {
+  session_start();
+
   $_SESSION['Usuário'] = $Login;
 
   $Classe_Usuario = ListaClasseUsuario($Login);

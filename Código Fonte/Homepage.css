@@ -1,0 +1,27 @@
+html {
+  font-family: arial;
+}
+
+.Barra_de_Navegacao {
+  background-color: green;
+  overflow: hidden;
+}
+
+.Barra_de_Navegacao a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.Barra_de_Navegacao #SHELL {
+  font-weight: bold;
+  background-color: black;
+}
+
+.Barra_de_Navegacao .Celula:hover {
+    background-color: #ddd;
+    color: black;
+}
