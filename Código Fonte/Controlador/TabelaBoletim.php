@@ -19,9 +19,9 @@ function ListaBoletimDoAluno($Aluno, $id_Disciplina)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          boletim.prim_cert AS 1cert,
-                          boletim.segu_cert AS 2cert,
-                          boletim.terc_cert AS 3cert,
+                          boletim.primeira_cert AS 1cert,
+                          boletim.segunda_cert AS 2cert,
+                          boletim.terceira_cert AS 3cert,
                           boletim.media AS media
                          FROM boletim
                          LEFT JOIN aluno ON boletim.id_aluno = aluno.id_aluno
@@ -46,7 +46,7 @@ function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
 
   $Media = ($Notas["1cert/" . $Disciplina["disciplina"]] * 2 + $Notas["2cert/" . $Disciplina["disciplina"]] * 2 + $Notas["3cert/" . $Disciplina["disciplina"]] * 3) / 10;
 
-  $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina, prim_cert, segu_cert, terc_cert, media) VALUES
+  $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina, primeira_cert, segunda_cert, terceira_cert, media) VALUES
                          (:id_Aluno, :id_Disciplina, :1cert, :2cert, :3cert, :media);');
 
   $SQL -> bindValue(":id_Aluno", $id_Aluno);

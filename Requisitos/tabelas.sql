@@ -1,3 +1,26 @@
+CREATE TABLE Classe (
+
+	id_classe INT NOT NULL AUTO_INCREMENT,
+  classe VARCHAR(100),
+  PRIMARY KEY(id_classe)
+);
+
+CREATE TABLE Disciplina (
+
+		id_disciplina INT NOT NULL AUTO_INCREMENT,
+		disciplina VARCHAR(50),
+		PRIMARY KEY (id_disciplina)
+);
+
+CREATE TABLE Turma (
+
+		id_turma INT NOT NULL AUTO_INCREMENT,
+		nome VARCHAR(100),
+		serie VARCHAR(50),
+		integrado BOOLEAN,
+		PRIMARY KEY (id_turma)
+);
+
 CREATE TABLE Usuario (
 
 		id_usuario INT NOT NULL AUTO_INCREMENT,
@@ -7,19 +30,11 @@ CREATE TABLE Usuario (
 		senha VARCHAR(20),
 		email VARCHAR(100),
 		tel VARCHAR(50),
+		data_nasc DATE,
+		id_turma INT,
 		PRIMARY KEY (id_usuario),
-		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe)
-);
-
-
-CREATE TABLE Turma (
-
-		id_turma INT NOT NULL AUTO_INCREMENT,
-		nome VARCHAR(100),
-		serie VARCHAR(50),
-		integrado BOOLEAN,
-		PRIMARY KEY (id_turma),
-		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
+		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma)
 );
 
 
@@ -34,6 +49,18 @@ CREATE TABLE Professor (
 		FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina),
 		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
 		FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+);
+
+CREATE TABLE Boletim (
+	id_boletim INT NOT NULL AUTO_INCREMENT,
+	primeira_cert DECIMAL,
+	segunda_cert DECIMAL,
+	terceira_cert DECIMAL,
+	pfv DECIMAL,
+	media DECIMAL,
+	id_disciplina INT,
+	PRIMARY KEY(id_boletim),
+	FOREIGN KEY(id_disciplina) REFERENCES disciplina(id_disciplina)
 );
 
 CREATE TABLE Aluno (
@@ -72,13 +99,6 @@ CREATE TABLE Professor_Turma (
 		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma)
 );
 
-CREATE TABLE Disciplina (
-
-		id_disciplina INT NOT NULL AUTO_INCREMENT,
-		disciplina VARCHAR(50),
-		PRIMARY KEY (id_disciplina)
-);
-
 CREATE TABLE Turma_Disciplina (
 
 		id_turma INT NOT NULL,
@@ -86,25 +106,4 @@ CREATE TABLE Turma_Disciplina (
 		PRIMARY KEY (id_turma, id_disciplina),
 		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
 		FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
-);
-
-CREATE TABLE Classe (
-
-	id_classe INT NOT NULL AUTO_INCREMENT,
-  classe VARCHAR(100),
-  PRIMARY KEY(id_classe),
-);
-
-CREATE TABLE Boletim (
-	id_boletim INT NOT NULL AUTO_INCREMENT,
-	1a_cert DECIMAL,
-	2a_cert DECIMAL,
-	3a_cert DECIMAL,
-	pfv DECIMAL,
-	media DECIMAL,
-	id_aluno INT,
-	id_disciplina INT,
-	PRIMARY KEY(id_boletim),
-	FOREIGN KEY(id_aluno) REFERENCES aluno(id_aluno),
-	FOREIGN KEY(id_disciplina) REFERENCES disciplina(id_disciplina)
 );
