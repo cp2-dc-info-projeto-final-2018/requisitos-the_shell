@@ -23,8 +23,8 @@ function ListaBoletimDoAluno($Aluno, $id_Disciplina)
                           boletim.segunda_cert AS 2cert,
                           boletim.terceira_cert AS 3cert,
                           boletim.media AS media
-                         FROM boletim
-                         LEFT JOIN aluno ON boletim.id_aluno = aluno.id_aluno
+                         FROM aluno
+                         LEFT JOIN aluno ON aluno.id_boletim = boletim.id_boletim
                          RIGHT JOIN usuario ON usuario.id_usuario = aluno.id_usuario
                          LEFT JOIN disciplina ON boletim.id_disciplina = disciplina.id_disciplina
                          WHERE usuario.login = :aluno

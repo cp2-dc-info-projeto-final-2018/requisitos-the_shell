@@ -6,9 +6,11 @@ require_once("Controlador/TabelaTurmas.php");
 
 session_start();
 
-$ID_Turma = ListaIDTurmaPorNome($_SESSION["Turma_Escolhida"]);
+$ID_Turma = $_GET['id_turma'];
 
-$Alunos = ListaAlunosDaTurma($ID_Turma["id_turma"]);
+$Turma = ListaTurmaPorID($ID_Turma);
+
+$Alunos = ListaAlunosDaTurma($ID_Turma);
 
 ?>
 
@@ -16,7 +18,7 @@ $Alunos = ListaAlunosDaTurma($ID_Turma["id_turma"]);
 
 <head>
   <meta charset="utf-8">
-  <title><?= $_SESSION["Turma_Escolhida"] ?></title>
+  <title><?= $Turma['nome'] ?></title>
   <link rel="stylesheet" type="text/css" href="Turma.css">
 </head>
 
@@ -29,18 +31,18 @@ $Alunos = ListaAlunosDaTurma($ID_Turma["id_turma"]);
 
 
   <fieldset>
-    <legend>Turma <?= $_SESSION["Turma_Escolhida"] ?></legend>
+    <legend>Turma <?= $Turma['Turma'] ?></legend>
 
     <table>
-      <tr>
         <?php
         for ($i = 0; $i <= (count($Alunos) - 1); $i++) { ?>
-          <th><?= $Alunos[$i]["nome"]?></th>
-          <th><?= $Alunos[$i]["email"]?></th>
-          <th><?= $Alunos[$i]["tel"]?></th>
-          <th><?= $Alunos[$i]["matricula"]?></th>
+          <tr>
+            <th><a href="Aluno.php?id_aluno=<?= $Alunos[$i]["ID_Aluno"] ?>"><?= $Alunos[$i]["Nome"]?></a></th>
+            <th><?= $Alunos[$i]["Email"]?></th>
+            <th><?= $Alunos[$i]["Tel"]?></th>
+            <th><?= $Alunos[$i]["Matricula"]?></th>
+          </tr>
         <?php } ?>
-      </tr>
     </table>
   </fieldset>
 

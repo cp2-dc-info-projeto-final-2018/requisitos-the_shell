@@ -1,22 +1,5 @@
 <!DOCTYPE html>
 
-<script>
-
-function VerTurma(<?php $Turma ?>)
-{
-  <?php
-
-  global $Turma_Escolhida;
-
-  $Turma_Escolhida = $Turma;
-
-  $_SESSION["Turma_Escolhida"] = $Turma_Escolhida;
-
-  ?>
-}
-
-</script>
-
 <html>
 
 <?php
@@ -52,9 +35,9 @@ session_start();
       </tr>
       <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
         <tr class="Linhas">
-          <th class="Celulas"><a name="Turma_Escolhida" href="Turma.php" onclick="VerTurma(<?= $Turmas[$i]["nome"] ?>)"><?= $Turmas[$i]["nome"] ?></a></th>
+          <th class="Celulas"><a name="Turma" href="Turma.php?id_turma=<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></a></th>
           <th class="Celulas"> <?= $Turmas[$i]["serie"] ?></th>
-          <th class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["nome"])) ?></th>
+          <th class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["id_turma"])) ?></th>
           <th class="Celulas">
             <?php
 
