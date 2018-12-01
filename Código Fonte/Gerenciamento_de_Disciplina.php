@@ -26,16 +26,32 @@ session_start();
     <h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
   </div>
 
-  <fieldset id="Campo_Turmas">
-    <table id="Disciplinas">
-      <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
-        <tr class="Linhas">
-          <th class="Celulas">
-            <?= $Disciplinas[$i]["disciplina"] ?>
-          </th>
-        </tr>
-      <?php } ?>
-    </table>
+
+  <fieldset id="Campo_Disciplina">
+    <div id="Div_Disciplinas">
+      <list id="Disciplinas">
+        <h4>Disciplinas</h4>
+        <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
+          <ul>
+            <li class="Celulas">
+              <?= $Disciplinas[$i]["disciplina"] ?>
+            </li>
+          </ul>
+        <?php } ?>
+      </list>
+    </div>
+
+    <div id="Div_Cadastro_Disciplina">
+      <h4>Adicionar Disciplina</h4>
+      <form class="Fonte" method="POST" action="Controlador/Cadastrar_Disciplina.php">
+        <br>
+        <label for="Nome_Disciplina">Nome</label>
+        <input id="Nome_Disciplina" name="Nome_Disciplina" type="text">
+        <br>
+        <br>
+        <input name="Cadastrar_Disciplina" type="submit" value="Cadastrar">
+      </form>
+    </div>
   </fieldset>
 
   <div id="Rodape">

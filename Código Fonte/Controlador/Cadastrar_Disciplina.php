@@ -20,6 +20,7 @@ if ($Request['Nome_Disciplina'] == null)
 if (empty($Erros))
 {
   CadastraDisciplina($Request['Nome_Disciplina']);
+  header("Location: ../Gerenciamento_de_Disciplina.php");
 }
 
 ?>
