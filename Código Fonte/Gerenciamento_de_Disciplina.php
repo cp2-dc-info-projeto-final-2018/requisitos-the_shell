@@ -6,11 +6,19 @@
 
 require_once("Controlador/TabelaDisciplina.php");
 
+session_start();
+
 $Disciplinas = ListaDisciplinas();
 
 $Usuario_Logado = $_SESSION["Usuário"];
 
-session_start();
+$Erros = null;
+
+if (isset($_SESSION['erros'])) {
+    $Erros = $_SESSION['erros'];
+}
+
+unset($_SESSION['erros']);
 
 ?>
 
@@ -25,6 +33,27 @@ session_start();
     <h1 id="Nome_do_Colegio">Colégio Pedro II</h1>
     <h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
   </div>
+
+  <?php if ($Erros != null) { ?>
+
+    <div id="Exibicao_de_Erro">
+      <p>
+        <?php
+          if ($Erros != null)
+          {
+            foreach ($Erros as $Erro)
+            {
+              echo $Erro;
+            }
+
+            unset($Erro);
+          }
+        ?>
+
+        <br>
+      </p>
+    </div>
+  <?php } ?>
 
 
   <fieldset id="Campo_Disciplina">

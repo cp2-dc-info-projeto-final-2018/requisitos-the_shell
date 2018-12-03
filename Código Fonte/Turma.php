@@ -48,8 +48,6 @@ $Alunos = ListaAlunosDaTurma($ID_Turma);
 
   <br>
 
-  <a href="Gerenciamento_de_Notas.php">Gerenciamento_de_Notas</a>
-
 
   <div id="Rodape">
 		<h2>Desenvolvedores</h2>
