@@ -37,7 +37,24 @@ if ($_REQUEST['Classe'] == 1) {
     ]
   );
 }
-else {
+else if ($_REQUEST['Classe'] == 2) {
+  $Request = filter_var_array(
+    $Request,
+    [
+      'Login' => FILTER_DEFAULT,
+      'Nome' => FILTER_DEFAULT,
+      'Data_Nasc' => FILTER_DEFAULT,
+      'Tel' => FILTER_DEFAULT,
+      'Email' => FILTER_VALIDATE_EMAIL,
+      'Senha' => FILTER_DEFAULT,
+      'Classe' => FILTER_DEFAULT,
+      'Confirmar_Senha' => FILTER_DEFAULT,
+      'Siape' => FILTER_DEFAULT
+      #Ainda falta a disciplina
+    ]
+  );
+}
+else if ($_REQUEST['Classe'] == 3) {
   $Request = filter_var_array(
     $Request,
     [
@@ -54,12 +71,13 @@ else {
   );
 }
 
+
 #ID das classes:
 #1 - Aluno
 #2 - Professor
 #3 - Secretário
 
-if (empty($Request['Classe']))
+if (empty($Request['Classe']) || $Request['Classe'] == "")
 {
   $Erros[] = "Classe não especificada";
 }
@@ -76,12 +94,15 @@ if ($Request['Senha'] != $Request['Confirmar_Senha'])
   header("Location: ../Cadastro.php");
 }
 
+$ID_Usuario = CadastraUsuario($Request);
+
 if (empty($Erros) == true)
 {
   session_start();
+
   if ($Request['Classe'] == 1)
   {
-    CadastraUsuario($Request);
+    CadastraAluno($ID_Usuario, $Request);
 
     $_SESSION["Turma_Escolhida"] = $Request['Turma'];
 
@@ -89,14 +110,20 @@ if (empty($Erros) == true)
   }
   else if ($Request['Classe'] == 2)
   {
+    CadastraProfessor($Request);
+
     header("Location: ../Login.php");
   }
   else if ($Request['Classe'] == 3)
   {
+    #Função CadastraSecretaria está faltando
     header("Location: ../Login.php");
   }
-} else {
+}
+else {
   session_start();
+
   $_SESSION['erros'] = $Erros;
+  
   header("Location: ../Cadastro_de_Usuario.php");
 }

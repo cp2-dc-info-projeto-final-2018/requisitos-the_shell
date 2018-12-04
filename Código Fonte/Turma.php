@@ -31,7 +31,7 @@ $Alunos = ListaAlunosDaTurma($ID_Turma);
 
 
   <fieldset>
-    <legend>Turma <?= $Turma['Turma'] ?></legend>
+    <legend>Turma <?= $Turma['nome'] ?></legend>
 
     <table>
         <?php

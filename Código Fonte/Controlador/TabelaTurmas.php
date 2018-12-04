@@ -42,6 +42,8 @@ function ListaTurmaPorID($ID_Turma)
 
   $SQL -> bindValue("id_turma", $ID_Turma);
 
+  $SQL -> execute();
+
   return $SQL -> fetch();
 }
 
