@@ -120,7 +120,7 @@ if (empty($Erros) == true)
   {
     CadastraSecretaria($ID_Usuario, $Request);
 
-    header("Location: ../Gerenciamento_de_Secretaria.php");
+    #header("Location: ../Gerenciamento_de_Secretaria.php");?
   }
 }
 else {
