@@ -3,9 +3,7 @@
 function CadastraAluno($ID_Usuario, $dadosNovoAluno)
 {
   $BD = CriaConexaoBD();
-
-  $id = CadastraUsuario($dadosNovoAluno);
-
+  
   $SQL = $BD -> prepare('INSERT INTO aluno(id_usuario, matricula, id_classe_usuario, id_turma) VALUES
                          (:id, :matricula, 1, :id_turma);');
 

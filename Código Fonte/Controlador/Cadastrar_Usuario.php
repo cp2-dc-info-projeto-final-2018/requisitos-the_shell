@@ -4,6 +4,7 @@ require_once('TabelaUsuários.php');
 require_once('Conexão_BD.php');
 require_once('TabelaAlunos.php');
 require_once('TabelaProfessores.php');
+require_once('TabelaSecretaria.php');
 
 function ValidaString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 {
@@ -113,12 +114,13 @@ if (empty($Erros) == true)
   {
     CadastraProfessor($ID_Usuario, $Request);
     
-    header("Location: ../Login.php");
+    header("Location: ../Gerenciamento_de_Professores.php");
   }
   else if ($Request['Classe'] == 3)
   {
-    #Função CadastraSecretaria está faltando
-    header("Location: ../Login.php");
+    CadastraSecretaria($ID_Usuario, $Request);
+
+    header("Location: ../Gerenciamento_de_Secretaria.php");
   }
 }
 else {

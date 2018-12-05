@@ -6,8 +6,6 @@ function CadastraProfessor($ID_Usuario, $dadosNovoProfessor)
 {
   $BD = CriaConexaoBD();
 
-  $ID = CadastraUsuario($dadosNovoProfessor);
-
   $SQL = $BD -> prepare('INSERT INTO professor(id_usuario, siape, id_classe_usuario,id_disciplina) VALUES
                          (:id, :siape, 2,:id_disciplina);');
 
