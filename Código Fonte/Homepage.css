@@ -3,7 +3,7 @@ html {
 }
 
 .Barra_de_Navegacao {
-  background-color: green;
+  background-color: Aquamarine;
   overflow: hidden;
 }
 
@@ -24,4 +24,18 @@ html {
 .Barra_de_Navegacao .Celula:hover {
     background-color: #ddd;
     color: black;
+}
+
+#Rodape {
+position: absolute;
+bottom: 0;
+
+}
+
+#Cabecalho {
+background-color: DeepSkyBlue;
+max-width: 35%;
+margin-left: auto;
+margin-right: auto;
+
 }
