@@ -8,11 +8,12 @@ function CadastraProfessor($ID_Usuario, $dadosNovoProfessor)
 
   $ID = CadastraUsuario($dadosNovoProfessor);
 
-  $SQL = $BD -> prepare('INSERT INTO professor(id_usuario, siape, id_classe) VALUES
-                         (:id, :matricula, 2);');
+  $SQL = $BD -> prepare('INSERT INTO professor(id_usuario, siape, id_classe_usuario,id_disciplina) VALUES
+                         (:id, :siape, 2,:id_disciplina);');
 
   $SQL -> bindValue(':id', $ID_Usuario);
   $SQL -> bindValue(':siape', $dadosNovoProfessor["Siape"]);
+  $SQL -> bindValue('id_disciplina', $dadosNovoProfessor["Disciplina"]);
 
   $SQL -> execute();
 }

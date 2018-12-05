@@ -3,6 +3,7 @@
 require_once('TabelaUsuários.php');
 require_once('Conexão_BD.php');
 require_once('TabelaAlunos.php');
+require_once('TabelaProfessores.php');
 
 function ValidaString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 {
@@ -49,8 +50,8 @@ else if ($_REQUEST['Classe'] == 2) {
       'Senha' => FILTER_DEFAULT,
       'Classe' => FILTER_DEFAULT,
       'Confirmar_Senha' => FILTER_DEFAULT,
-      'Siape' => FILTER_DEFAULT
-      #Ainda falta a disciplina
+      'Siape' => FILTER_DEFAULT,
+      'Disciplina'=> FILTER_DEFAULT
     ]
   );
 }
@@ -110,8 +111,8 @@ if (empty($Erros) == true)
   }
   else if ($Request['Classe'] == 2)
   {
-    CadastraProfessor($Request);
-
+    CadastraProfessor($ID_Usuario, $Request);
+    
     header("Location: ../Login.php");
   }
   else if ($Request['Classe'] == 3)

@@ -3,8 +3,9 @@
 <?php
 
 require_once("Controlador/TabelaTurmas.php");
-
+require_once("Controlador/TabelaDisciplina.php");
 session_start();
+
 $Erros = null;
 if (isset($_SESSION['erros'])) {
     $Erros = $_SESSION['erros'];
@@ -13,6 +14,7 @@ if (isset($_SESSION['erros'])) {
 unset($_SESSION['erros']);
 
 $Turmas = ListaTurmas();
+$Disciplinas = ListaDisciplinas();
 
 ?>
 

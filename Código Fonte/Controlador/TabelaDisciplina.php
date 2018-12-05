@@ -18,7 +18,7 @@ function ListaDisciplinas()
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> query('SELECT *
+  $SQL = $BD -> prepare('SELECT *
                        FROM disciplina;');
 
   $SQL -> execute();
@@ -35,6 +35,22 @@ function ListaDisciplinaPorID($id_Disciplina)
                          WHERE id_disciplina = :id;');
 
   $SQL -> bindValue(":id", $id_Disciplina);
+
+  $SQL -> execute();
+
+  return $SQL -> fetch();
+}
+
+function ListaDiciplinaPorNome($Nome_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT
+                          id_disciplina
+                         FROM disciplina
+                         WHERE nome = :turma;');
+
+  $SQL -> bindValue(":disciplina", $Nome_Disciplina);
 
   $SQL -> execute();
 
