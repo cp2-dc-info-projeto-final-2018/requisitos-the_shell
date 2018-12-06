@@ -49,13 +49,13 @@ if (empty($Erro))
   #4 - Secretário
   #5 - SESOP e NAPNE
 
-  if ($Classe_Usuario['id_classe'] = 1)
+  if ($Classe_Usuario['id_classe_usuario'] = 1)
   {
     header("Location: ../Aluno.php");
-  } else if ($Classe_Usuario['id_classe'] = 2)
+  } else if ($Classe_Usuario['id_classe_usuario'] = 2)
   {
     header("Location: ../Professor.php");
-  } else if ($Classe_Usuario['id_classe'] = 3)
+  } else if ($Classe_Usuario['id_classe_usuario'] = 3)
   {
     header("Location: ../Secretaria.php");
   }

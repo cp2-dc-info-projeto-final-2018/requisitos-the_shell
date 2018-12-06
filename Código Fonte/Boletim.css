@@ -59,6 +59,22 @@ body {
   font-family: arial;
 }
 
+.Celula_Disciplina:link {
+  background-color: yellow;
+}
+
+.Celula_Disciplina:visited {
+  background-color: cyan;
+}
+
+.Celula_Disciplina:hover {
+  background-color: lightgreen;
+}
+
+.Celula_Disciplina:active {
+  background-color: hotpink;
+}
+
 #Botao_Alterar_Notas {
   padding: 20px;
   background-color: #49ff65;
@@ -98,10 +114,18 @@ body {
   padding: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
+	background-color: #00e582;
 }
 
-.Celulas {
+.Celulas, .Celula_Disciplina {
   border: 1px solid black;
   padding: 8px;
   width: 200px;
+	background-color: white;
+}
+
+.Celula_Disciplina {
+	background-color: #3cd6f2;
+	border: 2px solid black;
+	cursor: pointer;
 }

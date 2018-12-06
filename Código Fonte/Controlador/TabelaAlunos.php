@@ -20,6 +20,7 @@ function ListaAlunoPorID($ID_Aluno)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
+                          usuario.login AS Login,
                           aluno.id_usuario AS ID_Usuario,
                           usuario.nome AS Nome,
                           usuario.data_nasc AS Data_Nasc,
