@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 
 <html>
 
@@ -11,6 +11,7 @@ session_start();
 $Disciplinas = ListaDisciplinas();
 
 $Usuario_Logado = $_SESSION["Usuário"];
+#ERRO USUARIO LOGADO OU NAO SE NAO ESTIVER LOGADO MANDA PRO LOGIN 
 
 $Erros = null;
 

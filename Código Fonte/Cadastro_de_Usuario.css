@@ -84,7 +84,7 @@ body {
 	opacity: 0.8;
 }
 
-#Professor_Secretaria, #Aluno
+#Professor, #Aluno, #Secretaria
 {
 	display: none;
 }

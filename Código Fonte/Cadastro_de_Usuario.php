@@ -3,8 +3,9 @@
 <?php
 
 require_once("Controlador/TabelaTurmas.php");
-
+require_once("Controlador/TabelaDisciplina.php");
 session_start();
+
 $Erros = null;
 if (isset($_SESSION['erros'])) {
     $Erros = $_SESSION['erros'];
@@ -13,6 +14,7 @@ if (isset($_SESSION['erros'])) {
 unset($_SESSION['erros']);
 
 $Turmas = ListaTurmas();
+$Disciplinas = ListaDisciplinas();
 
 ?>
 
@@ -23,12 +25,26 @@ function ExibeExtraInfo(Valor)
   if (Valor == "1")
   {
     document.getElementById("Aluno").style.display = "block";
-    document.getElementById("Professor_Secretaria").style.display = "none";
+    document.getElementById("Professor").style.display = "none";
+    document.getElementById("Secretaria").style.display = "none";
   }
-  else if ((Valor == "2") || (Valor == "3"))
+  else if (Valor == "2")
   {
     document.getElementById("Aluno").style.display = "none";
-    document.getElementById("Professor_Secretaria").style.display = "block";
+    document.getElementById("Professor").style.display = "block";
+    document.getElementById("Secretaria").style.display = "none";
+  }
+  else if (Valor == "3")
+  {
+    document.getElementById("Aluno").style.display = "none";
+    document.getElementById("Professor").style.display = "none";
+    document.getElementById("Secretaria").style.display = "block";
+  }
+  else if (Valor == "")
+  {
+    document.getElementById("Aluno").style.display = "none";
+    document.getElementById("Professor").style.display = "none";
+    document.getElementById("Secretaria").style.display = "none";
   }
 }
 
@@ -140,7 +156,25 @@ function ExibeExtraInfo(Valor)
           </select>
         </div>
 
-        <div id="Professor_Secretaria">
+        <div id="Professor">
+          <br>
+          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
+          <br>
+          <br>
+          Disciplina:
+          <select name="Disciplina" id="Selecionar_Disciplina">
+            <option value=""></option>
+
+            <?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
+
+              <option value="<?= $Disciplinas[$i]['id_disciplina'] ?>"><?= $Disciplinas[$i]['disciplina'] ?></option>
+
+            <?php } ?>
+
+          </select>
+        </div>
+
+        <div id="Secretaria">
           <br>
           Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
         </div>
@@ -153,13 +187,13 @@ function ExibeExtraInfo(Valor)
 	  </form>
   </div>
 
-	<br/>
+	<br>
 
 	<div id="Rodape">
 		<h2>Desenvolvedores</h2>
 		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
 	</div>
-  
+
 </body>
 
 </html>
