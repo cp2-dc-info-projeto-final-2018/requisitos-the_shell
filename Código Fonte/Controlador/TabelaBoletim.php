@@ -60,4 +60,11 @@ function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
   $SQL -> execute();
 }
 
+function EscolheDisciplinaTurma($id_Disciplina, $id_Turma)
+{
+  $BD = CriaConexaoBD();
+
+
+}
+
 ?>

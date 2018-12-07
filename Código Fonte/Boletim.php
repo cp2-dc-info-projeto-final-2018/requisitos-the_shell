@@ -8,6 +8,7 @@ require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaBoletim.php");
 require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaAlunos.php");
+require_once("Controlador/TabelaTurmas.php");
 
 $Disciplinas = ListaDisciplinas();
 
@@ -21,7 +22,20 @@ else {
   $Aluno = ListaAlunoPorID($ID_Aluno);
 }
 
+$Turmas = ListaTurmas();
+
 ?>
+
+<script>
+
+function ExibeTurmas(id_disciplina)
+{
+  document.getElementById("Turmas").style.display = "block";
+
+  document.getElementsByClassName("Celula_Turma").setAttribute("name", id_disciplina);
+}
+
+</script>
 
 <html>
 
@@ -37,29 +51,36 @@ else {
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 
-	<table id="Boletim">
-		<tr>
-			<th class="Nome_Coluna">Disciplina</th>
-			<th class="Nome_Coluna">1<sup>a</sup> Certificação</th>
-			<th class="Nome_Coluna">2<sup>a</sup> Certificação</th>
-			<th class="Nome_Coluna">3<sup>a</sup> Certificação</th>
-			<th class="Nome_Coluna">Média</th>
-		</tr>
-		<?php
-		for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
-		{
-			$Boletim = ListaBoletimDoAluno($Aluno, $Disciplinas[$i]["id_disciplina"]);
-		?>
-			<tr class="Linhas">
-				<th class="Celula_Disciplina" onclick="location.href='Boletim_da_Matéria.php?id_disciplina=<?= $Disciplinas[$i]["id_disciplina"] ?>'"><?= $Disciplinas[$i]["disciplina"] ?></th>
-				<th class="Celulas"><?= $Boletim["pri_cert"] ?></th>
-				<th class="Celulas"><?= $Boletim["seg_cert"] ?></th>
-				<th class="Celulas"><?= $Boletim["ter_cert"] ?></th>
-				<th class="Celulas"><?= $Boletim["Media"] ?></th>
-			</tr>
+  <div id="Turmas_Boletim">
+    <table id="Boletim">
+  		<tr>
+    			<th class="Nome_Coluna">Disciplinas</th>
+    		</tr>
+  		<?php
+  		for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
+  		{
 
-		<?php } ?>
-	</table>
+  		?>
+  			<tr class="Linhas">
+  				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["id_disciplina"] ?>)"><?= $Disciplinas[$i]["disciplina"] ?></th>
+  			</tr>
+
+  		<?php } ?>
+  	</table>
+
+    <table id="Turmas">
+      <tr>
+        <th class="Nome_Coluna">Turmas</th>
+      </tr>
+      <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
+        <tr class="Linhas">
+          <th name="" class="Celula_Turma" onclick="location.href='Boletim_da_Matéria.php?id_Turmas=<?= $Turmas[$i]["id_turma"] ?>&id_disciplina='"><?= $Turmas[$i]["nome"] ?></th>
+        </tr>
+      <?php } ?>
+    </table>
+  </div>
+
+
 
 	<div id="Rodape">
 		<h4 class="Desenvolvedores">Desenvolvedores</h4>
