@@ -1,87 +1,131 @@
-<style>
+body {
+	background-color: powderblue;
+	background-image: url("Imagens/Light Blue Background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
-#cabecalho {
+.Cabecalho {
 		border: 2px solid black;
+		background-color: #9efff9;
 		padding: 0px 0px 15px 10px;
 		font-size: 22px;
 		font-family: "Times New Roman";
 }
 
-#rodape {
-		border: 2px solid black;
-		padding: 0px 0px 15px 10px;
-
+#Nome_do_Software {
+	padding: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #11ffa8;
+	border: 1px dashed black;
+	border-radius: 30px;
+	text-align: center;
+	margin-top: -18px;
 }
 
-#nome {
-		padding: 10px 15px 0px 0px;
-		font-size: 16px;
+#Nome_do_Colegio {
+	font-family: arial;
+	background-image: url("Imagens/Blue Background.jpg");
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 30px;
+	border: 5px groove black;
+	border-radius: 2px;
+	margin-right: 10px;
 }
 
-#log-acesso{
-		border: 2px solid black;
-		padding: 73px;
-		font-size: 20px;
-
+#Rodape {
+		background-image: url("Imagens/Pinellas Blue Background.jpg");
+		background-size: cover;
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+    margin-top: 50px;
 }
 
-.fonte{
-		font-size: 17px;
+#Boletim {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  font-family: arial;
 }
 
-#botaoPesquisa{
-		width: 75px;
-		height: 31px;
-		margin-left:30px;
+#Botao_Alterar_Notas {
+  padding: 20px;
+  background-color: #49ff65;
+  border: 3px double black;
+  border-radius: 5px;
+  margin: auto;
+	margin-left: 100px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+  width: 20%;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 25px;
 }
 
-#botaoLanca{
-		width: 100px;
-		height: 41px;
-		font-weight: bold;
+#Botao_Alterar_Notas:link {
+  color: black;
 }
 
-.espaco{
-		margin-left:20px;
+#Botao_Alterar_Notas:visited {
+  color: black;
 }
 
-#telanotas{
-
-		border: 2px solid black;
-		border-radius: 2px;
-		padding: 70px;
-		display: block;
-		padding-left: 107px;
+#Botao_Alterar_Notas:hover {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
 }
 
 
-#notas {
-		border-collapse: collapse;
-		text-align:center;
-		font-size:21px;
-
+#Botao_Alterar_Notas:active {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #00ff27;
+  font-weight: bold;
 }
 
-.celula_nome {
-		width: 500px;
-		height: 40px;
-		border: 2px solid black;
+#Disciplina {
+	font-family: arial;
+	padding: 15px;
+	text-align: center;
 }
 
-.celula_notas{
-		width: 110px;
-		border: 1px solid black;
-		padding-left: 30px;
-		padding-right: 30px;
+.Nome_Coluna, #Nome_Coluna_Aluno {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #00e582;
+	font-weight: bold;
 }
 
-body {
-		background-image: url("logo.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-color: powderblue;
-
-
+#Nome_Coluna_Aluno {
+	padding-left: 180px;
+	padding-right: 180px;
 }
 
-</style>
+.Celulas {
+  border: 1px solid black;
+  padding: 8px;
+	height: 20px;
+  width: 200px;
+	background-color: white;
+}
+
+.Nome_Aluno {
+	background-color: #3ff5ff;
+}
