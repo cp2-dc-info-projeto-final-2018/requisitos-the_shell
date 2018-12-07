@@ -15,13 +15,11 @@ $Disciplinas = ListaDisciplinas();
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
 $ID_Disciplina = $_GET["id_disciplina"];
-
 $ID_Turma = $_GET["id_turma"];
 
 $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
-
 $Turma = ListaTurmaPorID($ID_Turma);
 
 ?>
@@ -63,7 +61,7 @@ $Turma = ListaTurmaPorID($ID_Turma);
     <?php } ?>
 	</table>
 
-	<a id="Botao_Alterar_Notas" href="Alteracao_de_Notas.php">Alterar Notas</a>
+	<a id="Botao_Alterar_Notas" href="Alteracao_de_Notas.php?id_disciplina=<?= $Disciplina['disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
 
 
 	<div id="Rodape">

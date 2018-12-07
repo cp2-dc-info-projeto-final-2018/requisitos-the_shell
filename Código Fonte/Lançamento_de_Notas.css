@@ -22,7 +22,7 @@
 		border: 2px solid black;
 		padding: 73px;
 		font-size: 20px;
-		
+
 }
 
 .fonte{
@@ -48,7 +48,8 @@
 #telanotas{
 
 		border: 2px solid black;
-		padding:70px;
+		border-radius: 2px;
+		padding: 70px;
 		display: block;
 		padding-left: 107px;
 }
@@ -58,27 +59,29 @@
 		border-collapse: collapse;
 		text-align:center;
 		font-size:21px;
-		
+
 }
 
 .celula_nome {
-		width:500px;
-		height:40px;
-		border: solid black 2px;
+		width: 500px;
+		height: 40px;
+		border: 2px solid black;
 }
 
 .celula_notas{
-		width:110px;
-		border: solid black 2px;
+		width: 110px;
+		border: 1px solid black;
+		padding-left: 30px;
+		padding-right: 30px;
 }
-		
+
 body {
 		background-image: url("logo.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: powderblue;
-		
-		
+
+
 }
 
 </style>
