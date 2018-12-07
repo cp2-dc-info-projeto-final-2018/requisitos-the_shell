@@ -73,7 +73,15 @@ body {
   background-color: yellow;
 }
 
+.Celula_Turma:link {
+	background-color: yellow;
+}
+
 .Celula_Disciplina:visited {
+  background-color: cyan;
+}
+
+.Celula_Turma:visited {
   background-color: cyan;
 }
 
@@ -81,7 +89,15 @@ body {
   background-color: lightgreen;
 }
 
+.Celula_Turma:hover {
+  background-color: lightgreen;
+}
+
 .Celula_Disciplina:active {
+  background-color: hotpink;
+}
+
+.Celula_Turma:active {
   background-color: hotpink;
 }
 

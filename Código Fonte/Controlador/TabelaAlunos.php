@@ -3,7 +3,7 @@
 function CadastraAluno($ID_Usuario, $dadosNovoAluno)
 {
   $BD = CriaConexaoBD();
-  
+
   $SQL = $BD -> prepare('INSERT INTO aluno(id_usuario, matricula, id_classe_usuario, id_turma) VALUES
                          (:id, :matricula, 1, :id_turma);');
 
@@ -25,7 +25,6 @@ function ListaAlunoPorID($ID_Aluno)
                           usuario.data_nasc AS Data_Nasc,
                           usuario.email AS Email,
                           usuario.tel AS Tel,
-                          aluno.id AS ID_Aluno,
                           aluno.matricula AS Matricula
                          FROM aluno
                          LEFT JOIN usuario ON aluno.id_usuario = usuario.id_usuario

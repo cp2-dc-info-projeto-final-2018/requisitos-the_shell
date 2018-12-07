@@ -22,7 +22,6 @@ function ListaProfessores()
 
   $SQL = $BD -> query('SELECT
                         usuario.id_usuario AS ID_Usuario,
-                        professor.id_professor AS ID_Professor,
                         usuario.nome AS Nome,
                         usuario.tel AS Tel,
                         usuario.data_nasc AS Data_Nasc,

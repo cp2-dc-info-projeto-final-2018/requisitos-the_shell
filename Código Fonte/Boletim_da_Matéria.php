@@ -8,6 +8,7 @@ require_once("Controlador/TabelaBoletim.php");
 require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaAlunos.php");
+require_once("Controlador/TabelaTurmas.php");
 
 $Disciplinas = ListaDisciplinas();
 
@@ -15,17 +16,13 @@ $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
 $ID_Disciplina = $_GET["id_disciplina"];
 
+$ID_Turma = $_GET["id_turma"];
+
+$Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
+
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 
-if ($Usuário_Logado['id_classe_usuario'] == 1) {
-  $Aluno = $Usuario_Logado;
-}
-else {
-  $ID_Aluno = $_GET['id_aluno'];
-  $Aluno = ListaAlunoPorID($ID_Aluno);
-}
-
-$Boletim = ListaBoletimDoAluno($Aluno, $ID_Disciplina);
+$Turma = ListaTurmaPorID($ID_Turma);
 
 ?>
 
@@ -47,17 +44,23 @@ $Boletim = ListaBoletimDoAluno($Aluno, $ID_Disciplina);
 
   <table id="Boletim">
 		<tr>
+      <th class="Nome_Coluna">Aluno</th>
 			<th class="Nome_Coluna">1<sup>a</sup> Certificação</th>
 			<th class="Nome_Coluna">2<sup>a</sup> Certificação</th>
 			<th class="Nome_Coluna">3<sup>a</sup> Certificação</th>
 			<th class="Nome_Coluna">Média</th>
 		</tr>
-		<tr class="Linhas">
-			<th class="Celulas"><?= $Boletim["pri_cert"] ?></th>
-			<th class="Celulas"><?= $Boletim["seg_cert"] ?></th>
-			<th class="Celulas"><?= $Boletim["ter_cert"] ?></th>
-			<th class="Celulas"><?= $Boletim["Media"] ?></th>
-		</tr>
+    <?php for ($i = 0; $i <= (count($Notas_da_Turma) - 1); $i++) { ?>
+
+      <tr class="Linhas">
+        <th class="Celulas"><a><?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
+			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
+			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
+        <th class="Celulas"><?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
+			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Media"] ?></th>
+		  </tr>
+
+    <?php } ?>
 	</table>
 
 	<a id="Botao_Alterar_Notas" href="Alteracao_de_Notas.php">Alterar Notas</a>

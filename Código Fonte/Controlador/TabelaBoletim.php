@@ -63,8 +63,35 @@ function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
 function EscolheDisciplinaTurma($id_Disciplina, $id_Turma)
 {
   $BD = CriaConexaoBD();
-
-
 }
+
+function ListaNotasDaTurma($ID_Disciplina, $ID_Turma)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT
+                          usuario.id_usuario AS ID_Usuario,
+                          usuario.nome AS Nome,
+                          aluno.matricula AS Matricula,
+                          aluno.id_turma AS ID_Turma,
+                          boletim.id_disciplina AS ID_Disciplina,
+                          boletim.primeira_cert AS Pri_Cert,
+                          boletim.segunda_cert AS Seg_Cert,
+                          boletim.terceira_cert AS Ter_Cert,
+                          boletim.media AS Media
+                         FROM boletim
+                         JOIN usuario ON boletim.id_aluno = usuario.id_usuario
+                         JOIN aluno ON boletim.id_aluno = aluno.id_aluno
+                         WHERE aluno.id_turma = :turma
+                         AND boletim.id_disciplina = :id_disciplina;');
+
+    $SQL -> bindValue(":turma", $ID_Turma);
+    $SQL -> bindValue(":id_disciplina", $ID_Disciplina);
+
+    $SQL -> execute();
+
+    return $SQL -> fetchAll();
+}
+
 
 ?>

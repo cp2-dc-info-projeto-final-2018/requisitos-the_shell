@@ -28,12 +28,21 @@ $Turmas = ListaTurmas();
 
 <script>
 
+var Disciplina_Selecionada = null;
+
 function ExibeTurmas(id_disciplina)
 {
-  document.getElementById("Turmas").style.display = "block";
+  Disciplina_Selecionada = id_disciplina;
 
-  document.getElementsByClassName("Celula_Turma").setAttribute("name", id_disciplina);
+  document.getElementById("Turmas").style.display = "block";
 }
+
+function VerNotas(id_turma)
+{
+    location.href = `Boletim_da_Matéria.php?id_Turmas=${id_turma}&id_disciplina=${Disciplina_Selecionada}`;
+}
+
+
 
 </script>
 
@@ -42,7 +51,7 @@ function ExibeTurmas(id_disciplina)
 <head>
 	<title>Gerenciamento de Notas</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="Boletim.css">
+	<link rel="stylesheet" type="text/css" href="Seleção_de_Boletim.css">
 </head>
 
 <body>
@@ -74,13 +83,11 @@ function ExibeTurmas(id_disciplina)
       </tr>
       <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
         <tr class="Linhas">
-          <th name="" class="Celula_Turma" onclick="location.href='Boletim_da_Matéria.php?id_Turmas=<?= $Turmas[$i]["id_turma"] ?>&id_disciplina='"><?= $Turmas[$i]["nome"] ?></th>
+          <th class="Celula_Turma" onclick="VerNotas(<?= $Turmas[$i]['id_turma'] ?>)"><?= $Turmas[$i]['nome'] ?></th>
         </tr>
       <?php } ?>
     </table>
   </div>
-
-
 
 	<div id="Rodape">
 		<h4 class="Desenvolvedores">Desenvolvedores</h4>
