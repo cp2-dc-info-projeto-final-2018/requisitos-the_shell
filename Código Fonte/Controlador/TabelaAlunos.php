@@ -4,7 +4,7 @@ function CadastraAluno($ID_Usuario, $dadosNovoAluno)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('INSERT INTO aluno(id_usuario, matricula, id_classe_usuario, id_turma) VALUES
+  $SQL = $BD -> prepare('INSERT INTO aluno(id_aluno, matricula, id_classe_usuario, id_turma) VALUES
                          (:id, :matricula, 1, :id_turma);');
 
   $SQL -> bindValue(':id', $ID_Usuario);
@@ -45,7 +45,7 @@ function ListaInfoAluno($Login)
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,
                                   usuario.tel AS Tel,
-                                  usuario.data_nasc AS "Data de Nascimento",
+                                  usuario.data_nasc AS Data_Nasc,
                                   classe.classe AS Classe,
                                   aluno.matricula AS Matrícula
                                 FROM usuario

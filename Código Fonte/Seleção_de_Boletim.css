@@ -67,6 +67,7 @@ body {
   border-collapse: collapse;
   font-family: arial;
 	display: none;
+	float: right;
 }
 
 .Celula_Disciplina:link {

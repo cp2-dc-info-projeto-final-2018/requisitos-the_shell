@@ -61,7 +61,7 @@ $Turma = ListaTurmaPorID($ID_Turma);
     <?php } ?>
 	</table>
 
-	<a id="Botao_Alterar_Notas" href="Alteracao_de_Notas.php?id_disciplina=<?= $Disciplina['disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
+	<a id="Botao_Alterar_Notas" href="Lançamento_de_Notas.php?id_disciplina=<?= $Disciplina['disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
 
 
 	<div id="Rodape">

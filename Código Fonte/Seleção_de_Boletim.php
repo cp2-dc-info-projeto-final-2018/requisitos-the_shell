@@ -60,6 +60,8 @@ function VerNotas(id_turma)
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 
+  <br>
+
   <div id="Turmas_Boletim">
     <table id="Boletim">
   		<tr>
@@ -88,6 +90,8 @@ function VerNotas(id_turma)
       <?php } ?>
     </table>
   </div>
+
+  <br>
 
 	<div id="Rodape">
 		<h4 class="Desenvolvedores">Desenvolvedores</h4>
