@@ -45,9 +45,7 @@ if (empty($Erro))
   #ID das classes:
   #1 - Aluno
   #2 - Professor
-  #3 - Diretor
-  #4 - Secretário
-  #5 - SESOP e NAPNE
+  #3 - Secretário
 
   if ($Classe_Usuario['id_classe_usuario'] = 1)
   {
