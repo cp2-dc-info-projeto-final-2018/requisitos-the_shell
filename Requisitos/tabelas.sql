@@ -87,3 +87,8 @@ CREATE TABLE Secretaria (
 		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
 		FOREIGN KEY (id_secretaria) REFERENCES Usuario(id_usuario)
 );
+
+INSERT INTO Classe(classe) VALUES
+("Aluno"),
+("Professor"),
+("Secretaria");
