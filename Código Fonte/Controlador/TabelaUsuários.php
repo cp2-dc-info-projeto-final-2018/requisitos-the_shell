@@ -52,7 +52,7 @@ function ListaUsuarioPorLogin($Login_Usuario)
                           aluno.matricula AS Matricula
                          FROM aluno
                          LEFT JOIN usuario
-                         ON aluno.id_usuario = usuario.id_usuario
+                         ON aluno.id_aluno = usuario.id_usuario
                          WHERE login = :login;');
 
   $SQL -> bindValue(':login', $Login_Usuario);

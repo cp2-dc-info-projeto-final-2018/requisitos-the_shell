@@ -68,11 +68,12 @@ function ListaAlunosDaTurma($ID_Turma)
                           usuario.nome AS Nome,
                           usuario.email AS Email,
                           usuario.tel AS Tel,
+                          usuario.data_nasc AS Data_Nasc,
                           aluno.matricula AS Matricula,
-                          aluno.id_aluno AS ID_Aluno,
-                          turma.nome AS Turma
+                          turma.nome AS Turma,
+                          turma.serie AS Serie
                          FROM aluno
-                         LEFT JOIN usuario ON aluno.id_usuario = usuario.id_usuario
+                         LEFT JOIN usuario ON aluno.id_aluno = usuario.id_usuario
                          LEFT JOIN turma ON turma.id_turma = aluno.id_turma
                          WHERE aluno.id_turma = :ID_Turma;');
 
