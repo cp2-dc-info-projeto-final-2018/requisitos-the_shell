@@ -59,7 +59,6 @@ CREATE TABLE Aluno (
 		PRIMARY KEY (id_usuario),
 		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
 		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe),
-		FOREIGN KEY (id_professor) REFERENCES Usuario(id_usuario)
 );
 
 CREATE TABLE Boletim (
