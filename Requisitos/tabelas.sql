@@ -52,13 +52,13 @@ CREATE TABLE Professor (
 
 CREATE TABLE Aluno (
 
-		id_aluno INT,
-		id_classe_usuario INT,
-		matricula VARCHAR(50),
-		id_turma INT,
-		PRIMARY KEY (id_usuario),
-		FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
-		FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe)
+	id_aluno INT,
+	id_classe_usuario INT,
+	matricula VARCHAR(50),
+	id_turma INT,
+	PRIMARY KEY (id_aluno),
+	FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
+	FOREIGN KEY (id_classe_usuario) REFERENCES Classe(id_classe)
 );
 
 CREATE TABLE Boletim (
