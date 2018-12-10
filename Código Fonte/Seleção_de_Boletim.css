@@ -55,8 +55,15 @@ body {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
+	margin-left: 400px;
   border-collapse: collapse;
   font-family: arial;
+	float: left;
+}
+
+#Turmas_Boletim {
+	padding: 10px;
+	display: flex;
 }
 
 #Turmas {
@@ -64,9 +71,11 @@ body {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
+	margin-right: 400px;
   border-collapse: collapse;
   font-family: arial;
 	display: none;
+	float: right;
 }
 
 .Celula_Disciplina:link {

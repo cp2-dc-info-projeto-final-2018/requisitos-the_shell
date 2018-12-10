@@ -58,7 +58,14 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
   		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
   		     <td class="Celulas"><input name="Seg_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Seg_Cert"] ?>"></td>
            <td class="Celulas"><input name="Ter_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Ter_Cert"] ?>"></td>
-           <td class="Celulas"><?= $Boletim[$i]["Media"] ?></td>
+           <td class="Celulas">
+             <?php if (array_key_exists($Boletim[$i]["Média"])) {
+               echo $Boletim[$i]["Média"];
+             }
+             else {
+               echo "0.0";
+             } ?>
+           </td>
   	     </tr>
 
     <?php } ?>
