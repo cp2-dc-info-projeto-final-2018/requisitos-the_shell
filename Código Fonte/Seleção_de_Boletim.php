@@ -13,17 +13,23 @@ require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
-if ($Usuario_Logado['id_classe_usuario'] == 1) {
-  $Aluno = $Usuario_Logado;
-}
-else if ($Usuario_Logado['id_classe_usuario'] == 2) {
-  $ID_Aluno = $_GET['id_aluno'];
+$ID_Usuario = $Usuario_Logado['id_usuario'];
+$Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
 
+$ID_Aluno = $_GET['id_aluno'];
+
+else if ($Classe_Usuario == 2) {
   $Aluno = ListaAlunoPorID($ID_Aluno);
-  $Professor = ListaInfoDoProfessor($Usuario_Logado['id_usuario']);
-
-  $Disciplinas = $Professor['Disciplina'];
-  $Turmas = $Professor['Turma'];
+  $Professor = ListaInfoDoProfessor($ID_Usuario);
+  $Disciplinas = ListaDisciplinasDoProfessor($ID_Usuario);
+  $Turmas = ListaTurmasDoProfessor($ID_Usuario);
+}
+else if ($Classe_Usuario == 3) {
+  $Disciplinas = ListaDisciplinas();
+  $Turmas = ListaTurmas();
+}
+else {
+  header("Location: Acesso_Negado.php");
 }
 
 ?>
@@ -35,6 +41,7 @@ var Disciplina_Selecionada = null;
 function ExibeTurmas(id_disciplina)
 {
   Disciplina_Selecionada = id_disciplina;
+
 
   document.getElementById("Turmas").style.display = "block";
 }
