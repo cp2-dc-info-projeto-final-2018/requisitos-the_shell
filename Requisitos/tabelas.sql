@@ -87,7 +87,12 @@ CREATE TABLE Secretaria (
 	FOREIGN KEY (id_secretaria) REFERENCES Usuario(id_usuario)
 );
 
+
+
 INSERT INTO Classe(classe) VALUES
 ("Aluno"),
 ("Professor"),
 ("Secretaria");
+
+#Tabela agregadora turmas diciplina professor 
+#o professor so tera acesso a pagina de lançamento de notas das turmas na tabela agregadora para  essas diciplinas na que seu id seja igual
