@@ -29,7 +29,7 @@ function ListaProfessores()
                         professor.siape AS Siape,
                         disciplina.disciplina AS Disciplina
                        FROM professor
-                       LEFT JOIN usuario ON professor.id_usuario = usuario.id_usuario
+                       LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario
                        LEFT JOIN disciplina ON professor.id_disciplina = disciplina.id_disciplina;');
 
   $SQL -> execute();

@@ -17,7 +17,7 @@ $UsuarioLogado = $_SESSION['Usuário'];
 <body>
 
 
-<?php if ($Classe_Usuario == 1): ?>
+<?php if ($Classe_Usuario == 1) ?>
   <div class="Barra_de_Navegacao">
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
@@ -33,14 +33,9 @@ $UsuarioLogado = $_SESSION['Usuário'];
 
   <?php endif; ?>
 
-
-
   <br>
 
-  <h1>Bem vindo ao SHELL, <?= "$UsuarioLogado" ?></h1>
-
-
-
+  <h1>Bem vindo ao SHELL, <?= $UsuarioLogado["Nome"] ?></h1>
 
 
   <div id="Cabecalho" align="center">
@@ -54,7 +49,11 @@ $UsuarioLogado = $_SESSION['Usuário'];
 	</div>
 	<div id="Direita">
 
-
+    <div class="Atalhos">
+      <a class="Celula" href="Boletim_da_Matéria.php">Ver Boletim</a>
+      <br/>
+      <a class="Celula">Sair</a>
+    </div>
 
 
 	</div>
