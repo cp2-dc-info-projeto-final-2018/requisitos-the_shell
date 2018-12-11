@@ -39,3 +39,11 @@ margin-left: auto;
 margin-right: auto;
 
 }
+
+#Direita {
+background-color: #3c00ff99;
+max-width: 15%;
+font-size: 15px;
+line-height: 1.5;
+
+}
