@@ -85,7 +85,7 @@ CREATE TABLE Secretaria (
 	FOREIGN KEY (id_secretaria) REFERENCES Usuario(id_usuario)
 );
 
-CREATE TABLE ProfessorDisciplinaTurma (
+CREATE TABLE Professor_Disciplina_Turma (
 
 	id_professor INT,
 	id_turma INT,
@@ -101,11 +101,11 @@ INSERT INTO Classe(classe) VALUES
 ("Professor"),
 ("Secretaria");
 
-#INSERT INTO `disciplina` (`disciplina`) VALUES ('Banco de Dados'), ('Engenharia de Software');
-#INSERT INTO `professor` (`professor`) VALUES ('Prof1'), ('Prof2');
-#INSERT INTO `aluno` (`aluno`) VALUES ('a'), ('b');
+/* INSERT INTO `disciplina` (`disciplina`) VALUES ('Banco de Dados'), ('Engenharia de Software'); */
+/* INSERT INTO `professor` (`professor`) VALUES ('Prof1'), ('Prof2'); */
+/* INSERT INTO `aluno` (`aluno`) VALUES ('a'), ('b'); */
 
 
 
-#Tabela agregadora turmas diciplina professor 
-#o professor so tera acesso a pagina de lançamento de notas das turmas na tabela agregadora para  essas diciplinas na que seu id seja igual
+/* Tabela agregadora turmas diciplina professor */
+/* o professor so tera acesso a pagina de lançamento de notas das turmas na tabela agregadora para  essas diciplinas na que seu id seja igual */

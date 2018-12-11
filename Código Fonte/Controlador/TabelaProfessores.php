@@ -64,4 +64,21 @@ function ListaInfoProfessor($Login)
    return $Info_Aluno = $Info_Usuario -> fetch();
 }
 
+function ListaDisciplinaDoProfessor($ID_Professor)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT
+                          id_discipina AS ID_Disciplina
+                         FROM professor
+                         JOIN disciplina ON professor.id_disciplina = disciplina.id_disciplina
+                         WHERE id_professor = :id_professor;');
+
+  $SQL -> bindValue(":id_professor", $ID_Professor);
+
+  $SQL -> execute();
+
+  return $SQL -> fetch();
+}
+
 ?>
