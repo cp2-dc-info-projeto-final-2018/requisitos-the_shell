@@ -14,24 +14,24 @@ function ApuraMedia($dados)
 
 }
 
-function ListaBoletimDoAluno($Aluno, $id_Disciplina)
+function ListaBoletimDoAluno($id_Aluno, $id_Disciplina)
 {
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
                           usuario.nome AS Aluno,
-                          boletim.primeira_cert AS pri_cert,
-                          boletim.segunda_cert AS seg_cert,
-                          boletim.terceira_cert AS ter_cert,
+                          boletim.primeira_cert AS Pri_Cert,
+                          boletim.segunda_cert AS Seg_Cert,
+                          boletim.terceira_cert AS Ter_Cert,
                           boletim.media AS Media
                          FROM aluno
                          LEFT JOIN boletim ON aluno.id_boletim = boletim.id_boletim
-                         RIGHT JOIN usuario ON usuario.id_usuario = aluno.id_usuario
+                         RIGHT JOIN usuario ON usuario.id_usuario = aluno.id_aluno
                          LEFT JOIN disciplina ON boletim.id_disciplina = disciplina.id_disciplina
-                         WHERE usuario.login = :aluno
+                         WHERE aluno.id_aluno = :aluno
                          AND boletim.id_disciplina = :disciplina;');
 
-  $SQL -> bindValue(":aluno", $Aluno['Login']);
+  $SQL -> bindValue(":aluno", $id_Aluno);
   $SQL -> bindValue(":disciplina", $id_Disciplina);
 
   $SQL -> execute();

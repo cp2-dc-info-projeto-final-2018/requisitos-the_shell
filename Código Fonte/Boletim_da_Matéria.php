@@ -10,7 +10,7 @@ require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaAlunos.php");
 require_once("Controlador/TabelaTurmas.php");
 
-$Disciplinas = ListaDisciplinas();
+#$Disciplinas = ListaDisciplinas();
 
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
@@ -20,6 +20,7 @@ $ID_Turma = $_GET["id_turma"];
 $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
+var_dump($Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
 
 ?>
@@ -38,7 +39,7 @@ $Turma = ListaTurmaPorID($ID_Turma);
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 
-  <h3 id="Disciplina"><?= $Disciplina["disciplina"] ?></h3>
+  <h3 id="Disciplina"> <?= $Disciplina["disciplina"] ?> </h3>
 
   <table id="Boletim">
 		<tr>
@@ -51,14 +52,16 @@ $Turma = ListaTurmaPorID($ID_Turma);
     <?php for ($i = 0; $i <= (count($Notas_da_Turma) - 1); $i++) { ?>
 
       <tr class="Linhas">
-        <th class="Celulas"><a><?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
-			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
-			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
-        <th class="Celulas"><?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
-			  <th class="Celulas"><?= $Notas_da_Turma[$i]["Media"] ?></th>
+        <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
+			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
+			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
+        <th class="Celulas"> <?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
+			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Media"] ?></th>
 		  </tr>
 
     <?php } ?>
+
+
 	</table>
 
 	<a id="Botao_Alterar_Notas" href="Lançamento_de_Notas.php?id_disciplina=<?= $Disciplina['disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
@@ -68,6 +71,8 @@ $Turma = ListaTurmaPorID($ID_Turma);
 		<h4 class="Desenvolvedores">Desenvolvedores</h4>
 		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
 	</div>
+
+	#tela de selecçao 
 
 </body>
 

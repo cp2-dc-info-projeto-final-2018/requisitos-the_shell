@@ -9,20 +9,22 @@ require_once("Controlador/TabelaBoletim.php");
 require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaAlunos.php");
 require_once("Controlador/TabelaTurmas.php");
-
-$Disciplinas = ListaDisciplinas();
+require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
-if ($Usuário_Logado['id_classe_usuario'] == 1) {
+if ($Usuario_Logado['id_classe_usuario'] == 1) {
   $Aluno = $Usuario_Logado;
 }
-else {
+else if ($Usuario_Logado['id_classe_usuario'] == 2) {
   $ID_Aluno = $_GET['id_aluno'];
-  $Aluno = ListaAlunoPorID($ID_Aluno);
-}
 
-$Turmas = ListaTurmas();
+  $Aluno = ListaAlunoPorID($ID_Aluno);
+  $Professor = ListaInfoDoProfessor($Usuario_Logado['id_usuario']);
+
+  $Disciplinas = $Professor['Disciplina'];
+  $Turmas = $Professor['Turma'];
+}
 
 ?>
 

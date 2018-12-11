@@ -1,16 +1,16 @@
 <?php
 
 require_once("Conexão_BD.php");
-require_once("TabelaUsuários.php"); 
+require_once("TabelaUsuários.php");
 
 function CadastraSecretaria($ID_Usuario, $dadosNovoSecretaria)
 {
 	$BD = CriaConexaoBD();
 
-	$SQL = $BD -> prepare('INSERT INTO secretaria(id_usuario, siape, id_classe_usuario) VALUES
-						   (:id_usuario, :siape, 3);');
+	$SQL = $BD -> prepare('INSERT INTO secretaria(id_secretaria, siape, id_classe_usuario) VALUES
+						   					 (:id_secretaria, :siape, 3);');
 
-	$SQL -> bindValue(":id_usuario", $ID_Usuario);
+	$SQL -> bindValue(":id_secretaria", $ID_Usuario);
 	$SQL -> bindValue(":siape", $dadosNovoSecretaria['Siape']);
 
 	$SQL -> execute();
@@ -21,7 +21,7 @@ function ListaSecretarios()
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> query('SELECT
-                        usuario.id_usuario AS ID_Usuario,
+                        usuario.id_usuario AS id_secretaria,
                         secretaria.id_secretaria AS ID_Secretaria,
                         usuario.nome AS Nome,
                         usuario.tel AS Tel,
@@ -29,7 +29,7 @@ function ListaSecretarios()
                         usuario.email AS Email,
                         secretaria.siape AS Siape,
                        FROM secretaria
-                       LEFT JOIN usuario ON secretaria.id_usuario = usuario.id_usuario;');
+                       LEFT JOIN usuario ON secretaria.id_secretaria = usuario.id_usuario;');
 
   $SQL -> execute();
 

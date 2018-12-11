@@ -11,6 +11,8 @@ $ID_Turma = $_GET["id_turma"];
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
 
+$Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
+
 ?>
 
 
@@ -32,6 +34,8 @@ $Turma = ListaTurmaPorID($ID_Turma);
 	<br>
   <br>
 
+  <h3 id="Disciplina"><?= $Disciplina["disciplina"] ?></h3>
+
   <table id="Boletim" border="2">
 		 <tr>
 		   <td id="Nome_Coluna_Aluno" class="Nome_Coluna">Aluno</td>
@@ -44,13 +48,27 @@ $Turma = ListaTurmaPorID($ID_Turma);
   	<br>
     <br>
 
-  	<tr>
-  		<td class="Nome_Aluno"></td>
-  		<td class="Celulas"><input name="Pri_Cert" type="number"></td>
-  		<td class="Celulas"><input name="Seg_Cert" type="number"></td>
-  		<td class="Celulas"><input name="Ter_Cert" type="number"></td>
-  		<td class="Celulas"><?= $Boletim[$i]["Media"] ?></td>
-  	</tr>
+    <?php
+    for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
+      {
+        $Boletim_Aluno[$i] = ListaBoletimDoAluno($Alunos_da_Turma[$i]["id_aluno"], $$ID_Disciplina); ?>
+
+  	     <tr>
+           <td class="Nome_Aluno"></td>
+  		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
+  		     <td class="Celulas"><input name="Seg_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Seg_Cert"] ?>"></td>
+           <td class="Celulas"><input name="Ter_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Ter_Cert"] ?>"></td>
+           <td class="Celulas">
+             <?php if (array_key_exists($Boletim[$i]["Média"])) {
+               echo $Boletim[$i]["Média"];
+             }
+             else {
+               echo "0.0";
+             } ?>
+           </td>
+  	     </tr>
+
+    <?php } ?>
 	</table>
 
 	<br>
