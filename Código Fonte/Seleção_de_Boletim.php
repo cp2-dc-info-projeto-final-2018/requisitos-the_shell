@@ -83,7 +83,7 @@ function VerNotas(id_turma)
 
   		<?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
   			<tr class="Linhas">
-  				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["id_disciplina"] ?>)"><?= $Disciplinas[$i]["disciplina"] ?></th>
+  				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["ID_Disciplina"] ?>)"><?= $Disciplinas[$i]["Disciplina"] ?></th>
   			</tr>
   		<?php } ?>
   	</table>
@@ -94,7 +94,7 @@ function VerNotas(id_turma)
       </tr>
       <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
         <tr class="Linhas">
-          <th class="Celula_Turma" onclick="VerNotas(<?= $Turmas[$i]['id_turma'] ?>)"><?= $Turmas[$i]['nome'] ?></th>
+          <th class="Celula_Turma" onclick="VerNotas(<?= $Turmas[$i]['ID_Turma'] ?>)"><?= $Turmas[$i]['Nome'] ?></th>
         </tr>
       <?php } ?>
     </table>

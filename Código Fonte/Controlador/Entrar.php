@@ -7,8 +7,10 @@ $Erro = null;
 $Request = array_map('trim', $_REQUEST);
 $Request = filter_var_array(
                $Request,
-               [ 'Login' => FILTER_DEFAULT,
-                 'Senha' => FILTER_VALIDATE_PASSWORD ]
+               [
+                 'Login' => FILTER_DEFAULT,
+                 'Senha' => FILTER_VALIDATE_PASSWORD
+               ]
            );
 
 $Login = $Request['Login'];

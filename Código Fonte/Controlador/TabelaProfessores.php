@@ -6,12 +6,11 @@ function CadastraProfessor($ID_Usuario, $dadosNovoProfessor)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('INSERT INTO professor(id_professor, siape, id_classe_usuario,id_disciplina) VALUES
-                         (:id, :siape, 2,:id_disciplina);');
+  $SQL = $BD -> prepare('INSERT INTO professor(id_professor, siape, id_classe_usuario) VALUES
+                         (:id, :siape, 2);');
 
   $SQL -> bindValue(':id', $ID_Usuario);
   $SQL -> bindValue(':siape', $dadosNovoProfessor["Siape"]);
-  $SQL -> bindValue('id_disciplina', $dadosNovoProfessor["Disciplina"]);
 
   $SQL -> execute();
 }
@@ -22,16 +21,14 @@ function ListaProfessores()
 
   $SQL = $BD -> query('SELECT
                         usuario.id_usuario AS ID_Usuario,
+                        professor.id_professor AS ID_Professor,
                         usuario.nome AS Nome,
                         usuario.tel AS Tel,
                         usuario.data_nasc AS Data_Nasc,
                         usuario.email AS Email,
-                        professor.siape AS Siape,
-                        disciplina.id_disciplina AS ID_Disciplina,
-                        disciplina.disciplina AS Disciplina
+                        professor.siape AS Siape
                        FROM professor
-                       LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario
-                       LEFT JOIN disciplina ON professor.id_disciplina = disciplina.id_disciplina;');
+                       LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario;');
 
   $SQL -> execute();
 
@@ -63,23 +60,6 @@ function ListaInfoProfessor($Login)
   $Info_Usuario -> execute();
 
    return $Info_Aluno = $Info_Usuario -> fetch();
-}
-
-function ListaDisciplinaDoProfessor($ID_Professor)
-{
-  $BD = CriaConexaoBD();
-
-  $SQL = $BD -> prepare('SELECT
-                          id_discipina AS ID_Disciplina
-                         FROM professor
-                         JOIN disciplina ON professor.id_disciplina = disciplina.id_disciplina
-                         WHERE id_professor = :id_professor;');
-
-  $SQL -> bindValue(":id_professor", $ID_Professor);
-
-  $SQL -> execute();
-
-  return $SQL -> fetch();
 }
 
 ?>

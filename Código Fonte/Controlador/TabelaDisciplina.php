@@ -19,7 +19,7 @@ function ListaDisciplinas()
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT *
-                       FROM disciplina;');
+                         FROM disciplina;');
 
   $SQL -> execute();
 

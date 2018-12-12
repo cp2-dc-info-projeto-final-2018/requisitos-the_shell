@@ -51,8 +51,7 @@ else if ($_REQUEST['Classe'] == 2) {
       'Senha' => FILTER_DEFAULT,
       'Classe' => FILTER_DEFAULT,
       'Confirmar_Senha' => FILTER_DEFAULT,
-      'Siape' => FILTER_DEFAULT,
-      'Disciplina'=> FILTER_DEFAULT
+      'Siape' => FILTER_DEFAULT
     ]
   );
 }
@@ -113,7 +112,7 @@ if (empty($Erros) == true)
   else if ($Request['Classe'] == 2)
   {
     CadastraProfessor($ID_Usuario, $Request);
-    
+
     header("Location: ../Gerenciamento_de_Professores.php");
   }
   else if ($Request['Classe'] == 3)
@@ -127,6 +126,6 @@ else {
   session_start();
 
   $_SESSION['erros'] = $Erros;
-  
+
   header("Location: ../Cadastro_de_Usuario.php");
 }

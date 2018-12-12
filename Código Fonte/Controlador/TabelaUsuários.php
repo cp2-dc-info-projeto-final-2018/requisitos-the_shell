@@ -50,8 +50,8 @@ function ListaUsuarioPorLogin($Login_Usuario)
                           usuario.tel AS Tel,
                           usuario.id_classe_usuario AS id_classe,
                           aluno.matricula AS Matricula
-                         FROM aluno
-                         LEFT JOIN usuario
+                         FROM usuario
+                         LEFT JOIN aluno
                          ON aluno.id_aluno = usuario.id_usuario
                          WHERE login = :login;');
 

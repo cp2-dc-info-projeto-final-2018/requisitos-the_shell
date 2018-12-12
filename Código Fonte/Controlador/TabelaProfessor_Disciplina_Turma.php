@@ -7,8 +7,10 @@ function ListaAulasDoProfessor($ID_Professor)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          id_turma AS Turma,
-                          id_disciplina AS Disciplina
+                          professor_disciplina_turma.id_turma AS ID_Turma,
+                          turma.nome AS Turma,
+                          professor_disciplina_turma.id_disciplina AS ID_Disciplina,
+                          disciplina.disciplina AS Disciplina
                          FROM professor_disciplina_turma
                          RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
                          RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
@@ -27,7 +29,8 @@ function ListaTurmasDoProfessor($ID_Professor)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          id_turma AS Turma
+                          professor_disciplina_turma.id_turma AS ID_Turma,
+                          turma.nome AS Turma
                          FROM professor_disciplina_turma
                          RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
                          RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
@@ -44,7 +47,8 @@ function ListaDisciplinaDoProfessor($ID_Professor)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
-                          id_disciplina AS Disciplina
+                          professor_disciplina_turma.id_disciplina AS ID_Disciplina,
+                          professor_disciplina_turma.disciplina AS Disciplina
                          FROM professor_disciplina_turma
                          RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
                          RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
@@ -74,6 +78,20 @@ function ListaDisciplinasDaTurma($ID_Turma)
   $SQL -> execute();
 
   return $SQL -> fetchAll();
+}
+
+function AssociaProfessorTurma($Dados)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('INSERT INTO professor_disciplina_turma(id_professor, id_disciplina, id_turma) VALUES
+                         (:id_professor, :id_disciplina, :id_turma);');
+
+  $SQL -> bindValue(":id_professor", $Dados['Professor']);
+  $SQL -> bindValue(":id_disciplina", $Dados['Disciplina']);
+  $SQL -> bindValue(":id_turma", $Dados['Turma']);
+
+  $SQL -> execute();
 }
 
 ?>

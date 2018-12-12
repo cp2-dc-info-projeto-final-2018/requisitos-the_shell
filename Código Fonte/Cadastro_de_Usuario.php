@@ -160,18 +160,6 @@ function ExibeExtraInfo(Valor)
           <br>
           Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
           <br>
-          <br>
-          Disciplina:
-          <select name="Disciplina" id="Selecionar_Disciplina">
-            <option value=""></option>
-
-            <?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
-
-              <option value="<?= $Disciplinas[$i]['id_disciplina'] ?>"><?= $Disciplinas[$i]['disciplina'] ?></option>
-
-            <?php } ?>
-
-          </select>
         </div>
 
         <div id="Secretaria">
