@@ -52,7 +52,8 @@ function ListaTurmas()
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> query('SELECT *
-                       FROM turma;');
+                       FROM turma
+                       ORDER BY nome ASC;');
 
   $SQL -> execute();
 
