@@ -110,3 +110,31 @@ body {
 	border-radius: 1px;
   text-align: center;
 }
+
+#Div_Cadastro {
+		padding: 73px;
+		font-size: 20px;
+
+}
+
+#Exibicao_de_Erro {
+	border: 5px solid black;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	margin-top: 50px;
+	margin-left: 250px;
+	margin-right: 250px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-family: arial;
+	text-align: center;
+	background-image: url("Imagens/Red Background.jpg");
+	background-size: contain;
+	background-position: center;
+}
+
+#Exibicao_de_Erro:hover {
+	opacity: 0.8;
+}

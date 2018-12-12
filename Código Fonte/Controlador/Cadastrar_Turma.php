@@ -25,7 +25,7 @@ $Request = filter_var_array(
 if (empty($Erros) == true)
 {
   CadastraTurma($Request);
-  header("Location: ../Cadastro_de_Usuario.php");
+  header("Location: ../Gerenciamento_de_Turmas.php");
 } else {
   if ($Request['Nome_Turma'] == null) {
     $_SESSION['erros'] = "Nome de turma não especificado";
@@ -36,7 +36,7 @@ if (empty($Erros) == true)
   }
 
   $_SESSION['erros'] = $Erros;
-  header("Location: ../Cadastro_de_Turma.php");
+  header("Location: ../Gerenciamento_de_Turmas.php");
 }
 
 
