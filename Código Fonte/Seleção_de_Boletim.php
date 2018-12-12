@@ -18,7 +18,7 @@ $Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
 
 $ID_Aluno = $_GET['id_aluno'];
 
-else if ($Classe_Usuario == 2) {
+if ($Classe_Usuario == 2) {
   $Aluno = ListaAlunoPorID($ID_Aluno);
   $Professor = ListaInfoDoProfessor($ID_Usuario);
   $Disciplinas = ListaDisciplinasDoProfessor($ID_Usuario);
@@ -28,9 +28,9 @@ else if ($Classe_Usuario == 3) {
   $Disciplinas = ListaDisciplinas();
   $Turmas = ListaTurmas();
 }
-else {
-  header("Location: Acesso_Negado.php");
-}
+#else {
+#  header("Location: Acesso_Negado.php");
+#}
 
 ?>
 

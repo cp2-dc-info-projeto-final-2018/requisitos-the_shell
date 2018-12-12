@@ -8,7 +8,8 @@ session_start();
 
 $Erro = null;
 
-if (isset($_SESSION['Erro'])) {
+if (isset($_SESSION['Erro'])) 
+{
     $Erro = $_SESSION['Erro'];
 }
 
@@ -60,6 +61,7 @@ unset($_SESSION['Erro']);
 				<br/><br/>
 
 				<input class="Botoes" id="Logar" type="submit" value="Entrar"/>
+
         <br>
 				<input class="Botoes" id="Esq_Senha" type="submit" value="Esqueci minha senha"/> </br></br>
 

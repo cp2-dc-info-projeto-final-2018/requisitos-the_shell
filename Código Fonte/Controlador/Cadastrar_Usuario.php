@@ -88,7 +88,7 @@ ValidaString($Request['Login'], "Login", 2, 32);
 ValidaString($Request['Nome'], "Nome", 2, 50);
 ValidaString($Request['Tel'], "Tel", 8, 12);
 ValidaString($Request['Email'], "Email", 4, 30);
-ValidaString($Request['Senha'], "Senha", 2, 16);
+ValidaString($Request['Senha'], "Senha", 2, 80);
 
 if ($Request['Senha'] != $Request['Confirmar_Senha'])
 {

@@ -27,7 +27,7 @@ CREATE TABLE Usuario (
 	id_classe_usuario INT,
 	login VARCHAR(100),
 	nome VARCHAR(100),
-	senha VARCHAR(20),
+	senha VARCHAR(80),
 	email VARCHAR(100),
 	tel VARCHAR(50),
 	data_nasc DATE,

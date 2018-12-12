@@ -27,7 +27,7 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
-			<form method="get" action="GerenciamentoDeNotas.html">
+			<form method="get" action="Seleção_de_Boletim.php">
         <button class="Botoes" type="submit" id="btn_Notas" value="Notas">Notas</button>
       </form>
       <form method="get" action="Gerenciamento_de_Turmas.php">
