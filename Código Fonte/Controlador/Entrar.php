@@ -53,7 +53,7 @@ if (empty($Erro))
 
     if ($Classe_Usuario['id_classe_usuario'] = 1)
     {
-    header("Location: ../Aluno.php");
+    header("Location: ../Homepage.php");
     } 
     else if ($Classe_Usuario['id_classe_usuario'] = 2)
     {

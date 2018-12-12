@@ -31,7 +31,7 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
-			<link class="Botoes" href="GerenciamentoDeNotas.html" id="btn_Notas" value="Notas"/>
+			<link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas"/>
 		</div>
 	</div>
 	<div id="Direita">
