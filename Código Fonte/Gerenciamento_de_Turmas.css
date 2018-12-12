@@ -73,39 +73,6 @@ body {
 	background-color: white;
 }
 
-#Botao_Cadastrar_Turma {
-  padding: 20px;
-  background-color: #49ff65;
-  border: 3px double black;
-  border-radius: 5px;
-  margin: 50px;
-  text-decoration: none;
-  font-family: arial;
-}
-
-#Botao_Cadastrar_Turma:link {
-  color: black;
-}
-
-#Botao_Cadastrar_Turma:visited {
-  color: black;
-}
-
-#Botao_Cadastrar_Turma:hover {
-  border: 3px solid black;
-  border-radius: 5px;
-  background-color: #00ff27;
-  font-weight: bold;
-}
-
-
-#Botao_Cadastrar_Turma:active {
-  border: 3px solid black;
-  border-radius: 5px;
-  background-color: #00ff27;
-  font-weight: bold;
-}
-
 #Campo_Turmas {
   margin: 50px;
   text-align: center;
@@ -120,17 +87,20 @@ body {
 	padding-top: 20px;
 	width: 1095px;
 	margin: auto;
+	width: 800px;
 }
 
 #Campo_Cadastro {
 	padding-top: 30px;
+	padding-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 3px;
 }
 
 #Botao_Cadastrar_Usuario {
 	border: 3px double black;
 	border-radius: 3px;
 	padding: 10px;
-	margin: 20px;
 	float: left;
 	background-color: lightgreen;
 	text-decoration: none;
@@ -138,11 +108,24 @@ body {
 	font-weight: bold;
 }
 
+#Botao_Cadastrar {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	width: 100px;
+	font-weight: bold;
+	font-family: arial;
+	background-color: lightgreen;
+}
+
+#Botao_Cadastrar:hover {
+	background-color: cyan;
+}
+
 #Botao_Cadastrar_Usuario:hover {
 	border: 3px double black;
 	border-radius: 3px;
 	padding: 10px;
-	margin: 20px;
 	float: left;
 	background-color: cyan;
 }

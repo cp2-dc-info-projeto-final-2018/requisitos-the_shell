@@ -122,6 +122,8 @@ unset($_SESSION['erros']);
 
         <br>
         <br>
+        <br>
+        <br>
 
         <input id="Botao_Cadastrar" type="submit" name="Botao_Enviar" value="Cadastrar">
 
