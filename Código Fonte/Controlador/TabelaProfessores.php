@@ -27,6 +27,7 @@ function ListaProfessores()
                         usuario.data_nasc AS Data_Nasc,
                         usuario.email AS Email,
                         professor.siape AS Siape,
+                        disciplina.id_disciplina AS ID_Disciplina,
                         disciplina.disciplina AS Disciplina
                        FROM professor
                        LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario
