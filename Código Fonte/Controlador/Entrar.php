@@ -49,33 +49,18 @@ if (empty($Erro))
   #2 - Professor
   #3 - Secretário
 
-<<<<<<< HEAD
     if ($Classe_Usuario['id_classe_usuario'] = 1)
     {
     header("Location: ../Homepage.php");
-    } 
+    }
     else if ($Classe_Usuario['id_classe_usuario'] = 2)
     {
-    header("Location: ../Professor.php");
-    } 
+    header("Location: ../Homepage.php");
+    }
     else if ($Classe_Usuario['id_classe_usuario'] = 3)
     {
-    header("Location: ../Secretaria.php");
+    header("Location: ../Homepage.php");
     }
-=======
-  if ($Classe_Usuario['id_classe_usuario'] = 1)
-  {
-  header("Location: ../Aluno.php");
-  }
-  else if ($Classe_Usuario['id_classe_usuario'] = 2)
-  {
-  header("Location: ../Professor.php");
-  }
-  else if ($Classe_Usuario['id_classe_usuario'] = 3)
-  {
-  header("Location: ../Secretaria.php");
-  }
->>>>>>> 56cb13a33d30786b3c881dbbce9ea6d1b4493379
 }
 else
 {
