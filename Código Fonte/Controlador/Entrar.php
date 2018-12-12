@@ -22,7 +22,7 @@ else if ($Senha == false)
 {
   $Erro = "Senha não informada.";
 
-} 
+}
 else {
   $Login_Correto = ListaUsuarioPorLogin($Login);
 
@@ -40,8 +40,6 @@ session_start();
 
 if (empty($Erro))
 {
-  
-
   $_SESSION['Usuário'] = ListaUsuarioPorLogin($Login);
 
   $Classe_Usuario = ListaClasseUsuario($Login);
@@ -53,15 +51,15 @@ if (empty($Erro))
 
     if ($Classe_Usuario['id_classe_usuario'] = 1)
     {
-    header("Location: ../Aluno.php");
-    } 
+    header("Location: ../Homepage.php");
+    }
     else if ($Classe_Usuario['id_classe_usuario'] = 2)
     {
-    header("Location: ../Professor.php");
-    } 
+    header("Location: ../Homepage.php");
+    }
     else if ($Classe_Usuario['id_classe_usuario'] = 3)
     {
-    header("Location: ../Secretaria.php");
+    header("Location: ../Homepage.php");
     }
 }
 else

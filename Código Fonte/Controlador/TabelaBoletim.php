@@ -19,12 +19,15 @@ function ListaBoletimDoAluno($id_Aluno, $id_Disciplina)
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT
+                          usuario.id_usuario AS ID_Aluno,
                           usuario.nome AS Aluno,
+                          disciplina.id_disciplina AS ID_Disciplina,
+                          disciplina.disciplina AS Disciplina,
                           boletim.primeira_cert AS Pri_Cert,
                           boletim.segunda_cert AS Seg_Cert,
                           boletim.terceira_cert AS Ter_Cert,
                           boletim.media AS Media
-                         FROM aluno
+                         FROM boletim
                          LEFT JOIN boletim ON aluno.id_boletim = boletim.id_boletim
                          RIGHT JOIN usuario ON usuario.id_usuario = aluno.id_aluno
                          LEFT JOIN disciplina ON boletim.id_disciplina = disciplina.id_disciplina

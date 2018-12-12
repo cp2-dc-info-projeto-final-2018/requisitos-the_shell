@@ -11,14 +11,18 @@ $Usuario_Logado = $_SESSION['Usuário'];
 $Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
 $ID_Turma = $Usuario_Logado['id_turma'];
 
-if ($Classe_Usuario == 1) {
+#if ($Classe_Usuario == 1) {
   $ID_Aluno = $Usuario_Logado['id_aluno'];
-}
-else {
-  header("Acesso_Negado.php");
-}
+#}
+#else {
+#  header("Acesso_Negado.php");
+#}
 
 $Disciplinas = ListaDisciplinasDaTurma($ID_Turma);
+
+for ($i = 0; $i <= (count($Disciplinas)); $i++) {
+  $Boletim[$i] = ListaBoletimDoAluno($ID_Aluno, $Disciplinas[$i]);
+}
 
 ?>
 
@@ -39,17 +43,35 @@ $Disciplinas = ListaDisciplinasDaTurma($ID_Turma);
 			<th class="Nome_Coluna">3<sup>a</sup> Certificação</th>
 			<th class="Nome_Coluna">Média</th>
 		</tr>
-    <?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
+    <?php
+    for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
+    {
+      if (! empty($Boletim))
+      { ?>
 
-      <tr class="Linhas">
-        <th class="Celulas"><a> <?= $Boletim[$i]["Disciplina"] ?></a></th>
-			  <th class="Celulas"> <?= $Boletim[$i]["Pri_Cert"] ?></th>
-			  <th class="Celulas"> <?= $Boletim[$i]["Seg_Cert"] ?></th>
-        <th class="Celulas"> <?= $Boletim[$i]["Ter_Cert"] ?></th>
-			  <th class="Celulas"> <?= $Boletim[$i]["Media"] ?></th>
-		  </tr>
+        <tr class="Linhas">
+          <th class="Celulas"><a> <?= $Boletim[$i]["Disciplina"] ?></a></th>
+  			  <th class="Celulas"> <?= $Boletim[$i]["Pri_Cert"] ?></th>
+  			  <th class="Celulas"> <?= $Boletim[$i]["Seg_Cert"] ?></th>
+          <th class="Celulas"> <?= $Boletim[$i]["Ter_Cert"] ?></th>
+  			  <th class="Celulas"> <?= $Boletim[$i]["Media"] ?></th>
+  		  </tr>
 
-    <?php } ?>
+    <?php
+      }
+      else
+      { ?>
+        <tr class="Linhas">
+          <th class="Celulas"><a><?= $Disciplinas[$i] ?></a></th>
+  			  <th class="Celulas">0.0</th>
+  			  <th class="Celulas">0.0</th>
+          <th class="Celulas">0.0</th>
+  			  <th class="Celulas">0.0</th>
+  		  </tr>
+        <?php
+      }
+    }
+        ?>
 
 
 	</table>

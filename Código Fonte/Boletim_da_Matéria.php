@@ -39,7 +39,9 @@ $Turma = ListaTurmaPorID($ID_Turma);
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 
-  <h3 id="Disciplina"> <?= $Disciplina["disciplina"] ?> </h3>
+  <h2 id="Turma"><?= $Turma['nome'] ?></h2>
+
+  <h3 id="Disciplina"><?= $Disciplina["disciplina"] ?></h3>
 
   <table id="Boletim">
 		<tr>
@@ -72,7 +74,7 @@ $Turma = ListaTurmaPorID($ID_Turma);
 		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
 	</div>
 
-	#tela de selecçao 
+	#tela de selecçao
 
 </body>
 

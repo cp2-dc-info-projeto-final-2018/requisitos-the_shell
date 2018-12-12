@@ -10,6 +10,7 @@ require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaAlunos.php");
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
+require_once("Controlador/TabelaDisciplina.php");
 
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
 
@@ -18,13 +19,16 @@ $Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
 
 $ID_Aluno = $_GET['id_aluno'];
 
-if ($Classe_Usuario == 2) {
-  $Aluno = ListaAlunoPorID($ID_Aluno);
+$Aluno = ListaAlunoPorID($ID_Aluno);
+
+if ($Classe_Usuario == 2)
+{
   $Professor = ListaInfoDoProfessor($ID_Usuario);
   $Disciplinas = ListaDisciplinasDoProfessor($ID_Usuario);
   $Turmas = ListaTurmasDoProfessor($ID_Usuario);
 }
-else if ($Classe_Usuario == 3) {
+else if ($Classe_Usuario == 3)
+{
   $Disciplinas = ListaDisciplinas();
   $Turmas = ListaTurmas();
 }
@@ -74,17 +78,13 @@ function VerNotas(id_turma)
   <div id="Turmas_Boletim">
     <table id="Boletim">
   		<tr>
-    			<th class="Nome_Coluna">Disciplinas</th>
-    		</tr>
-  		<?php
-  		for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
-  		{
+    		<th class="Nome_Coluna">Disciplinas</th>
+    	</tr>
 
-  		?>
+  		<?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
   			<tr class="Linhas">
   				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["id_disciplina"] ?>)"><?= $Disciplinas[$i]["disciplina"] ?></th>
   			</tr>
-
   		<?php } ?>
   	</table>
 
