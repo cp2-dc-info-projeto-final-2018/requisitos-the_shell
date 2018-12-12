@@ -113,4 +113,23 @@ function ListaIDTurmaPorNome($Nome_Turma)
   $SQL -> execute();
 
 }
+
+
+
+
+
+function AlteraTurma($Nome_Turma, $Serie_Turma, $Integrado_Turma)
+{
+$BD = CriaConexaoBD();
+
+$SQL = $BD -> prepare('UPDATE turma
+                       SET nome = :Nome_Turma:, serie = Serie_Turma:, integrado = Integrado_Turma:;
+                       WHERE turma.id = :id_turma;');
+
+$SQL -> bindValue(":id_turma", $ID_Turma );
+
+$SQL -> execute();
+
+}
+
 ?>

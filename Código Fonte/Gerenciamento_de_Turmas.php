@@ -8,6 +8,12 @@ function ExcluiTurma(id_turma)
 }
 
 
+function AlteraTurma(id_turma)
+{
+  location.href = `Controlador/PageEdição.php`;
+}
+
+
 </script>
 
 <html>
@@ -72,6 +78,7 @@ unset($_SESSION['erros']);
       <th class="Nome_Coluna">Quantidade de Alunos</th>
       <th class="Nome_Coluna">Integrado</th>
       <th class="Nome_Coluna">Remover</th>
+      <th class="Nome_Coluna">Alterar</th>
     </tr>
     <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
       <tr class="Linhas">
@@ -90,7 +97,9 @@ unset($_SESSION['erros']);
 
           ?>
         <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["id_turma"] ?>)">Excluir</th>
-      </tr>
+        <th id="Edita_Turma" class="Celulas" name="Edita_Turma"  onclick="AlteraTurma(<?= $Turmas[$i]["id_turma"] ?>)">Editar</a></th>
+
+        </tr>
 
     <?php } ?>
   </table>
