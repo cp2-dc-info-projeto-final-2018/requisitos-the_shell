@@ -11,7 +11,7 @@ session_start();
 $Disciplinas = ListaDisciplinas();
 
 $Usuario_Logado = $_SESSION["Usuário"];
-#ERRO USUARIO LOGADO OU NAO SE NAO ESTIVER LOGADO MANDA PRO LOGIN 
+#ERRO USUARIO LOGADO OU NAO SE NAO ESTIVER LOGADO MANDA PRO LOGIN
 
 $Erros = null;
 
@@ -64,7 +64,7 @@ unset($_SESSION['erros']);
         <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
           <ul>
             <li class="Celulas">
-              <?= $Disciplinas[$i]["disciplina"] ?>
+              <?= $Disciplinas[$i]["disciplina"] ?> <a href="Gerenciamento_de_Disciplina.php" id="Remover_Btn" value="Remover Botão" type="reset">Remover Botão</a>
             </li>
           </ul>
         <?php } ?>

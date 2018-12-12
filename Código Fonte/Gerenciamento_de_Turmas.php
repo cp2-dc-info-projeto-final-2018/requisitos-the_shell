@@ -32,6 +32,7 @@ session_start();
         <th class="Nome_Coluna">Série</th>
         <th class="Nome_Coluna">Quantidade de Alunos</th>
         <th class="Nome_Coluna">Integrado</th>
+        <th class="Nome_Coluna">Remover</th>
       </tr>
       <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
         <tr class="Linhas">
@@ -41,6 +42,7 @@ session_start();
           <th class="Celulas">
             <?php
 
+
             if ($Turmas[$i]["integrado"] == 1) {
               echo "Sim";
             }
@@ -49,7 +51,9 @@ session_start();
             }
 
             ?>
-          </th>
+          <th>
+ <input id="Exclui_Turma" type="reset" name="Exclui_Turma" value="Excluir">          
+            </th>
         </tr>
 
       <?php } ?>
@@ -57,6 +61,8 @@ session_start();
   </fieldset>
 
   <a id="Botao_Cadastrar_Turma" href="Cadastro_de_Turma.php">Cadastrar Turma</a>
+
+
 
   <div id="Rodape">
     <h4 class="Desenvolvedores">Desenvolvedores</h4>
