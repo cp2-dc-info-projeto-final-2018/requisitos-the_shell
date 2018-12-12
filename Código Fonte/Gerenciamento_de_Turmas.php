@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 
+<script>
+
+function ExcluiTurma(id_turma)
+{
+  location.href = `Controlador/Excluir_Turma.php?id_turma=${id_turma}`;
+}
+
+
+</script>
+
 <html>
 
 <?php
@@ -54,81 +64,79 @@ unset($_SESSION['erros']);
     </div>
   <?php } ?>
 
-  <fieldset id="Campo_Turmas">
-    <table id="Turmas">
-      <tr>
-        <th class="Nome_Coluna">Turma</th>
-        <th class="Nome_Coluna">Série</th>
-        <th class="Nome_Coluna">Quantidade de Alunos</th>
-        <th class="Nome_Coluna">Integrado</th>
-        <th class="Nome_Coluna">Remover</th>
+
+  <table id="Turmas">
+    <tr>
+      <th class="Nome_Coluna">Turma</th>
+      <th class="Nome_Coluna">Série</th>
+      <th class="Nome_Coluna">Quantidade de Alunos</th>
+      <th class="Nome_Coluna">Integrado</th>
+      <th class="Nome_Coluna">Remover</th>
+    </tr>
+    <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
+      <tr class="Linhas">
+        <td class="Celulas"><a name="Turma" href="Turma.php?id_turma=<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></a></th>
+        <td class="Celulas"> <?= $Turmas[$i]["serie"] ?></th>
+        <td class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["id_turma"])) ?></th>
+        <td class="Celulas">
+          <?php
+
+          if ($Turmas[$i]["integrado"] == 1) {
+            echo "Sim";
+          }
+          else {
+            echo "Não";
+          }
+
+          ?>
+        <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["id_turma"] ?>)">Excluir</th>
       </tr>
-      <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
-        <tr class="Linhas">
-          <th class="Celulas"><a name="Turma" href="Turma.php?id_turma=<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></a></th>
-          <th class="Celulas"> <?= $Turmas[$i]["serie"] ?></th>
-          <th class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["id_turma"])) ?></th>
-          <th class="Celulas">
-            <?php
 
+    <?php } ?>
+  </table>
 
-            if ($Turmas[$i]["integrado"] == 1) {
-              echo "Sim";
-            }
-            else {
-              echo "Não";
-            }
+  <br>
 
-            ?>
-          <th>
- <input id="Exclui_Turma" type="reset" name="Exclui_Turma" value="Excluir">          
-            </th>
-        </tr>
+  <div id="Div_Cadastro">
+    <legend id="Legend">Cadastro de Turma</legend>
 
-      <?php } ?>
-    </table>
+    <form class="Fonte" method="POST" action="Controlador/Cadastrar_Turma.php">
+      <fieldset id="Campo_Cadastro">
+        <label id="Label_Turma" for="Nome_da_turma">Nome: </label>
+        <input type="text" name="Nome_Turma" required>
 
-    <br>
+        </br>
+        </br>
 
-    <div id="Div_Cadastro">
-     <legend>Cadastro de Turma</legend>
+        <label for="Serie_Turma">Serie: </label>
+        <select name="Serie_Turma" id="Serie">
+          <option value="Primeiro Ano">Primeiro Ano</option>
+          <option value="Segundo Ano">Segundo Ano</option>
+          <option value="Terceiro Ano">Terceiro Ano</option>
+        </select>
 
-     <form class="Fonte" method="POST" action="Controlador/Cadastrar_Turma.php">
-       <fieldset>
-         <label id="Label_Turma" for="Nome_da_turma">Nome: </label>
-         <input type="text" name="Nome_Turma" required>
+        <br>
+        <br>
 
-         </br>
-         </br>
+        <input type="checkbox" id="Integrado" name="Integrado" value="1"> Integrado
 
-         <label for="Serie_Turma">Serie: </label>
-         <select name="Serie_Turma" id="Serie">
-           <option value="Primeiro Ano">Primeiro Ano</option>
-           <option value="Segundo Ano">Segundo Ano</option>
-           <option value="Terceiro Ano">Terceiro Ano</option>
-         </select>
+        <br>
+        <br>
 
-         <br>
-         <br>
+        <input id="Botao_Cadastrar" type="submit" name="Botao_Enviar" value="Cadastrar">
 
-         <input type="checkbox" id="Integrado" name="Integrado" value="1"> Integrado
+        <br>
+        <br>
 
-         <br>
-         <br>
+      </fieldset>
 
-         <input id="Botao_Cadastrar" type="submit" name="Botao_Enviar" value="Cadastrar">
+   </form>
 
-         <br>
-         <br>
+   <br>
+   <br>
 
-       </fieldset>
-
-     </form>
-    </div>
-  </fieldset>
-
-  <a id="Botao_Cadastrar_Turma" href="Cadastro_de_Turma.php">Cadastrar Turma</a>
-
+   <a id="Botao_Cadastrar_Usuario" href="Cadastro_de_Usuario.php">Cadastrar Alunos</a>
+  </div>
 
 
   <div id="Rodape">

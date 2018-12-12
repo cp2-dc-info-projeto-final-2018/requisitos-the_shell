@@ -30,7 +30,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe_usuario'];
 
   <div class="Barra_de_Navegacao">
     <a id="SHELL">SHELL</a>
-    <a class="Celula" href="#home"> Home  </a>
+    <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Controlador/Abrir_Perfil.php"> Perfil</a>
   </div>
 <?php
@@ -74,7 +74,7 @@ else if ($Classe_Usuario == 3)
       <link class="Botoes" href="Seleção_de_Boletim.php" id="btn_Notas" value="Notas prof"/>
       <link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas ver "/>
 
-      
+
 		</div>
 	</div>
 	<div id="Direita">

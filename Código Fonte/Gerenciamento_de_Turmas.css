@@ -53,8 +53,8 @@ body {
   padding: 10px;
   text-align: center;
   margin: auto;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   border-collapse: collapse;
   font-family: arial;
 }
@@ -63,12 +63,14 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   padding: 5px;
+	background-color: lightgreen;
 }
 
 .Celulas {
   border: 1px solid black;
   padding: 8px;
   width: 200px;
+	background-color: white;
 }
 
 #Botao_Cadastrar_Turma {
@@ -106,16 +108,52 @@ body {
 
 #Campo_Turmas {
   margin: 50px;
-	border: 1px solid black;
-	border-radius: 1px;
   text-align: center;
 }
 
 #Div_Cadastro {
-		padding: 73px;
-		font-size: 20px;
-
+	padding: 73px;
+	font-size: 17px;
+	font-family: arial;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+	width: 1095px;
+	margin: auto;
 }
+
+#Campo_Cadastro {
+	padding-top: 30px;
+}
+
+#Botao_Cadastrar_Usuario {
+	border: 3px double black;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 20px;
+	float: left;
+	background-color: lightgreen;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+#Botao_Cadastrar_Usuario:hover {
+	border: 3px double black;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 20px;
+	float: left;
+	background-color: cyan;
+}
+
+#Exclui_Turma {
+	cursor: pointer;
+	background-color: #ff5751;
+	border: 2px solid black;
+}
+
+
 
 #Exibicao_de_Erro {
 	border: 5px solid black;

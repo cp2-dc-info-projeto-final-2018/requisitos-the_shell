@@ -101,13 +101,12 @@ function ListaIDTurmaPorNome($Nome_Turma)
   return $SQL -> fetch();
   }
 
-  function DeletaTurmas($ID_Turma)
+  function RemoveTurma($ID_Turma)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('DELETE FROM
-                        turma
-                        WHERE turma.id_turma = :id_turma;');
+  $SQL = $BD -> prepare('DELETE FROM turma
+                         WHERE turma.id_turma = :id_turma;');
 
   $SQL -> bindValue(":id_turma", $ID_Turma );
 
