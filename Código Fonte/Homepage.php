@@ -42,6 +42,7 @@ else if ($Classe_Usuario == 2)
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php">Turma</a>
     <a class="Celula" href="Controlador/Abrir_Perfil.php">Perfil</a>
+      <a class="Celula" href="Seleção_de_Boletim.php" >Notas prof</a>
   </div>
 
 
@@ -69,7 +70,9 @@ else if ($Classe_Usuario == 3)
 	<div id="Esquerda">
 		<div id="Caixa_de_Botoes">
 
-			<link class="Botoes" href="GerenciamentoDeNotas.html" id="btn_Notas" value="Notas"/>
+			<link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas"/>
+      <link class="Botoes" href="Seleção_de_Boletim.php" id="btn_Notas" value="Notas prof"/>
+      <link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas ver "/>
 
       
 		</div>
