@@ -97,6 +97,13 @@ body {
   font-weight: bold;
 }
 
+#Turma {
+	font-family: arial;
+	font-size: 30px;
+	padding-top: 8px;
+	text-align: center;
+}
+
 #Disciplina {
 	font-family: arial;
 	padding: 15px;
