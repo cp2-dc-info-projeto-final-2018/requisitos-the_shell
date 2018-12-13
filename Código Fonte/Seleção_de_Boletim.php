@@ -11,19 +11,20 @@ require_once("Controlador/TabelaAlunos.php");
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 require_once("Controlador/TabelaDisciplina.php");
+require_once("Controlador/TabelaProfessores.php");
 
 $Usuario_Logado = $_SESSION["Usuário"];
 
 $ID_Usuario = $Usuario_Logado['id_usuario'];
 $Classe_Usuario = $Usuario_Logado['id_classe'];
 
-$ID_Aluno = $_GET['id_aluno'];
+#$ID_Aluno = $_GET['id_aluno'];
 
-$Aluno = ListaAlunoPorID($ID_Aluno);
+#$Aluno = ListaAlunoPorID($ID_Aluno);
 
 if ($Classe_Usuario == 2)
 {
-  $Professor = ListaInfoDoProfessor ($ID_Usuario);
+  $Professor = ListaAulasDoProfessor ($ID_Usuario);
   $Disciplinas = ListaDisciplinasDoProfessor ($ID_Usuario);
   $Turmas = ListaTurmasDoProfessor($ID_Usuario);
 }
