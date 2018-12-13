@@ -61,27 +61,22 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
 	<h2 id="Nome_do_Software">Home Page</h2>
 	</div>
 	<div id="Direita">
-    <table border="1">
-    <td>
-        <tr> <label class="Info_Label">Nome:</label> </tr>
+        <label class="Info_Label">Nome:</label>
         <br/>
-        <tr> <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label> </tr>
+        <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label>
         <br/>
-        <tr> <label class="Info_Label">Data de nascimento:</label> </tr>
+        <label class="Info_Label">Data de nascimento:</label> 
         <br/>
-        <tr> <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label> </tr>
+        <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label>
         <br/>
-        <tr> <label class="Info_Label">E-mail:</label> </tr>
+        <label class="Info_Label">E-mail:</label>
         <br/>
-        <tr> <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label> </tr>
+        <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label>
         <br/>
-        <tr> <label class="Info_Label">Telefone:</label> </tr>        <br/> 
-        <tr>> <label class="Info"><?= $UsuarioLogado['Tel'] ?> </label> </tr>
-        <tr> <a class="Celula">Sair</a> </tr>
-
-    </td>
-      
-    </table>
+        <label class="Info_Label">Telefone:</label> 
+        <label class="Info"><?= $UsuarioLogado['Tel'] ?></label>
+        <br/>
+        <a class="Celula">Sair</a>
     </div>
 
   <div id="Rodape">

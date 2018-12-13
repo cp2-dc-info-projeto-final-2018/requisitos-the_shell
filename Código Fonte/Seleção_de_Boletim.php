@@ -23,8 +23,8 @@ $Aluno = ListaAlunoPorID($ID_Aluno);
 
 if ($Classe_Usuario == 2)
 {
-  $Professor = ListaInfoDoProfessor($ID_Usuario);
-  $Disciplinas = ListaDisciplinasDoProfessor($ID_Usuario);
+  $Professor = ListaInfoDoProfessor ($ID_Usuario);
+  $Disciplinas = ListaDisciplinasDoProfessor ($ID_Usuario);
   $Turmas = ListaTurmasDoProfessor($ID_Usuario);
 }
 else if ($Classe_Usuario == 3)
