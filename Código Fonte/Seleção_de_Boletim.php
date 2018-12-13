@@ -12,10 +12,10 @@ require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 require_once("Controlador/TabelaDisciplina.php");
 
-$Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
+$Usuario_Logado = $_SESSION["Usuário"];
 
 $ID_Usuario = $Usuario_Logado['id_usuario'];
-$Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
+$Classe_Usuario = $Usuario_Logado['id_classe'];
 
 $ID_Aluno = $_GET['id_aluno'];
 

@@ -2,9 +2,9 @@
 
 <script>
 
-function ExcluiTurma(id_turma)
+function ExcluiTurma(id_turma, funcao)
 {
-  location.href = `Controlador/Excluir_Turma.php?id_turma=${id_turma}`;
+  location.href = `Controlador/Excluir.php?id_turma=${id_turma}&excluir=${funcao}`;
 }
 
 
@@ -96,7 +96,7 @@ unset($_SESSION['erros']);
           }
 
           ?>
-        <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["id_turma"] ?>)">Excluir</th>
+        <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["id_turma"] ?>, 'turma')">Excluir</th>
         <th id="Edita_Turma" class="Celulas" name="Edita_Turma"  onclick="AlteraTurma(<?= $Turmas[$i]["id_turma"] ?>)">Editar</a></th>
 
         </tr>

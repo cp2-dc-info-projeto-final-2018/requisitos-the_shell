@@ -17,22 +17,16 @@
 
     <label> Digite o novo Nome: </label>
     <label> Digite o novo Nome: </label>
-  
-  <input type="text" name="Nome_Turma" value="">
-  <label> Digite a nova Série: </label>te a parada de integrado ai : </label>
-  <input type="text" name="Integrado_Turma" value="">
 
-  <input type="submit" value="Editar" >
+    <input type="text" name="Nome_Turma" value="">
+    <label> Digite a nova Série: </label>te a parada de integrado ai : </label>
+    <input type="text" name="Integrado_Turma" value="">
+
+    <input type="submit" value="Editar" >
 
   </form>
 
-
-
 </body>
-
-
-
-
 
 
 </html>

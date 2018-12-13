@@ -19,7 +19,8 @@ function ListaDisciplinas()
   $BD = CriaConexaoBD();
 
   $SQL = $BD -> prepare('SELECT *
-                         FROM disciplina;');
+                         FROM disciplina
+                         ORDER BY disciplina ASC;');
 
   $SQL -> execute();
 
@@ -55,6 +56,18 @@ function ListaDiciplinaPorNome($Nome_Disciplina)
   $SQL -> execute();
 
   return $SQL -> fetch();
+}
+
+function RemoveDisciplina($ID_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('DELETE FROM disciplina
+                         WHERE id_disciplina = :id_disciplina;');
+
+  $SQL -> bindValue(":id_disciplina", $ID_Disciplina);
+
+  $SQL -> execute();
 }
 
 

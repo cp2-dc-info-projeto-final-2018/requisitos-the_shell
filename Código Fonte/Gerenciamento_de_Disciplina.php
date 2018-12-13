@@ -1,5 +1,14 @@
 '<!DOCTYPE html>
 
+<script>
+
+function ExcluiDisciplina(id_disciplina, funcao)
+{
+  location.href = `Controlador/Excluir.php?id_disciplina=${id_disciplina}&excluir=${funcao}`;
+}
+
+</script>
+
 <html>
 
 <?php
@@ -59,16 +68,20 @@ unset($_SESSION['erros']);
 
   <fieldset id="Campo_Disciplina">
     <div id="Div_Disciplinas">
-      <list id="Disciplinas">
-        <h4>Disciplinas</h4>
+      <table id="Disciplinas">
+        <tr>
+          <th id="Nome_Tabela">Disciplinas</th>
+          <th id="Coluna_Remover">Remover</th>
+        </tr>
         <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
-          <ul>
-            <li class="Celulas">
-              <?= $Disciplinas[$i]["disciplina"] ?> <a href="Gerenciamento_de_Disciplina.php" id="Remover_Btn" value="Remover Botão" type="reset">Remover Botão</a>
-            </li>
-          </ul>
+          <tr>
+            <td class="Celulas">
+              <?= $Disciplinas[$i]["disciplina"] ?>
+            </td>
+            <td id="Exclui_Disciplina" name="Exclui_Disciplina" onclick="ExcluiDisciplina(<?= $Disciplinas[$i]["id_disciplina"] ?>, 'disciplina')">Excluir</td>
+          </tr>
         <?php } ?>
-      </list>
+      </table>
     </div>
 
     <div id="Div_Cadastro_Disciplina">
