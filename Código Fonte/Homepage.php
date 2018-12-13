@@ -57,36 +57,39 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
 
   <h1>Bem vindo à Concha do Trovão, <?= $UsuarioLogado['Nome'] ?> </h1>
 
-
   <div id="Cabecalho" align="center">
 	<h2 id="Nome_do_Software">Home Page</h2>
 	</div>
-
-	<div id="Esquerda">
-		<div id="Caixa_de_Botoes">
-
-			<link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas"/>
-      <link class="Botoes" href="Seleção_de_Boletim.php" id="btn_Notas" value="Notas prof"/>
-      <link class="Botoes" href="Boletim.php" id="btn_Notas" value="Notas ver "/>
-
-
-		</div>
-	</div>
 	<div id="Direita">
+    <table border="1">
+    <td>
+        <tr> <label class="Info_Label">Nome:</label> </tr>
+        <br/>
+        <tr> <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label> </tr>
+        <br/>
+        <tr> <label class="Info_Label">Data de nascimento:</label> </tr>
+        <br/>
+        <tr> <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label> </tr>
+        <br/>
+        <tr> <label class="Info_Label">E-mail:</label> </tr>
+        <br/>
+        <tr> <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label> </tr>
+        <br/>
+        <tr> <label class="Info_Label">Telefone:</label> </tr>        <br/> 
+        <tr>> <label class="Info"><?= $UsuarioLogado['Tel'] ?> </label> </tr>
+        <tr> <a class="Celula">Sair</a> </tr>
 
-
-    <div class="Atalhos">
-      <a class="Celula" href="Boletim_da_Matéria.php">Ver Boletim</a>
-      <br/>
-      <a class="Celula">Sair</a>
+    </td>
+      
+    </table>
     </div>
 
-	</div>
+  <div id="Rodape">
+    <h2>Desenvolvedores</h2>
+    <h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
+  </div>
 
-	<div id="Rodape">
-		<h2>Desenvolvedores</h2>
-		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
-	</div>
 </body>
+
 
 </html>
