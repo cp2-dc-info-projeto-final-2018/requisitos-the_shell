@@ -11,7 +11,7 @@ session_start();
 
 $UsuarioLogado = $_SESSION['Usuário'];
 
-$Classe_Usuario = $UsuarioLogado['id_classe_usuario'];
+$Classe_Usuario = $UsuarioLogado['id_classe'];
 
 ?>
 
@@ -33,10 +33,8 @@ $Classe_Usuario = $UsuarioLogado['id_classe_usuario'];
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Controlador/Abrir_Perfil.php"> Perfil</a>
   </div>
-<?php
-}
-else if ($Classe_Usuario == 2)
-{ ?>
+
+<?php } else if ($Classe_Usuario == 2) { ?>
   <div class="Barra_de_Navegacao">
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
@@ -45,22 +43,19 @@ else if ($Classe_Usuario == 2)
       <a class="Celula" href="Seleção_de_Boletim.php" >Notas prof</a>
   </div>
 
-
-<?php
-}
-else if ($Classe_Usuario == 3)
-{ ?>
+<?php } else if ($Classe_Usuario == 3) { ?>
   <div class="Barra_de_Navegacao">
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php">Turma</a>
     <a class="Celula" href="Controlador/Abrir_Perfil.php">Perfil</a>
   </div>
+
 <?php } ?>
 
   <br>
 
-  <h1>Bem vindo à Concha do Trovão, <?= $UsuarioLogado['nome'] ?> </h1>
+  <h1>Bem vindo à Concha do Trovão, <?= $UsuarioLogado['Nome'] ?> </h1>
 
 
   <div id="Cabecalho" align="center">
