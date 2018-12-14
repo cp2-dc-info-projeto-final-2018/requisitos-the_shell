@@ -76,9 +76,9 @@ unset($_SESSION['erros']);
         <?php for ($i = 0; $i <= (count($Disciplinas) - 1) ; $i++) { ?>
           <tr>
             <td class="Celulas">
-              <?= $Disciplinas[$i]["disciplina"] ?>
+              <?= $Disciplinas[$i]["Disciplina"] ?>
             </td>
-            <td id="Exclui_Disciplina" name="Exclui_Disciplina" onclick="ExcluiDisciplina(<?= $Disciplinas[$i]["id_disciplina"] ?>, 'disciplina')">Excluir</td>
+            <td id="Exclui_Disciplina" name="Exclui_Disciplina" onclick="ExcluiDisciplina(<?= $Disciplinas[$i]["ID_Disciplina"] ?>, 'disciplina')">Excluir</td>
           </tr>
         <?php } ?>
       </table>
