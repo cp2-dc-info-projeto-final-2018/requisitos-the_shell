@@ -28,7 +28,7 @@ function ListaBoletimDoAluno($id_Aluno, $id_Disciplina)
                           boletim.terceira_cert AS Ter_Cert,
                           boletim.media AS Media
                          FROM boletim
-                         LEFT JOIN boletim ON aluno.id_boletim = boletim.id_boletim
+                         LEFT JOIN aluno ON aluno.id_aluno = boletim.id_aluno
                          RIGHT JOIN usuario ON usuario.id_usuario = aluno.id_aluno
                          LEFT JOIN disciplina ON boletim.id_disciplina = disciplina.id_disciplina
                          WHERE aluno.id_aluno = :aluno
@@ -95,6 +95,5 @@ function ListaNotasDaTurma($ID_Disciplina, $ID_Turma)
 
     return $SQL -> fetchAll();
 }
-
 
 ?>

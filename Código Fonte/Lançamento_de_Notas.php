@@ -52,21 +52,24 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
     for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
       {
         $Boletim_Aluno[$i] = ListaBoletimDoAluno($Alunos_da_Turma[$i]["id_aluno"], $$ID_Disciplina); ?>
-
-  	     <tr>
-           <td class="Nome_Aluno"></td>
-  		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
-  		     <td class="Celulas"><input name="Seg_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Seg_Cert"] ?>"></td>
-           <td class="Celulas"><input name="Ter_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Ter_Cert"] ?>"></td>
-           <td class="Celulas">
-             <?php if (array_key_exists($Boletim[$i]["Média"])) {
-               echo $Boletim[$i]["Média"];
-             }
-             else {
-               echo "0.0";
-             } ?>
-           </td>
-  	     </tr>
+        <form>
+    	     <tr>
+             <td class="Nome_Aluno"></td>
+    		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
+    		     <td class="Celulas"><input name="Seg_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Seg_Cert"] ?>"></td>
+             <td class="Celulas"><input name="Ter_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Ter_Cert"] ?>"></td>
+             <td class="Celulas">
+               <?php if (array_key_exists($Boletim[$i]["Média"])) {
+                 echo $Boletim[$i]["Média"];
+               }
+               else {
+                 echo "0.0";
+               } ?>
+               <td>
+                 <input id="botaoLanca" type="submit" name="lançaNotas<?= $i ?>" value="Lançar Notas"></td>
+             </td>
+      	   </tr>
+        </form>
 
     <?php } ?>
 	</table>
@@ -74,8 +77,6 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
 	<br>
   <br>
   <br>
-
-  <input id="botaoLanca" type="button" name="lançaNotas" value="Lançar Notas">
 
 
 	<div id="Rodape">

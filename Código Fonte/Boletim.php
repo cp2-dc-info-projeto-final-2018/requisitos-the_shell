@@ -35,6 +35,7 @@ for ($i = 0; $i <= (count($Disciplinas)); $i++) {
 </head>
 
 <body>
+  <h3><?= $Usuario_Logado['nome'] ?>
   <table id="Boletim">
 		<tr>
       <th class="Nome_Coluna">Disciplina</th>

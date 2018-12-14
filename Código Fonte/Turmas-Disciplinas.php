@@ -5,7 +5,7 @@
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaDisciplina.php");
 session_start();
- 
+
 $Erros = null;
 if (isset($_SESSION['erros'])) {
     $Erros = $_SESSION['erros'];
@@ -22,7 +22,7 @@ $Disciplinas = ListaDisciplinas();
 	<div id="Cabecalho">
 		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
 		<h2 id="Nome_do_Software">SHELL</h2>
-	</div> 
+	</div>
 
 
 	 Turma:
@@ -53,8 +53,8 @@ $Disciplinas = ListaDisciplinas();
 
      <input id="Botao_Seleccionar" type="submit" name="Botao_Selecciona" value="Visualizar">
 
-#mais facil com check-up
-       
+
+
  </body>
 
 </html>

@@ -18,10 +18,6 @@ $Usuario_Logado = $_SESSION["Usuário"];
 $ID_Usuario = $Usuario_Logado['id_usuario'];
 $Classe_Usuario = $Usuario_Logado['id_classe'];
 
-#$ID_Aluno = $_GET['id_aluno'];
-
-#$Aluno = ListaAlunoPorID($ID_Aluno);
-
 if ($Classe_Usuario == 2)
 {
   $Professor = ListaAulasDoProfessor ($ID_Usuario);
@@ -55,8 +51,6 @@ function VerNotas(id_turma)
 {
     location.href = `Boletim_da_Matéria.php?id_Turmas=${id_turma}&id_disciplina=${Disciplina_Selecionada}`;
 }
-
-
 
 </script>
 

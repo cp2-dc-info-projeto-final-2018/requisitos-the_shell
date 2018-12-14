@@ -27,7 +27,7 @@ function ListaSecretarios()
                         usuario.tel AS Tel,
                         usuario.data_nasc AS Data_Nasc,
                         usuario.email AS Email,
-                        secretaria.siape AS Siape,
+                        secretaria.siape AS Siape
                        FROM secretaria
                        LEFT JOIN usuario ON secretaria.id_secretaria = usuario.id_usuario;');
 

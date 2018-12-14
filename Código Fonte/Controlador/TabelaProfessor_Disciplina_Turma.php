@@ -14,7 +14,7 @@ function ListaAulasDoProfessor($ID_Professor)
                          FROM professor_disciplina_turma
                          RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
                          RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
-                         LEFT JOIN disciplina ON professor_disciplina_turma.id_discipina = disciplina.id_discipina
+                         LEFT JOIN disciplina ON professor_disciplina_turma.id_disciplina = disciplina.id_disciplina
                          WHERE professor_disciplina_turma.id_professor = :id_professor;');
 
   $SQL -> bindValue(":id_professor", $ID_Professor);
@@ -42,7 +42,7 @@ function ListaTurmasDoProfessor($ID_Professor)
   return $SQL -> fetchAll();
 }
 
-function ListaDisciplinaDoProfessor($ID_Professor)
+function ListaDisciplinasDoProfessor($ID_Professor)
 {
   $BD = CriaConexaoBD();
 

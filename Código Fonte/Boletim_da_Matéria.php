@@ -20,8 +20,10 @@ $ID_Turma = $_GET["id_turma"];
 $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
-var_dump($Disciplina);
+
 $Turma = ListaTurmaPorID($ID_Turma);
+
+var_dump($Disciplina);
 
 ?>
 
@@ -51,17 +53,30 @@ $Turma = ListaTurmaPorID($ID_Turma);
 			<th class="Nome_Coluna">3<sup>a</sup> Certificação</th>
 			<th class="Nome_Coluna">Média</th>
 		</tr>
-    <?php for ($i = 0; $i <= (count($Notas_da_Turma) - 1); $i++) { ?>
-
-      <tr class="Linhas">
-        <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
-			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
-			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
-        <th class="Celulas"> <?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
-			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Media"] ?></th>
-		  </tr>
-
-    <?php } ?>
+    <?php
+    for ($i = 0; $i <= (count($Notas_da_Turma) - 1); $i++)
+    {
+      if (! empty($Notas_da_Turma)) { ?>
+        <tr class="Linhas">
+          <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
+  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
+  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
+          <th class="Celulas"> <?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
+  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Media"] ?></th>
+  		  </tr>
+    <?php
+      }
+      else { ?>
+        <tr>
+          <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
+  			  <th class="Celulas">0.0</th>
+  			  <th class="Celulas">0.0</th>
+          <th class="Celulas">0.0</th>
+  			  <th class="Celulas">0.0</th>
+        </tr>
+    <?php
+      }
+    } ?>
 
 
 	</table>
