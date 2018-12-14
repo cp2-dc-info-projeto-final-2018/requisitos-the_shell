@@ -51,7 +51,11 @@ function ListaTurmas()
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> query('SELECT *
+  $SQL = $BD -> query('SELECT
+                        id_turma AS ID_Turma,
+                        nome AS Nome,
+                        serie AS Serie,
+                        integrado AS Integrado
                        FROM turma
                        ORDER BY nome ASC;');
 

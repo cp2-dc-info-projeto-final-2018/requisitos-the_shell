@@ -18,7 +18,9 @@ function ListaDisciplinas()
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('SELECT *
+  $SQL = $BD -> prepare('SELECT
+                          id_disciplina AS ID_Disciplina,
+                          disciplina AS Disciplina
                          FROM disciplina
                          ORDER BY disciplina ASC;');
 
