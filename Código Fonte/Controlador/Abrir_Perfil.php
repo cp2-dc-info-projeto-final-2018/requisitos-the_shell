@@ -1,9 +1,11 @@
 <?php
 
 require_once("Conexão_BD.php");
-require_once("TabelaUsuários.php")
+require_once("TabelaUsuários.php");
+session_start();
 
 function AbrePerfil($Usuario_Logado)
+
 {
   if ($Usuario_Logado['id_classe'] == 1)
   {
@@ -18,7 +20,9 @@ function AbrePerfil($Usuario_Logado)
   }
 }
 
-$Usuario = ListaUsuarioPorLogin($_SESSION['Usuário'])
+
+
+$Usuario = ListaUsuarioPorLogin($_SESSION['Usuário']);
 
 AbrePerfil()
 

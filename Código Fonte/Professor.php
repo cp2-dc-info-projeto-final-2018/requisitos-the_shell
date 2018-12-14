@@ -3,11 +3,12 @@
 <?php
 
 require_once("Controlador/TabelaUsuários.php");
+require_once("Controlador/TabelaProfessores.php");
 
 session_start();
 
-$Login = $_SESSION["Usuário"];
-
+#$Login = $_SESSION["Usuário"];
+$UsuarioLogado = $_SESSION['Usuário'];
 $Info_Usuario = ListaUsuarioPorLogin($Login);
 
 ?>
@@ -39,22 +40,25 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			Nome: <?= $Info_Usuario["Nome"] ?>
-      <br/>
+			 <label class="Info_Label">Nome:</label>
+        <br/>
+        <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label>
+        <br/>
+        <br/>
 		</div>
 
 		<div id="Tela_de_Informaçoes">
-				Data de nascimento: <?= $Info_Usuario["Data de Nascimento"] ?>
+        <label class="Info_Label">Data de nascimento:</label> 
         <br/>
+        <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label>
         <br/>
-				E-mail: <?= $Info_Usuario["Email"] ?>
+        <label class="Info_Label">E-mail:</label>
         <br/>
+        <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label>
         <br/>
-				Siape: <?= $Info_Usuario["Siape"] ?>
+        <label class="Info_Label">Telefone:</label> 
+        <label class="Info"><?= $UsuarioLogado['Tel'] ?></label>
         <br/>
-        <br/>
-		</div>
-
 	</div>
 
 	<div id="Rodape">

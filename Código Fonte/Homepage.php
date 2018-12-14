@@ -31,7 +31,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
   <div class="Barra_de_Navegacao">
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
-    <a class="Celula" href="Controlador/Abrir_Perfil.php"> Perfil</a>
+    <a class="Celula" href="Aluno.php"> Perfil</a>
   </div>
 
 <?php } else if ($Classe_Usuario == 2) { ?>
@@ -39,7 +39,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php">Turma</a>
-    <a class="Celula" href="Controlador/Abrir_Perfil.php">Perfil</a>
+    <a class="Celula" href="Professor.php">Perfil</a>
       <a class="Celula" href="Seleção_de_Boletim.php" >Notas prof</a>
   </div>
 
@@ -48,7 +48,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a id="SHELL">SHELL</a>
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php">Turma</a>
-    <a class="Celula" href="Controlador/Abrir_Perfil.php">Perfil</a>
+    <a class="Celula" href="Secretaria.php">Perfil</a>
   </div>
 
 <?php } ?>
