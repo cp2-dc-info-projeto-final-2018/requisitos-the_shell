@@ -106,20 +106,25 @@ if (empty($Erros) == true)
     CadastraAluno($ID_Usuario, $Request);
 
     $_SESSION["Turma_Escolhida"] = $Request['Turma'];
+    header("Location: ../Gerenciamento_de_Turmas.php");
+
   }
   else if ($Request['Classe'] == 2)
   {
     CadastraProfessor($ID_Usuario, $Request);
+    header("Location: ../Gerenciamento_de_Professores.php");
   }
   else if ($Request['Classe'] == 3)
   {
     CadastraSecretaria($ID_Usuario, $Request);
+    header("Location: ../Gerenciamento_de_Secretaria.php");
   }
 }
 else {
   session_start();
 
   $_SESSION['erros'] = $Erros;
+  header("Location: ../Cadastro_de_Usuario.php");
 }
 
-header("Location: ../Cadastro_de_Usuario.php");
+
