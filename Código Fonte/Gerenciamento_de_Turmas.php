@@ -82,13 +82,13 @@ unset($_SESSION['erros']);
     </tr>
     <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
       <tr class="Linhas">
-        <td class="Celulas"><a name="Turma" href="Turma.php?id_turma=<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></a></th>
-        <td class="Celulas"> <?= $Turmas[$i]["serie"] ?></th>
-        <td class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["id_turma"])) ?></th>
+        <td class="Celulas"><a name="Turma" href="Turma.php?id_turma=<?= $Turmas[$i]["ID_Turma"] ?>"><?= $Turmas[$i]["Nome"] ?></a></th>
+        <td class="Celulas"> <?= $Turmas[$i]["Serie"] ?></th>
+        <td class="Celulas"> <?= count(ListaAlunosDaTurma($Turmas[$i]["ID_Turma"])) ?></th>
         <td class="Celulas">
           <?php
 
-          if ($Turmas[$i]["integrado"] == 1) {
+          if ($Turmas[$i]["Integrado"] == 1) {
             echo "Sim";
           }
           else {
@@ -96,8 +96,8 @@ unset($_SESSION['erros']);
           }
 
           ?>
-        <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["id_turma"] ?>, 'turma')">Excluir</th>
-        <th id="Edita_Turma" class="Celulas" name="Edita_Turma"  onclick="AlteraTurma(<?= $Turmas[$i]["id_turma"] ?>)">Editar</a></th>
+        <th id="Exclui_Turma" class="Celulas" name="Exclui_Turma" onclick="ExcluiTurma(<?= $Turmas[$i]["ID_Turma"] ?>, 'turma')">Excluir</th>
+        <th id="Edita_Turma" class="Celulas" name="Edita_Turma"  onclick="AlteraTurma(<?= $Turmas[$i]["ID_Turma"] ?>)">Editar</a></th>
 
         </tr>
 

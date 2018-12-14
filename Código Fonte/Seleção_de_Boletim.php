@@ -49,7 +49,7 @@ function ExibeTurmas(id_disciplina)
 
 function VerNotas(id_turma)
 {
-    location.href = `Boletim_da_Matéria.php?id_Turmas=${id_turma}&id_disciplina=${Disciplina_Selecionada}`;
+    location.href = `Boletim_da_Matéria.php?id_turma=${id_turma}&id_disciplina=${Disciplina_Selecionada}`;
 }
 
 </script>
