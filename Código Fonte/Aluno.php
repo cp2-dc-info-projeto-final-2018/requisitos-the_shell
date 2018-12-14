@@ -9,11 +9,11 @@ session_start();
 
 $Login = $_SESSION["Usuário"];
 
-$ID_Aluno = $_GET["id_aluno"];
+#$ID_Aluno = $_GET["id_aluno"];
 
-$Aluno = ListaAlunoPorID($ID_Aluno);
+#$Aluno = ListaAlunoPorID($ID_Aluno);
 
-$Info_Usuario = ListaUsuarioPorLogin($Login);
+#$Info_Usuario = ListaUsuarioPorLogin($Login);
 
 ?>
 
@@ -33,25 +33,22 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			 <label class="Info_Label">Nome:</label>
+			Nome: 
+			<?= $UsuarioLogado['Nome'] ?> <br/>
+		</div>
+
+		<div id="Tela_de_Informaçoes">
+			Data de nascimento: <br/>  <?= $UsuarioLogado['Data_Nasc'] ?>
         <br/>
-        <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label>
+        <br/>
+				E-mail: <br/>  <?= $UsuarioLogado['Email'] ?>
+        <br/>
+        <br/>
+				Telefone: <br/> <?= $UsuarioLogado['Tel'] ?>
         <br/>
         <br/>
 		</div>
 
-		<div id="Tela_de_Informaçoes">
-        <label class="Info_Label">Data de nascimento:</label> 
-        <br/>
-        <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label>
-        <br/>
-        <label class="Info_Label">E-mail:</label>
-        <br/>
-        <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label>
-        <br/>
-        <label class="Info_Label">Telefone:</label> 
-        <label class="Info"><?= $UsuarioLogado['Tel'] ?></label>
-        <br/>
 	</div>
 
 	<div id="Rodape">

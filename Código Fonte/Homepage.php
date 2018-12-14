@@ -40,7 +40,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php">Turma</a>
     <a class="Celula" href="Professor.php">Perfil</a>
-      <a class="Celula" href="Seleção_de_Boletim.php" >Notas prof</a>
+      <a class="Celula" href="Seleção_de_Boletim.php" > Seleccionar Diciplina a editar</a>
   </div>
 
 <?php } else if ($Classe_Usuario == 3) { ?>
@@ -60,24 +60,6 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
   <div id="Cabecalho" align="center">
 	<h2 id="Nome_do_Software">Home Page</h2>
 	</div>
-	<div id="Direita">
-        <label class="Info_Label">Nome:</label>
-        <br/>
-        <label class="Info"> <?= $UsuarioLogado['Nome'] ?> </label>
-        <br/>
-        <label class="Info_Label">Data de nascimento:</label> 
-        <br/>
-        <label class="Info"> <?= $UsuarioLogado['Data_Nasc'] ?> </label>
-        <br/>
-        <label class="Info_Label">E-mail:</label>
-        <br/>
-        <label class="Info"> <?= $UsuarioLogado['Email'] ?> </label>
-        <br/>
-        <label class="Info_Label">Telefone:</label> 
-        <label class="Info"><?= $UsuarioLogado['Tel'] ?></label>
-        <br/>
-        <a class="Celula">Sair</a>
-    </div>
 
   <div id="Rodape">
     <h2>Desenvolvedores</h2>

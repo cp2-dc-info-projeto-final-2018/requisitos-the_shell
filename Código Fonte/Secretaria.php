@@ -3,12 +3,14 @@
 <?php
 
 require_once("Controlador/TabelaUsuários.php");
+require_once("Controlador/TabelaSecretaria.php");
 
 session_start();
 
-$Login = $_SESSION["Usuário"];
+#$Login = $_SESSION["Usuário"];
+$UsuarioLogado = $_SESSION['Usuário'];
 
-$Info_Usuario = ListaUsuarioPorLogin($Login);
+#$Info_Usuario = ListaUsuarioPorLogin($Login);
 
 ?>
 
@@ -25,40 +27,21 @@ $Info_Usuario = ListaUsuarioPorLogin($Login);
 		<h2 id="Nome_do_Software">SHELL - Notas</h2>
 	</div>
 
-	<div id="Esquerda">
-		<div id="Caixa_de_Botoes">
-			<form method="get" action="GerenciamentoDeNotas.html">
-				<input class="Botoes" onclick="Botao_Notas" type="button" id="btn_Notas" value="Notas"/>
-      </form>
-      <form method="get" action="">
-				<input class="Botoes" onclick="Botao_Dicisplina" type="button" id="btn_Disciplina" value="Disciplina"/>
-      </form>
-      <form method="get" action="Gerenciamento_de_Turmas.php">
-				<input class="Botoes" onclick="Botao_Turmas" type="button" id="btn_Turmas" value="Turmas"/>
-      </form>
-      <form method="get" action="GerenciamentoAlunos.html">
-				<input class="Botoes" onclick="Botao_Alunos" type="button" id="" value="Alunos"/>
-      </form>
-      <form method="get" action="GerenciamentoDeNotas.html">
-				<input class="Botoes" onclick="Botao_Professores" type="button" id="" value="Professores"/>
-			</form>
-		</div>
-	</div>
-
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			Nome: <?= $Info_Usuario["Nome"] ?><br/>
+			Nome: 
+			<?= $UsuarioLogado['Nome'] ?> <br/>
 		</div>
 
 		<div id="Tela_de_Informaçoes">
-				Data de nascimento: <?= $Info_Usuario["Data de Nascimento"] ?>
+			Data de nascimento: <br/>  <?= $UsuarioLogado['Data_Nasc'] ?>
         <br/>
         <br/>
-				E-mail: <?= $Info_Usuario["Email"] ?>
+				E-mail: <br/>  <?= $UsuarioLogado['Email'] ?>
         <br/>
         <br/>
-				Siape: <?= $Info_Usuario["Siape"] ?>
+				Telefone <br/> <?= $UsuarioLogado['Tel'] ?>
         <br/>
         <br/>
 		</div>

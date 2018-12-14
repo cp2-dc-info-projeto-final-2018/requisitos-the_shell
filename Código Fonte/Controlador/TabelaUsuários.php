@@ -52,7 +52,7 @@ function ListaUsuarioPorLogin($Login_Usuario)
                          FROM usuario
                          WHERE login = :login;');
 
-  $SQL -> bindValue(':login', $Login_Usuario['login']);
+  $SQL -> bindValue(':login', $Login_Usuario);
 
   $SQL -> execute();
 
