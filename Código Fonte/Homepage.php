@@ -41,7 +41,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a class="Celula" href="#home">Home</a>
     <a class="Celula" href="Professor.php"> Perfil </a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php"> Turmas</a>
-    <a class="Celula" href="Seleção_de_Boletim.php" > Seleccionar Diciplina a editar </a>
+    <a class="Celula" href="Seleção_de_Boletim.php" > Editar notas </a>
   </div>
 
 <?php } else if ($Classe_Usuario == 3) { ?>
@@ -51,6 +51,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a class="Celula" href="Secretaria.php"> Perfil </a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php"> Turmas </a>
     <a class="Celula" href="Gerenciamento_de_Disciplina.php"> Diciplinas </a>
+    <a class="Celula" href="Seleção_de_Boletim.php" > Editar notas </a>
   </div>
 
 <?php } ?>
