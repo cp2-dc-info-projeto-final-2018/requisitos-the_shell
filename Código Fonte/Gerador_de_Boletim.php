@@ -4,6 +4,7 @@
 
 require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaAlunos.php");
+require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 
