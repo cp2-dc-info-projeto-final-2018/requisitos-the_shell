@@ -89,6 +89,24 @@ ValidaString($Request['Tel'], "Tel", 8, 12);
 ValidaString($Request['Email'], "Email", 4, 30);
 ValidaString($Request['Senha'], "Senha", 2, 80);
 
+if ($Request['Classe'] == 1)
+{
+  ValidaString($Request['Matricula'], "Matricula", 9, 80);
+}
+
+else if ($Request['Classe'] == 2)
+{
+  ValidaString($Request['Siape'], "Siape", 9, 80);
+}
+
+else if ($Request['Classe'] == 3)
+{
+  ValidaString($Request['Siape'], "Siape", 9, 80);
+}
+
+
+
+
 if ($Request['Senha'] != $Request['Confirmar_Senha'])
 {
   $Erros[] = "As senhas não combinam";
