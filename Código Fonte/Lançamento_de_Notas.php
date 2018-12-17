@@ -51,8 +51,11 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
     <?php
     for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
       {
-        $Boletim_Aluno[$i] = ListaBoletimDoAluno($Alunos_da_Turma[$i]["id_aluno"], $$ID_Disciplina); ?>
-        <form>
+        $ID_Aluno = $Alunos_da_Turma[$i]["id_aluno"];
+
+        $Boletim_Aluno[$i] = ListaBoletimDoAluno($Alunos_da_Turma[$i]["id_aluno"], $ID_Disciplina); ?>
+
+        <form method="POST" action="Controlador/Cadastrar_Notas.php?id_disciplina=<?= $ID_Disciplina ?>&id_aluno=<?= $ID_Aluno ?>">
     	     <tr>
              <td class="Nome_Aluno"></td>
     		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
@@ -65,8 +68,9 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
                else {
                  echo "0.0";
                } ?>
-               <td>
-                 <input id="botaoLanca" type="submit" name="lançaNotas<?= $i ?>" value="Lançar Notas"></td>
+             </td>
+             <td>
+               <input id="Lancar_Notas" type="submit" name="Lancar_Notas" value="Lançar Notas">
              </td>
       	   </tr>
         </form>

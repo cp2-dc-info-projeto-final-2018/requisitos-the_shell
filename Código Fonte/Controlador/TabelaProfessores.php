@@ -10,7 +10,7 @@ function CadastraProfessor($ID_Usuario, $dadosNovoProfessor)
                          (:id, :siape, 2);');
 
   $SQL -> bindValue(':id', $ID_Usuario);
-  $SQL -> bindValue(':siape', $dadosNovoProfessor["Siape"]);
+  $SQL -> bindValue(':siape', $dadosNovoProfessor["Siape_Professor"]);
 
   $SQL -> execute();
 }

@@ -42,22 +42,27 @@ function ListaBoletimDoAluno($id_Aluno, $id_Disciplina)
   return $SQL -> fetch();
 }
 
-function CadastraBoletim($id_Aluno, $id_Disciplina, $Notas)
+function CadastraNotas($ID_Aluno, $ID_Disciplina, $Notas)
 {
   $BD = CriaConexaoBD();
 
   $Disciplina = ListaDisciplinaPorID($id_Disciplina);
 
-  $Media = ($Notas["1cert/" . $Disciplina["disciplina"]] * 2 + $Notas["2cert/" . $Disciplina["disciplina"]] * 2 + $Notas["3cert/" . $Disciplina["disciplina"]] * 3) / 10;
+  $Media = ($Notas["Pri_Cert"] * 3 + $Notas["Seg_Cert"] * 3 + $Notas["Ter_Cert"] * 4) / 10;
 
-  $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina, primeira_cert, segunda_cert, terceira_cert, media) VALUES
-                         (:id_Aluno, :id_Disciplina, :1cert, :2cert, :3cert, :media);');
+  $SQL = $BD -> prepare('UPDATE boletim
+                         SET primeira_cert = :pri_cert,
+                             segunda_cert = :seg_cert,
+                             terceira_cert = :ter_cert,
+                             media = :media
+                         WHERE id_aluno = :id_aluno
+                         AND id_disciplina = :id_disciplina');
 
   $SQL -> bindValue(":id_Aluno", $id_Aluno);
   $SQL -> bindValue(":id_Disciplina", $id_Disciplina);
-  $SQL -> bindValue(":1cert", $Notas["1cert/" . $Disciplina["disciplina"]]);
-  $SQL -> bindValue(":2cert", $Notas["2cert/" . $Disciplina["disciplina"]]);
-  $SQL -> bindValue(":3cert", $Notas["3cert/" . $Disciplina["disciplina"]]);
+  $SQL -> bindValue(":pri_cert", $Notas["Pri_Cert"]);
+  $SQL -> bindValue(":seg_cert", $Notas["Seg_Cert"]);
+  $SQL -> bindValue(":ter_cert", $Notas["Ter_Cert"]);
   $SQL -> bindValue(":media", $Media);
 
   $SQL -> execute();
@@ -94,6 +99,19 @@ function ListaNotasDaTurma($ID_Disciplina, $ID_Turma)
     $SQL -> execute();
 
     return $SQL -> fetchAll();
+}
+
+function GeraBoletim($ID_Aluno, $ID_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina) VALUES
+                         (:id_aluno, :id_disciplina);')
+
+  $SQL -> bindValue(":id_aluno", $ID_Aluno);
+  $SQL -> bindValue(":id_disciplina", $ID_Disciplina);
+
+  $SQL -> execute();
 }
 
 ?>

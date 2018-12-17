@@ -158,13 +158,13 @@ function ExibeExtraInfo(Valor)
 
         <div id="Professor">
           <br>
-          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
+          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape_Professor">
           <br>
         </div>
 
         <div id="Secretaria">
           <br>
-          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape">
+          Siape: <input class="Digitar_Extra_Info" type="text" name="Siape_Secretaria">
         </div>
 
       </fieldset>

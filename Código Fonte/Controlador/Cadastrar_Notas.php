@@ -8,27 +8,23 @@ require_once('TabelaUsuários.php');
 
 session_start();
 
-$Disciplinas = ListaDisciplinas();
-
 $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
+
+$ID_Disciplina = $_GET["id_disciplina"];
+$ID_Aluno = $_GET["id_aluno"];
 
 $Request = array_map("trim", $_REQUEST);
 
-for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
-{
-  $id_Disciplina = $Disciplinas[$i]["id_disciplina"];
+$Request = filter_var_array(
+  $Request,
+  [
+    'Pri_Cert' => FILTER_VALIDATE_FLOAT,
+    'Seg_Cert' => FILTER_VALIDATE_FLOAT,
+    'Ter_Cert' => FILTER_VALIDATE_FLOAT
+  ]
+);
 
-  $Request = filter_var_array(
-    $Request,
-    [
-      '1cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
-      '2cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
-      '3cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT
-    ]
-  );
-
-  CadastraBoletim($Usuario_Logado["id_usuario"], $id_Disciplina, $Request);
-}
+CadastraNotas($ID_Aluno, $ID_Disciplina, $Request);
 
 header("Location: ../Gerenciamento_de_Notas.php");
 

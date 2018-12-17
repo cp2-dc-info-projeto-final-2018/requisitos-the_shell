@@ -49,6 +49,7 @@ function SelecionaAluno(ID_Turma)
       <div id="Div_Turma">
         <label for="Turma">Turma: </label>
         <select id="Turma" name="Turma" onclick="SelecionaAluno(this.value)">
+          <option value=""></option>
           <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
             <option value="<?= $Turmas[$i]["ID_Turma"] ?>"><?= $Turmas[$i]["Nome"] ?></option>
           <?php } ?>
@@ -61,6 +62,7 @@ function SelecionaAluno(ID_Turma)
       <div id="Div_Turma">
         <label for="Aluno">Aluno: </label>
         <select id="Aluno" name="Aluno">
+          <option value=""></option>
           <?php for ($i = 0; $i <= (count($Alunos_da_Turma[$_POST["Turma"]]) - 1); $i++) { ?>
             <option value="<?= $Alunos_da_Turma["ID_Turma"] ?>"><?= $Turmas["Nome"] ?></option>
           <?php } ?>
