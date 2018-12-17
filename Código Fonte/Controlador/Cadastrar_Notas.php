@@ -21,9 +21,9 @@ for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
   $Request = filter_var_array(
     $Request,
     [
-      '1cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
-      '2cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT,
-      '3cert/' . $Disciplinas[$i]["disciplina"] => FILTER_DEFAULT
+      'Pri_Cert' => FILTER_VALIDATE_FLOAT,
+      'Seg_Cert' => FILTER_VALIDATE_FLOAT,
+      'Ter_Cert' => FILTER_VALIDATE_FLOAT
     ]
   );
 
