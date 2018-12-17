@@ -28,7 +28,8 @@ function ListaProfessores()
                         usuario.email AS Email,
                         professor.siape AS Siape
                        FROM professor
-                       LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario;');
+                       LEFT JOIN usuario ON professor.id_professor = usuario.id_usuario
+                       ORDER BY usuario.nome ASC;');
 
   $SQL -> execute();
 

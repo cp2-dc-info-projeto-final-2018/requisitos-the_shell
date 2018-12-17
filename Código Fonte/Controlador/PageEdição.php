@@ -23,9 +23,22 @@ require_once("TabelaTurmas.php");
 
   <form action="EditarTurmas.php" method="post" >
   <label> Digite o novo Nome: </label>
-  <input type="text" name="Nome_Turma" value="">
-  <input type="text" name="Serie_Turma" value="">
-  <input type="text" name="Integrado_Turma" value="">
+
+Nome:  <input type="text" name="Nome_Turma" value="Nome"> <br/>
+
+
+<label for="Serie_Turma">Serie: </label>
+<select name="Serie_Turma" id="Serie">
+  <option value="Primeiro Ano">Primeiro Ano</option>
+  <option value="Segundo Ano">Segundo Ano</option>
+  <option value="Terceiro Ano">Terceiro Ano</option>
+
+</select>
+
+<br/>
+
+
+<input type="checkbox" id="Integrado" name="Integrado" value="1"> Integrado <br/>
 
   <input type="submit" value="Editar" >
 

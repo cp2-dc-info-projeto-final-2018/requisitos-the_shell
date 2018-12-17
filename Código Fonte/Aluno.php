@@ -7,7 +7,7 @@ require_once("Controlador/TabelaAlunos.php");
 
 session_start();
 
-$Login = $_SESSION["Usuário"];
+$UsuarioLogado = $_SESSION["Usuário"];
 
 #$ID_Aluno = $_GET["id_aluno"];
 
@@ -26,28 +26,13 @@ $Login = $_SESSION["Usuário"];
 
 	<div id="Cabecalho">
 		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
-		<h2 id="Nome_do_Software">SHELL - Notas</h2>
+		<h2 id="Nome_do_Software">SHELL - Perfil</h2>
 	</div>
 
 	</div>
 	<div id="Direita">
 
-		<div id="Informaçoes_de_Usuario">
-			Nome: 
-			<?= $UsuarioLogado['Nome'] ?> <br/>
-		</div>
 
-		<div id="Tela_de_Informaçoes">
-			Data de nascimento: <br/>  <?= $UsuarioLogado['Data_Nasc'] ?>
-        <br/>
-        <br/>
-				E-mail: <br/>  <?= $UsuarioLogado['Email'] ?>
-        <br/>
-        <br/>
-				Telefone: <br/> <?= $UsuarioLogado['Tel'] ?>
-        <br/>
-        <br/>
-		</div>
 
 	</div>
 

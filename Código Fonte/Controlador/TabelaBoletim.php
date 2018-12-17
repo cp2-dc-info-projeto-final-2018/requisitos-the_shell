@@ -1,5 +1,7 @@
 <?php
 
+require_once("TabelaTurmas.php");
+
 function ApuraMedia($dados)
 {
 
@@ -66,6 +68,25 @@ function CadastraNotas($ID_Aluno, $ID_Disciplina, $Notas)
   $SQL -> bindValue(":media", $Media);
 
   $SQL -> execute();
+}
+
+function GeraBoletimDaTurma($ID_Turma, $ID_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
+
+  for ($i = 0; $i <= (count($Alunos_da_Turma) - 1) ; $i++) {
+    $ID_Aluno = $Alunos_da_Turma[$i]["id_aluno"];
+
+    $SQL = $BD -> prepare('INSERT INTO boletim(id_aluno, id_disciplina) VALUES
+                           (:id_aluno, :id_disciplina);');
+
+    $SQL -> bindValue(":id_aluno", $ID_Aluno);
+    $SQL -> bindValue(":id_disciplina", $ID_Disciplina);
+
+    $SQL -> execute();
+  }
 }
 
 function EscolheDisciplinaTurma($id_Disciplina, $id_Turma)

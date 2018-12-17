@@ -4,6 +4,7 @@ html
   width: 100%;
   margin: 1%;
   padding: 0;
+  font-family: arial;
 }
 body {
   display: table;
@@ -13,30 +14,42 @@ body {
   width: 100%;
 }
 
-.Barra_de_Navegacao {
-  background-color: Aquamarine;
-  overflow: hidden;
-  width: 35%;
-}
 
 .Barra_de_Navegacao {
     float: left;
+    background-color: Aquamarine;
+    overflow: hidden;
     color: #f2f2f2;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     width: 95%;
+    border: 1px solid black;
+    font-family: arial;
+    margin-bottom: 15px;
+    position: fixed;
 }
 
 .Barra_de_Navegacao #SHELL {
   font-weight: bold;
+  font-size: 18px;
   background-color: black;
+  border: 1px solid black;
+  padding: 15px;
 }
 
 .Barra_de_Navegacao .Celula:hover {
-    background-color: #ddd;
+    background-color: cyan;
+    border: 1px solid black;
     color: black;
+}
+
+.Barra_de_Navegacao .Celula {
+    background-color: Aquamarine;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
 }
 
 #Cabecalho {
@@ -46,6 +59,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
+/*
 #Direita {
 max-width: 15%;
 font-size: 15px;
@@ -53,6 +67,7 @@ line-height: 1.5;
 padding-left: 5px;
 
 }
+*/
 
 #Rodape {
     background-image: url("Imagens/Pinellas Blue Background.jpg");
@@ -66,4 +81,19 @@ padding-left: 5px;
     bottom: -20%;
     width: 98.5%;
 }
+<<<<<<< HEAD
 
+
+#Informaçoes_de_Usuario {
+  font-weight: bold;
+  padding-left: 10px;
+  padding: 20px;
+  width: 80%;
+  display: table-cell;
+  margin: 25px;
+  vertical-align: top;
+  border: 5px;
+
+}
+=======
+>>>>>>> 760442abc54582e4c21e2bf6d5e68c0e0c19ad55

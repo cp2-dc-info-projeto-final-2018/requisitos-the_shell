@@ -11,6 +11,7 @@ session_start();
 
 $UsuarioLogado = $_SESSION['Usuário'];
 
+
 $Classe_Usuario = $UsuarioLogado['id_classe'];
 
 ?>
@@ -56,6 +57,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
 
 <?php } ?>
 
+
   <br>
 
   <h1>Bem vindo à Concha do Trovão, <?= $UsuarioLogado['Nome'] ?> </h1>
@@ -63,6 +65,36 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
   <div id="Cabecalho" align="center">
 	<h2 id="Nome_do_Software">Home Page</h2>
 	</div>
+
+
+
+  <div id="Informaçoes_de_Usuario">
+    Nome:
+    <?= $UsuarioLogado['Nome'] ?> <br/>
+  </div>
+
+  <div id="Tela_de_Informaçoes">
+    Data de nascimento: <br/>  <?= $UsuarioLogado['Data_Nasc'] ?>
+      <br/>
+      <br/>
+      E-mail: <br/>  <?= $UsuarioLogado['Email'] ?>
+      <br/>
+      <br/>
+      Telefone: <br/> <?= $UsuarioLogado['Tel'] ?>
+      <br/>
+      <br/>
+
+      <?php if ($Classe_Usuario == 1) { ?>
+        Matricula: <br/>  <?= $UsuarioLogado['Matricula'] ?>
+
+      <?php } else if ($Classe_Usuario == 2) { ?>
+
+        Siape:  <?= $UsuarioLogado['Siape'] ?>
+      <?php } ?>
+
+
+  </div>
+
 
   <div id="Rodape">
     <h2>Desenvolvedores</h2>

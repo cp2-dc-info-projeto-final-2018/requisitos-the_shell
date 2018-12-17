@@ -72,7 +72,7 @@ unset($_SESSION['Erros']);
       <select name="Disciplina" required>
         <option value=""></option>
         <?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
-          <option value="<?= $Disciplinas[$i]["id_disciplina"] ?>"><?= $Disciplinas[$i]["disciplina"] ?></option>
+          <option value="<?= $Disciplinas[$i]["ID_Disciplina"] ?>"><?= $Disciplinas[$i]["Disciplina"] ?></option>
         <?php } ?>
       </select>
 
@@ -84,7 +84,7 @@ unset($_SESSION['Erros']);
       <select name="Turma" required>
         <option value=""></option>
         <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
-          <option value="<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></option>
+          <option value="<?= $Turmas[$i]["ID_Turma"] ?>"><?= $Turmas[$i]["Nome"] ?></option>
         <?php } ?>
       </select>
 

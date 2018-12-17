@@ -12,7 +12,7 @@ require_once("Controlador/TabelaTurmas.php");
 
 #$Disciplinas = ListaDisciplinas();
 
-$Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]);
+$Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]["Nome"]);
 
 $ID_Disciplina = $_GET["id_disciplina"];
 $ID_Turma = $_GET["id_turma"];

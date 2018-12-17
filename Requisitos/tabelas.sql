@@ -87,9 +87,11 @@ CREATE TABLE Secretaria (
 
 CREATE TABLE Professor_Disciplina_Turma (
 
+	id_dados INT NOT NULL AUTO_INCREMENT,
 	id_professor INT,
 	id_turma INT,
 	id_disciplina INT,
+	PRIMARY KEY (id_dados),
 	FOREIGN KEY (id_professor) REFERENCES Professor(id_professor),
 	FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
 	FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)

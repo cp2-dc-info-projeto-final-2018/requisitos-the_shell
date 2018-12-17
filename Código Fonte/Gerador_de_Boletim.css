@@ -1,0 +1,48 @@
+body {
+	background-color: powderblue;
+	background-image: url("Imagens/Light Blue Background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.Cabecalho {
+		border: 2px solid black;
+		background-color: #9efff9;
+		padding: 0px 0px 15px 10px;
+		font-size: 22px;
+		font-family: "Times New Roman";
+}
+
+#Nome_do_Software {
+	padding: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #11ffa8;
+	border: 1px dashed black;
+	border-radius: 30px;
+	text-align: center;
+	margin-top: -18px;
+}
+
+#Nome_do_Colegio {
+	font-family: arial;
+	background-image: url("Imagens/Blue Background.jpg");
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	padding-left: 30px;
+	border: 5px groove black;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+
+#Rodape {
+		background-image: url("Imagens/Pinellas Blue Background.jpg");
+		background-size: cover;
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+    margin-top: 50px;
+}

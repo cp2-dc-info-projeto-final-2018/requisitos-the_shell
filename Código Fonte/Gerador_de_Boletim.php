@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-
 <?php
 
 require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaAlunos.php");
+require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 
@@ -12,20 +11,21 @@ $Turmas = ListaTurmas();
 $Disciplinas_da_Turma = [];
 $Alunos_da_Turma = [];
 
-for ($i = 0; $i <= (count($Turmas) - 1); $i++) {
-  $Disciplinas_da_Turma[] = ListaDisciplinasDaTurma($Turmas[$i]["ID_Turma"]);
-  $Alunos_da_Turma[] = ListaAlunosDaTurma($Turmas[$i]["ID_Turma"]);
+//for ($i = 0; $i <= (count($Turmas) - 1); $i++) {
+if (empty($_GET['ID_Turma']) == false) {
+  $idTurma = $_GET["ID_Turma"];
+  $Disciplinas_da_Turma = ListaDisciplinasDaTurma($idTurma);
 }
 
 ?>
-
+<!DOCTYPE html>
 <html>
 
 <script>
 
-function SelecionaAluno(ID_Turma)
+function TurmaSelecionada(ID_Turma)
 {
-  document.getElementById("Aluno").style.display = "block";
+  this.location.href = `Gerador_de_Boletim.php?ID_Turma=${ID_Turma}`;
 }
 
 </script>
@@ -48,23 +48,9 @@ function SelecionaAluno(ID_Turma)
     <form method="POST" action="Controlador/Gerar_Boletim.php">
       <div id="Div_Turma">
         <label for="Turma">Turma: </label>
-        <select id="Turma" name="Turma" onclick="SelecionaAluno(this.value)">
-          <option value=""></option>
+        <select id="Turma" name="Turma" onchange="TurmaSelecionada(this.value)">
           <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
             <option value="<?= $Turmas[$i]["ID_Turma"] ?>"><?= $Turmas[$i]["Nome"] ?></option>
-          <?php } ?>
-        </select>
-      </div>
-
-      <br>
-      <br>
-
-      <div id="Div_Turma">
-        <label for="Aluno">Aluno: </label>
-        <select id="Aluno" name="Aluno">
-          <option value=""></option>
-          <?php for ($i = 0; $i <= (count($Alunos_da_Turma[$_POST["Turma"]]) - 1); $i++) { ?>
-            <option value="<?= $Alunos_da_Turma["ID_Turma"] ?>"><?= $Turmas["Nome"] ?></option>
           <?php } ?>
         </select>
       </div>
@@ -75,8 +61,8 @@ function SelecionaAluno(ID_Turma)
       <div>
         <label for="Disciplina">Disciplina: </label>
         <select id="Disciplina" name="Disciplina">
-          <?php for ($i = 0; $i <= (count($Disciplinas_da_Turma[$_POST["Turma"]]) - 1); $i++) { ?>
-            <option value="<?= $Disciplinas_da_Turma["ID_Turma"] ?>"><?= $Disciplinas_da_Turma["Disciplina"] ?></option>
+          <?php for ($i = 0; $i <= (count($Disciplinas_da_Turma) - 1); $i++) { ?>
+            <option value="<?= $Disciplinas_da_Turma[$i]["ID_Disciplina"] ?>"><?= $Disciplinas_da_Turma[$i]["Disciplina"] ?></option>
           <?php } ?>
         </select>
       </div>
