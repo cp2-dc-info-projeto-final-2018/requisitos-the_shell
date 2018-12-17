@@ -20,8 +20,8 @@ $Classe_Usuario = $Usuario_Logado['id_classe'];
 
 if ($Classe_Usuario == 2)
 {
-  $Professor = ListaAulasDoProfessor ($ID_Usuario);
-  $Disciplinas = ListaDisciplinasDoProfessor ($ID_Usuario);
+  $Professor = ListaAulasDoProfessor($ID_Usuario);
+  $Disciplinas = ListaDisciplinasDoProfessor($ID_Usuario);
   $Turmas = ListaTurmasDoProfessor($ID_Usuario);
 }
 else if ($Classe_Usuario == 3)
@@ -75,7 +75,7 @@ function VerNotas(id_turma)
     		<th class="Nome_Coluna">Disciplinas</th>
     	</tr>
 
-  		<?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
+  		<?php for ($i = 0; $i <= (count($Disciplinas)); $i++) { ?>
   			<tr class="Linhas">
   				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["ID_Disciplina"] ?>)"><?= $Disciplinas[$i]["Disciplina"] ?></th>
   			</tr>
