@@ -35,7 +35,7 @@ if ($_REQUEST['Classe'] == 1) {
       'Classe' => FILTER_DEFAULT,
       'Confirmar_Senha' => FILTER_DEFAULT,
       'Matricula' => FILTER_DEFAULT,
-      'Turma' => FILTER_DEFAULT
+      'Turma' => FILTER_VALIDATE_INT
     ]
   );
 }
@@ -126,5 +126,3 @@ else {
   $_SESSION['erros'] = $Erros;
   header("Location: ../Cadastro_de_Usuario.php");
 }
-
-

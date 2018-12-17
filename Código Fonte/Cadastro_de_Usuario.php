@@ -149,7 +149,7 @@ function ExibeExtraInfo(Valor)
 
             <?php for ($i = 0; $i <= (count($Turmas) - 1) ; $i++) { ?>
 
-              <option value="<?= $Turmas[$i]["id_turma"] ?>"><?= $Turmas[$i]["nome"] ?></option>
+              <option value="<?= $Turmas[$i]["ID_Turma"] ?>"><?= $Turmas[$i]["Nome"] ?></option>
 
             <?php } ?>
 
