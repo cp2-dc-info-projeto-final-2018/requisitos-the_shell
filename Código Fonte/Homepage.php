@@ -11,6 +11,7 @@ session_start();
 
 $UsuarioLogado = $_SESSION['Usuário'];
 
+
 $Classe_Usuario = $UsuarioLogado['id_classe'];
 
 ?>

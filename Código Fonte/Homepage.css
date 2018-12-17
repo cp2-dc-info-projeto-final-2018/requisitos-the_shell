@@ -13,6 +13,7 @@ body {
   width: 100%;
 }
 
+/*
 .Barra_de_Navegacao {
   background-color: Aquamarine;
   overflow: hidden;
@@ -46,6 +47,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
+/*
 #Direita {
 max-width: 15%;
 font-size: 15px;
@@ -53,6 +55,7 @@ line-height: 1.5;
 padding-left: 5px;
 
 }
+*/
 
 #Rodape {
     background-image: url("Imagens/Pinellas Blue Background.jpg");
@@ -67,3 +70,15 @@ padding-left: 5px;
     width: 98.5%;
 }
 
+
+#Informaçoes_de_Usuario {
+  font-weight: bold;
+  padding-left: 10px;
+  padding: 20px;
+  width: 80%;
+  display: table-cell;
+  margin: 25px;
+  vertical-align: top;
+  border: 5px;
+
+}
