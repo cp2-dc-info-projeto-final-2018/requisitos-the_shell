@@ -17,10 +17,9 @@ $Usuario_Logado = ListaUsuarioPorLogin($_SESSION["Usuário"]["Nome"]);
 $ID_Disciplina = $_GET["id_disciplina"];
 $ID_Turma = $_GET["id_turma"];
 
+$Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
 $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
-
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
-
 $Turma = ListaTurmaPorID($ID_Turma);
 
 var_dump($Disciplina);
@@ -54,34 +53,62 @@ var_dump($Disciplina);
 			<th class="Nome_Coluna">Média</th>
 		</tr>
     <?php
-    for ($i = 0; $i <= (count($Notas_da_Turma) - 1); $i++)
+    for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
     {
-      if (! empty($Notas_da_Turma)) { ?>
+      $Boletim_do_Aluno = ListaBoletimDoAluno($Alunos_da_Turma[$i]["ID_Usuario"], $ID_Disciplina); ?>
         <tr class="Linhas">
-          <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
-  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Pri_Cert"] ?></th>
-  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Seg_Cert"] ?></th>
-          <th class="Celulas"> <?= $Notas_da_Turma[$i]["Ter_Cert"] ?></th>
-  			  <th class="Celulas"> <?= $Notas_da_Turma[$i]["Media"] ?></th>
+          <th class="Celulas"><a> <?= $Alunos_da_Turma[$i]["Nome"] ?></a></th>
+  			  <th class="Celulas">
+            <?php
+            if (empty($Boletim_do_Aluno[$i]["Pri_Cert"]))
+            {
+              echo "0.0";
+            }
+            else
+            {
+              echo $Boletim_do_Aluno[$i]["Pri_Cert"];
+            }  ?>
+          </th>
+  			  <th class="Celulas">
+            <?php
+            if (empty($Boletim_do_Aluno[$i]["Seg_Cert"]))
+            {
+              echo "0.0";
+            }
+            else
+            {
+              echo $Boletim_do_Aluno[$i]["Seg_Cert"];
+            } ?>
+          </th>
+          <th class="Celulas">
+            <?php
+            if (empty($Boletim_do_Aluno[$i]["Ter_Cert"]))
+            {
+              echo "0.0";
+            }
+            else
+            {
+              echo $Boletim_do_Aluno[$i]["Ter_Cert"];
+            } ?>
+          </th>
+  			  <th class="Celulas">
+            <?php
+            if (empty($Boletim_do_Aluno[$i]["Media"]))
+            {
+              echo "0.0";
+            }
+            else
+            {
+              echo $Boletim_do_Aluno[$i]["Media"];
+            } ?>
+          </th>
   		  </tr>
-    <?php
-      }
-      else { ?>
-        <tr>
-          <th class="Celulas"><a> <?= $Notas_da_Turma[$i]["Nome"] ?></a></th>
-  			  <th class="Celulas">0.0</th>
-  			  <th class="Celulas">0.0</th>
-          <th class="Celulas">0.0</th>
-  			  <th class="Celulas">0.0</th>
-        </tr>
-    <?php
-      }
-    } ?>
+    <?php } ?>
 
 
 	</table>
 
-	<a id="Botao_Alterar_Notas" href="Lançamento_de_Notas.php?id_disciplina=<?= $Disciplina['disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
+	<a id="Botao_Alterar_Notas" href="Lançamento_de_Notas.php?id_disciplina=<?= $Disciplina['id_disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
 
 
 	<div id="Rodape">

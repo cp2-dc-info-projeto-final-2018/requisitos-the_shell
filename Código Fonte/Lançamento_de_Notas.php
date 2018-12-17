@@ -4,17 +4,16 @@
 
 require_once("Controlador/TabelaDisciplina.php");
 require_once("Controlador/TabelaTurmas.php");
+require_once("Controlador/TabelaBoletim.php");
 
 $ID_Disciplina = $_GET["id_disciplina"];
 $ID_Turma = $_GET["id_turma"];
 
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
-
 $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
 
 ?>
-
 
 <html>
 
@@ -51,19 +50,19 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
     <?php
     for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
       {
-        $ID_Aluno = $Alunos_da_Turma[$i]["id_aluno"];
+        $ID_Aluno = $Alunos_da_Turma[$i]["ID_Usuario"];
 
-        $Boletim_Aluno[$i] = ListaBoletimDoAluno($Alunos_da_Turma[$i]["id_aluno"], $ID_Disciplina); ?>
+        $Boletim_Aluno = ListaBoletimDoAluno($Alunos_da_Turma[$i]["ID_Usuario"], $ID_Disciplina); ?>
 
-        <form method="POST" action="Controlador/Cadastrar_Notas.php?id_disciplina=<?= $ID_Disciplina ?>&id_aluno=<?= $ID_Aluno ?>">
+        <form method="POST" action="Controlador/Cadastrar_Notas.php?id_disciplina=<?= $ID_Disciplina ?>&id_aluno=<?= $ID_Aluno ?>&id_turma=<?= $ID_Turma ?>">
     	     <tr>
              <td class="Nome_Aluno"></td>
-    		     <td class="Celulas"><input name="Pri_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Pri_Cert"] ?>"></td>
-    		     <td class="Celulas"><input name="Seg_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Seg_Cert"] ?>"></td>
-             <td class="Celulas"><input name="Ter_Cert" type="number" value="<?= $Boletim_Aluno[$i]["Ter_Cert"] ?>"></td>
+    		     <td class="Celulas"><input name="Pri_Cert" type="text" value="<?= $Boletim_Aluno["Pri_Cert"] ?>"></td>
+    		     <td class="Celulas"><input name="Seg_Cert" type="text" value="<?= $Boletim_Aluno["Seg_Cert"] ?>"></td>
+             <td class="Celulas"><input name="Ter_Cert" type="text" value="<?= $Boletim_Aluno["Ter_Cert"] ?>"></td>
              <td class="Celulas">
-               <?php if (array_key_exists($Boletim[$i]["Média"])) {
-                 echo $Boletim[$i]["Média"];
+               <?php if (! empty($Boletim_Aluno["Media"])) {
+                 echo $Boletim_Aluno["Media"];
                }
                else {
                  echo "0.0";

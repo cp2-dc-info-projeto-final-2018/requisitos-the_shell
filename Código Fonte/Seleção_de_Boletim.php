@@ -43,7 +43,6 @@ function ExibeTurmas(id_disciplina)
 {
   Disciplina_Selecionada = id_disciplina;
 
-
   document.getElementById("Turmas").style.display = "block";
 }
 

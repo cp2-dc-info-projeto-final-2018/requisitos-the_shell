@@ -12,11 +12,11 @@ function ValidaString($Valor, $Nome_Campo, $Tam_Min, $Tam_Max)
 
   if ($Valor == false)
   {
-    $Erros[] = "Valor de $Nome_Campo inválido";
+    $Erros[] = "Valor de $Nome_Campo inválido. ";
   }
   else if ((strlen($Valor) < $Tam_Min) || (strlen($Valor) > $Tam_Max))
   {
-    $Erros[] = "$Nome_Campo deve ter, no mínimo, $Tam_Min caracteres e, no máximo, $Tam_Max caracteres.";
+    $Erros[] = "$Nome_Campo deve ter, no mínimo, $Tam_Min caracteres e, no máximo, $Tam_Max caracteres. ";
   }
 }
 
@@ -80,7 +80,7 @@ else if ($_REQUEST['Classe'] == 3) {
 
 if (empty($Request['Classe']) || $Request['Classe'] == "")
 {
-  $Erros[] = "Classe não especificada";
+  $Erros[] = "Classe não especificada. ";
 }
 
 ValidaString($Request['Login'], "Login", 2, 32);
@@ -96,12 +96,12 @@ if ($Request['Classe'] == 1)
 
 else if ($Request['Classe'] == 2)
 {
-  ValidaString($Request['Siape'], "Siape", 9, 80);
+  ValidaString($Request['Siape_Professor'], "Siape", 9, 80);
 }
 
 else if ($Request['Classe'] == 3)
 {
-  ValidaString($Request['Siape'], "Siape", 9, 80);
+  ValidaString($Request['Siape_Secretaria'], "Siape", 9, 80);
 }
 
 
@@ -109,7 +109,7 @@ else if ($Request['Classe'] == 3)
 
 if ($Request['Senha'] != $Request['Confirmar_Senha'])
 {
-  $Erros[] = "As senhas não combinam";
+  $Erros[] = "As senhas não combinam. ";
 
 }
 
