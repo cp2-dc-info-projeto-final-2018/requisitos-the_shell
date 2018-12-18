@@ -29,9 +29,9 @@ else if ($Classe_Usuario == 3)
   $Disciplinas = ListaDisciplinas();
   $Turmas = ListaTurmas();
 }
-#else {
-#  header("Location: Acesso_Negado.php");
-#}
+else {
+  header("Location: Acesso_Negado.php");
+}
 
 var_dump($ID_Usuario);
 

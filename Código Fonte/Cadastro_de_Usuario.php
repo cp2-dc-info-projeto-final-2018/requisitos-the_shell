@@ -16,6 +16,11 @@ unset($_SESSION['erros']);
 $Turmas = ListaTurmas();
 $Disciplinas = ListaDisciplinas();
 
+if (! $Classe_Usuario == 3) {
+  header("Acesso_Negado.php");
+}
+
+
 ?>
 
 <script>

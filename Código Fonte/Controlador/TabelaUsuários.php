@@ -49,9 +49,11 @@ function ListaUsuarioPorLogin($Login_Usuario)
                           usuario.data_nasc AS Data_Nasc,
                           usuario.tel AS Tel,
                           usuario.id_classe_usuario AS id_classe,
-                          aluno.matricula AS Matricula
+                          aluno.matricula AS Matricula,
+                          aluno.id_turma AS ID_Turma
                          FROM usuario
                          LEFT JOIN aluno ON aluno.id_aluno = usuario.id_usuario
+                         LEFT JOIN turma ON aluno.id_turma = turma.id_turma
                          WHERE login = :login;');
 
   $SQL -> bindValue(':login', $Login_Usuario);
