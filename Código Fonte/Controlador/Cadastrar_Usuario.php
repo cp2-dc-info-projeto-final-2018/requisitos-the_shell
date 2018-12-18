@@ -96,12 +96,12 @@ if ($Request['Classe'] == 1)
 
 else if ($Request['Classe'] == 2)
 {
-  ValidaString($Request['Siape_Professor'], "Siape", 9, 80);
+  ValidaString($Request['Siape_Professor'], "Siape", 7, 80);
 }
 
 else if ($Request['Classe'] == 3)
 {
-  ValidaString($Request['Siape_Secretaria'], "Siape", 9, 80);
+  ValidaString($Request['Siape_Secretaria'], "Siape", 7, 80);
 }
 
 

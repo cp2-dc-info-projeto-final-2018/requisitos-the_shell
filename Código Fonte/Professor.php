@@ -29,7 +29,7 @@ $UsuarioLogado = $_SESSION['Usuário'];
 	<div id="Direita">
 
 		<div id="Informaçoes_de_Usuario">
-			Nome: 
+			Nome:
 			<?= $UsuarioLogado['Nome'] ?> <br/>
 		</div>
 
@@ -43,6 +43,7 @@ $UsuarioLogado = $_SESSION['Usuário'];
 				Telefone: <br/> <?= $UsuarioLogado['Tel'] ?>
         <br/>
         <br/>
+      Siape: <br/>  <?= $UsuarioLogado['Siape'] ?>
 		</div>
 
 	</div>

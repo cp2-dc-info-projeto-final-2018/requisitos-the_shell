@@ -42,8 +42,6 @@ session_start();
 
 if (empty($Erro))
 {
-  $_SESSION['Usuário'] = ListaUsuarioPorLogin($Login);
-
   $Classe_Usuario = ListaClasseUsuario($Login);
 
   #ID das classes:
@@ -52,18 +50,20 @@ if (empty($Erro))
   #3 - Secretário
 
     if ($Classe_Usuario['id_classe_usuario'] = 1)
-    {
-    header("Location: ../Homepage.php");
-    }
+      {
+        $_SESSION['Usuário'] = ListaUsuarioPorLogin($Login);
+      }
     else if ($Classe_Usuario['id_classe_usuario'] = 2)
-    {
-    header("Location: ../Homepage.php");
-    }
+      {
+        $_SESSION['Usuário'] =  ListaInfoProfessor($Login);
+      }
     else if ($Classe_Usuario['id_classe_usuario'] = 3)
-    {
+      {
+        $_SESSION['Usuário'] =  ListaInfoFuncionario($Login);
+      }
     header("Location: ../Homepage.php");
-    }
 }
+
 else
 {
   $_SESSION['Erro'] = $Erro;

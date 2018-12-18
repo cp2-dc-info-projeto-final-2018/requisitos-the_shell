@@ -30,11 +30,33 @@ $UsuarioLogado = $_SESSION["Usuário"];
 	</div>
 
 	</div>
-	<div id="Direita">
+
+  <div id="Direita">
+
+		<div id="Informaçoes_de_Usuario">
+			Nome:
+			<?= $UsuarioLogado['Nome'] ?> <br/>
+		</div>
+
+		<div id="Tela_de_Informaçoes">
+			Data de nascimento: <br/>  <?= $UsuarioLogado['Data_Nasc'] ?>
+        <br/>
+        <br/>
+				E-mail: <br/>  <?= $UsuarioLogado['Email'] ?>
+        <br/>
+        <br/>
+				Telefone: <br/> <?= $UsuarioLogado['Tel'] ?>
+        <br/>
+        Matricula: <br/>  <?= $UsuarioLogado['Matricula'] ?>
 
 
+		</div>
 
 	</div>
+
+
+
+
 
 	<div id="Rodape">
 		<h2>Desenvolvedores</h2>
