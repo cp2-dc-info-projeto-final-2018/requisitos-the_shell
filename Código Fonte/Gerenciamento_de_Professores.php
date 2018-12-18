@@ -24,6 +24,11 @@ if (! $Classe_Usuario == 3) {
 </head>
 
 <body>
+  <body>
+    <div class="Cabecalho">
+      <h1 id="Nome_do_Colegio">Colégio Pedro II</h1>
+      <h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
+    </div>
 
   <fieldset id="Campo_Professores">
     <table id="Professores">
