@@ -11,11 +11,6 @@ session_start();
 $UsuarioLogado = $_SESSION['Usuário'];
 # $Info_Usuario = ListaUsuarioPorLogin($Login);
 
-if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
-  header("Acesso_Negado.php");
-}
-
-
 ?>
 
 <head>

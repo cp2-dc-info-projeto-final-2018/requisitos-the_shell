@@ -49,11 +49,9 @@ function ListaUsuarioPorLogin($Login_Usuario)
                           usuario.data_nasc AS Data_Nasc,
                           usuario.tel AS Tel,
                           usuario.id_classe_usuario AS id_classe,
-                          aluno.matricula AS Matricula,
-                          aluno.id_turma AS ID_Turma
+                          aluno.matricula AS Matricula
                          FROM usuario
                          LEFT JOIN aluno ON aluno.id_aluno = usuario.id_usuario
-                         LEFT JOIN turma ON aluno.id_turma = turma.id_turma
                          WHERE login = :login;');
 
   $SQL -> bindValue(':login', $Login_Usuario);
@@ -79,31 +77,32 @@ function ListaClasseUsuario($Login_Usuario)
   return $Usuario -> fetch();
 }
 
-function ListaInfoProfessor($Login)
+function ListaInfoProfessor($Login_Usuario)
 {
   $BD = CriaConexaoBD();
 
-  $Info_Usuario = $BD -> query('SELECT
+  $Info_Usuario = $BD ->prepare('SELECT
                                   usuario.login AS Login,
                                   usuario.nome AS Nome,
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,
                                   usuario.tel AS Tel,
-                                  usuario.data_nasc AS "Data de Nascimento",
+                                  usuario.data_nasc AS Data_Nasc,
                                   classe.classe AS Classe,
+                                  classe.id_classe as id_classe,
                                   professor.siape AS Siape
                                 FROM usuario
-                                WHERE login = :login
                                 LEFT JOIN classe
                                 ON usuario.id_classe_usuario = classe.id_classe
-                                LEFT JOIN professor
-                                ON professor.id_classe_usuario = classe.id_classe');
+                                JOIN professor
+                                ON professor.id_professor = usuario.id_usuario
+                                WHERE usuario.login = :varlogin;');
 
-  $Info_Usuario -> bindValue(':login', $Login);
+  $Info_Usuario -> bindValue(':varlogin', $Login_Usuario);
 
   $Info_Usuario -> execute();
 
-   return $Info_Aluno = $Info_Usuario -> fetch();
+   return $Info_Usuario -> fetch();
 }
 
 function ListaInfoFuncionario($Login)
@@ -116,15 +115,17 @@ function ListaInfoFuncionario($Login)
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,
                                   usuario.tel AS Tel,
-                                  usuario.data_nasc AS "Data de Nascimento",
+                                  usuario.data_nasc AS Data_Nasc,
                                   classe.classe AS Classe,
-                                  secretaria.siape AS Siape
+                                  classe.id_classe as id_classe,
+                                  secre.siape AS Siape
                                 FROM usuario
                                 WHERE login = :login
                                 LEFT JOIN classe
                                 ON usuario.id_classe_usuario = classe.id_classe
                                 LEFT JOIN secretaria
-                                ON secretaria.id_classe_usuario = classe.id_classe');
+                                ON secretaria.id_classe_usuario = classe.id_classe
+                                WHERE usuario.login = :login;');
 
   $Info_Usuario -> bindValue(':login', $Login);
 

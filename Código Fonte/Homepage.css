@@ -27,6 +27,7 @@ body {
     width: 95%;
     border: 1px solid black;
     font-family: arial;
+    margin-bottom: 15px;
     position: fixed;
 }
 

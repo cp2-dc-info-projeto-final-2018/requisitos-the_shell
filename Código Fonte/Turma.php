@@ -12,11 +12,6 @@ $Turma = ListaTurmaPorID($ID_Turma);
 
 $Alunos = ListaAlunosDaTurma($ID_Turma);
 
-if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
-  header("Acesso_Negado.php");
-}
-
-
 ?>
 
 <html>

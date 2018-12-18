@@ -9,11 +9,6 @@ $Secretaria = ListaSecretarios();
 
 session_start();
 
-if (! $Classe_Usuario == 3) {
-  header("Acesso_Negado.php");
-}
-
-
 ?>
 <html>
   <fieldset id="">
@@ -28,5 +23,6 @@ if (! $Classe_Usuario == 3) {
       <?php } ?>
     </table>
   </fieldset>
-
+           
 </html>
+

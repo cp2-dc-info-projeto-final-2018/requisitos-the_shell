@@ -25,11 +25,6 @@ if (empty($_GET['ID_Turma']) == false) {
   $Disciplinas_da_Turma = ListaDisciplinasDaTurma($idTurma);
 }
 
-if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
-  header("Acesso_Negado.php");
-}
-
-
 ?>
 
 <!DOCTYPE html>

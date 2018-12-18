@@ -29,11 +29,9 @@ else if ($Classe_Usuario == 3)
   $Disciplinas = ListaDisciplinas();
   $Turmas = ListaTurmas();
 }
-else {
-  header("Location: Acesso_Negado.php");
-}
-
-var_dump($ID_Usuario);
+#else {
+#  header("Location: Acesso_Negado.php");
+#}
 
 ?>
 
@@ -77,7 +75,7 @@ function VerNotas(id_turma)
     		<th class="Nome_Coluna">Disciplinas</th>
     	</tr>
 
-  		<?php for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) { ?>
+  		<?php for ($i = 0; $i <= (count($Disciplinas)); $i++) { ?>
   			<tr class="Linhas">
   				<th class="Celula_Disciplina" onclick="ExibeTurmas(<?= $Disciplinas[$i]["ID_Disciplina"] ?>)"><?= $Disciplinas[$i]["Disciplina"] ?></th>
   			</tr>
@@ -90,7 +88,7 @@ function VerNotas(id_turma)
       </tr>
       <?php for ($i = 0; $i <= (count($Turmas) - 1); $i++) { ?>
         <tr class="Linhas">
-          <th class="Celula_Turma" onclick="VerNotas(<?= $Turmas[$i]['ID_Turma'] ?>)"><?= $Turmas[$i]['Turma'] ?></th>
+          <th class="Celula_Turma" onclick="VerNotas(<?= $Turmas[$i]['ID_Turma'] ?>)"><?= $Turmas[$i]['Nome'] ?></th>
         </tr>
       <?php } ?>
     </table>

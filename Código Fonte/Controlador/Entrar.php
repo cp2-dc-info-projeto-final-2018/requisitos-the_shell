@@ -9,7 +9,7 @@ $Request = filter_var_array(
                $Request,
                [
                  'Login' => FILTER_DEFAULT,
-                 'Senha' => FILTER_DEFAULT
+                 'Senha' => FILTER_VALIDATE_PASSWORD
                ]
            );
 
@@ -49,15 +49,16 @@ if (empty($Erro))
   #2 - Professor
   #3 - Secretário
 
-    if ($Classe_Usuario['id_classe_usuario'] = 1)
+    if ($Classe_Usuario['id_classe_usuario'] == 1)
       {
         $_SESSION['Usuário'] = ListaUsuarioPorLogin($Login);
       }
-    else if ($Classe_Usuario['id_classe_usuario'] = 2)
+    else if ($Classe_Usuario['id_classe_usuario'] == 2)
       {
         $_SESSION['Usuário'] =  ListaInfoProfessor($Login);
+        var_dump("pasou por aqui!");
       }
-    else if ($Classe_Usuario['id_classe_usuario'] = 3)
+    else if ($Classe_Usuario['id_classe_usuario'] == 3)
       {
         $_SESSION['Usuário'] =  ListaInfoFuncionario($Login);
       }

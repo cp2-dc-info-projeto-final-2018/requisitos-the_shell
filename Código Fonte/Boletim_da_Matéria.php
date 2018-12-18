@@ -22,9 +22,7 @@ $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
 
-if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
-  header("Acesso_Negado.php");
-}
+var_dump($Disciplina);
 
 ?>
 
@@ -58,51 +56,50 @@ if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
     for ($i = 0; $i <= (count($Alunos_da_Turma) - 1); $i++)
     {
       $Boletim_do_Aluno = ListaBoletimDoAluno($Alunos_da_Turma[$i]["ID_Usuario"], $ID_Disciplina); ?>
-
         <tr class="Linhas">
           <th class="Celulas"><a> <?= $Alunos_da_Turma[$i]["Nome"] ?></a></th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno["Pri_Cert"]))
+            if (empty($Boletim_do_Aluno[$i]["Pri_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno["Pri_Cert"];
+              echo $Boletim_do_Aluno[$i]["Pri_Cert"];
             }  ?>
           </th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno["Seg_Cert"]))
+            if (empty($Boletim_do_Aluno[$i]["Seg_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno["Seg_Cert"];
+              echo $Boletim_do_Aluno[$i]["Seg_Cert"];
             } ?>
           </th>
           <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno["Ter_Cert"]))
+            if (empty($Boletim_do_Aluno[$i]["Ter_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno["Ter_Cert"];
+              echo $Boletim_do_Aluno[$i]["Ter_Cert"];
             } ?>
           </th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno["Media"]))
+            if (empty($Boletim_do_Aluno[$i]["Media"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno["Media"];
+              echo $Boletim_do_Aluno[$i]["Media"];
             } ?>
           </th>
   		  </tr>

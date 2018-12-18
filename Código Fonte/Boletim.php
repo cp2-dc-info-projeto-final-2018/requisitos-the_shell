@@ -8,20 +8,20 @@ require_once("Controlador/TabelaBoletim.php");
 session_start();
 
 $Usuario_Logado = $_SESSION['Usuário'];
-$Classe_Usuario = $Usuario_Logado['id_classe'];
-$ID_Turma = $Usuario_Logado['ID_Turma'];
+$Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
+$ID_Turma = $Usuario_Logado['id_turma'];
 
-if ($Classe_Usuario == 1) {
-  $ID_Aluno = $Usuario_Logado['id_usuario'];
-}
-else {
-  header("Acesso_Negado.php");
-}
+#if ($Classe_Usuario == 1) {
+  $ID_Aluno = $Usuario_Logado['id_aluno'];
+#}
+#else {
+#  header("Acesso_Negado.php");
+#}
 
 $Disciplinas = ListaDisciplinasDaTurma($ID_Turma);
 
-for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) {
-  $Boletim[$i] = ListaBoletimDoAluno($ID_Aluno, $Disciplinas[$i]["ID_Disciplina"]);
+for ($i = 0; $i <= (count($Disciplinas)); $i++) {
+  $Boletim[$i] = ListaBoletimDoAluno($ID_Aluno, $Disciplinas[$i]);
 }
 
 ?>
@@ -35,14 +35,7 @@ for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) {
 </head>
 
 <body>
-
-  <div class="Cabecalho">
-		<h1 id="Nome_do_Colegio">Colégio Pedro II</h1>
-		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
-	</div>
-
-  <h3 id="Aluno"><?= $Usuario_Logado['Nome'] ?></h3>
-
+  <h3><?= $Usuario_Logado['nome'] ?>
   <table id="Boletim">
 		<tr>
       <th class="Nome_Coluna">Disciplina</th>
@@ -78,13 +71,11 @@ for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) {
   		  </tr>
         <?php
       }
-    } ?>
-	</table>
+    }
+        ?>
 
-  <div id="Rodape">
-		<h4 class="Desenvolvedores">Desenvolvedores</h4>
-		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
-	</div>
+
+	</table>
 </body>
 
 </html>
