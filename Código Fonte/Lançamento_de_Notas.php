@@ -37,8 +37,8 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
 
   <table id="Boletim" border="2">
 		 <tr>
-		   <td id="Nome_Coluna_Aluno" class="Nome_Coluna">Aluno</td>
-			 <td class="Nome_Coluna">1<sup>a</sup> Certificação</td>
+		  <td id="Nome_Coluna_Aluno" class="Nome_Coluna">Aluno</td>
+			<td class="Nome_Coluna">1<sup>a</sup> Certificação</td>
 			<td class="Nome_Coluna">2<sup>a</sup> Certificação</td>
   		<td class="Nome_Coluna">3<sup>a</sup> Certificação</td>
   		<td class="Nome_Coluna">Média</td>
@@ -56,7 +56,7 @@ $Alunos_da_Turma = ListaAlunosDaTurma($ID_Turma);
 
         <form method="POST" action="Controlador/Cadastrar_Notas.php?id_disciplina=<?= $ID_Disciplina ?>&id_aluno=<?= $ID_Aluno ?>&id_turma=<?= $ID_Turma ?>">
     	     <tr>
-             <td class="Nome_Aluno"></td>
+             <td class="Nome_Aluno"><?= $Alunos_da_Turma[$i]["Nome"] ?></td>
     		     <td class="Celulas"><input name="Pri_Cert" type="text" value="<?= $Boletim_Aluno["Pri_Cert"] ?>"></td>
     		     <td class="Celulas"><input name="Seg_Cert" type="text" value="<?= $Boletim_Aluno["Seg_Cert"] ?>"></td>
              <td class="Celulas"><input name="Ter_Cert" type="text" value="<?= $Boletim_Aluno["Ter_Cert"] ?>"></td>
