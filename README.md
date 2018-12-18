@@ -3,7 +3,7 @@
 # Projeto Final do Curso Técnico em Informática do Colégio Pedro II – Campus Duque de Caxias – 2018
 
 # Integrantes:
-Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar Nery, Carlos Eduardo França, Danilo Alexandre
+Maria Jose Villamizar Patiño, Gabriel Rodrigues Nunes, João Victor de Aguiar Nery, Carlos Eduardo França e Danilo Alexandre.
 
 # Sumário
 - [1* sessão - Proposta](#1*-sessão---Proposta)
@@ -12,20 +12,20 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 - [4* sessão - Manual](#4*-sessão---Manual)
 
 # Propostas
-  **descrição:** Sistema voltado para o gerenciamneto de notas em geral, focado na facilidade de permitir o acesso a notas por alunos, professores e outras entidades.
+  **Descrição:** Sistema voltado para o gerenciamneto de notas em geral, tendo seu foco em permitir o armazenamento das notas dos alunos pelos professores e pela secretaria, e a visualização dessas notas pelos alunos.
  
- **stakeholders:** Secretaria e Direção
+ **Stakeholders:** Secretaria e Direção.
  
- **links:**  https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell
+ **Links:**  https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell
  
  # CDU
-   **diagramas de cdu:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/diagrama.png.png
+   **Diagramas de CDU:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/diagrama.png.png
    
-   **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/casosDeUso.md
+   **Link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/casosDeUso.md
  
  
  # Modelagem
-   **diagrama de classes:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Diagrama_classes.png
+   **Diagrama de Classes:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Diagrama_classes.png
   
   **Banco de dados:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Requisitos/tabelas.sql
   
@@ -34,50 +34,49 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    - Turma
    - Professor
    - Aluno
-   - Secretaria
-   - Professor_Turma 
-   - Disciplina 
-   - Turma_Disciplina 
+   - Secretaria 
+   - Disciplina
+   - Professor_Disciplina_Turma
    - Classe 
    - Boletim 
  
  
  # Manual
-   **Sistema de cadastro e Login:**
+   **Sistema de Cadastro e Login:**
    
-   ... Cadastro será realizado pela secretaria, que será responsavel de registrar devidos individuos, turmas, avaliações e disciplina no sistema, passando as informações e carateristicas das mesmas. 
+   ... Cadastro será realizado pela secretaria, que será responsavel de registrar individuos, turmas, avaliações e disciplinas no sistema, passando as informações necessárias das mesmas. 
    
-   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4606.jpg
+   **Link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4606.jpg
    
-   ...Já o login irá ser realizado por cada individuo, de acordo com o que ele assinale o que é pedido na página.
+   ... Já o login irá ser realizado por cada individuo.
    
-   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4610-1.jpg
+   **Link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4610-1.jpg
    
-   **Sistema de recupera senha:**
+   **Sistema de Recuperação de Senha:**
   
-  ...Na pagina de Login haverá um botão escrito "esqueci minha senha", que irá fazer uma serie de perguntas de segurança para o caso de um usuario precisar recuperar sua devida senha.
+  ... Na pagina de Login haverá um botão escrito "esqueci minha senha", que irá fazer uma serie de perguntas de segurança para o caso de um usuario precisar recuperar sua senha.
   
-  **sistema de visualização de notas:**
+  **sistema de Visualização de Notas:**
   
-  ...Cada entidade  terá acesso a visualização de notas, em cada perfil estará um botão que da acesso as médias.
+  ... Cada entidade terá acesso a visualização de notas por meio de um botão na barra de navegação.
    
-   **Sistema de gerenciamento de notas:**
+   **Sistema de Gerenciamento de Notas:**
    
-   ...Algumas entidades terão privilégios unicos, como o de lançar e alterar notas.
+   ... Algumas entidades terão privilégios unicos, como o de lançar e alterar notas.
    
-   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4608.jpg
+   **Link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4608.jpg
    
-   **Sistema de gerenciamento de turma, aluno e professores:**
+   **Sistema de Gerenciamento de Turmas, Alunos e Professores:**
    
-   ...A secretaria irá ser responsavel por gerenciar cada informação de cada entidade.
+   ... A secretaria irá ser responsável por gerenciar as informações de cada entidade.
    
    **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4605.jpg
     
-   **link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4609.jpg
+   **Link:** https://raw.githubusercontent.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/master/C%C3%B3digo%20Fonte/Imagens/Prints/IMG_4609.jpg
    
    **Sistema de gerenciamento de disciplinas:**
   
-  ...Caso determinada disciplina precisar ter certas alterações
+  ... Caso determinada disciplina precisar ter certas alterações.
    
  # Requisitos funcionais e não funcionais
  
@@ -87,13 +86,12 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
 - [3* RF - Mapa de notas](#3*-RF---Mapa)
 - [4* RF - Status do aluno](#4*-RF---Status)
   
-  **Requisitos funcionais:**
+  **Requisitos Funcionais:**
    
    
-   - Sistema de Acesso
+   - Sistema de acesso
    - Privilégio de acessos
    - Mapa de notas
-   - Status do aluno
    
     # Sumário RNF
 - [1* RNF - Tipos de acessos](#1*-RNF---TiposDeAcessos)
@@ -106,11 +104,11 @@ Maria Jose Villamizar Patiño, Gabriel Rodruigues Nunes, João Victor de Aguiar 
    - Segurança tipo HTTPS
    - Sistema de "esqueci minha senha"
  
- **link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Velhos%20arquivos/requisitos.md
+ **Link:** https://github.com/cp2-dc-info-projeto-final-2018/requisitos-the_shell/blob/master/Velhos%20arquivos/requisitos.md
  
- # Diagramas e suas Entidades
+ # Diagramas e Suas Entidades
  
- **entidades**
+ **Entidades**
   - Aluno
   - Professor 
   - Secretaria
