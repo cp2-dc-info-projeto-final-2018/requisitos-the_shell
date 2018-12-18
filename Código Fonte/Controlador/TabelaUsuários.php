@@ -83,6 +83,7 @@ function ListaInfoProfessor($Login_Usuario)
 
   $Info_Usuario = $BD ->prepare('SELECT
                                   usuario.login AS Login,
+                                  usuario.id_usuario As ID_usuario,
                                   usuario.nome AS Nome,
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,
@@ -109,7 +110,7 @@ function ListaInfoFuncionario($Login)
 {
   $BD = CriaConexaoBD();
 
-  $Info_Usuario = $BD -> query('SELECT
+  $Info_Usuario = $BD ->prepare('SELECT
                                   usuario.login AS Login,
                                   usuario.nome AS Nome,
                                   usuario.senha AS Senha,
@@ -118,9 +119,8 @@ function ListaInfoFuncionario($Login)
                                   usuario.data_nasc AS Data_Nasc,
                                   classe.classe AS Classe,
                                   classe.id_classe as id_classe,
-                                  secre.siape AS Siape
+                                  secretaria.siape AS Siape
                                 FROM usuario
-                                WHERE login = :login
                                 LEFT JOIN classe
                                 ON usuario.id_classe_usuario = classe.id_classe
                                 LEFT JOIN secretaria

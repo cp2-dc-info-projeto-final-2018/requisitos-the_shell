@@ -9,7 +9,7 @@ $Request = filter_var_array(
                $Request,
                [
                  'Login' => FILTER_DEFAULT,
-                 'Senha' => FILTER_VALIDATE_PASSWORD
+                 'Senha' => FILTER_DEFAULT
                ]
            );
 
