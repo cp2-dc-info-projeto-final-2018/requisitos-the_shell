@@ -28,16 +28,38 @@ function ListaTurmasDoProfessor($ID_Professor)
 {
   $BD = CriaConexaoBD();
 
-  $SQL = $BD -> prepare('SELECT
+  $SQL = $BD -> prepare('SELECT DISTINCT
                           professor_disciplina_turma.id_turma AS ID_Turma,
-                          turma.nome AS Turma
+                          turma.nome AS Nome
                          FROM professor_disciplina_turma
                          RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
                          RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
                          LEFT JOIN disciplina ON professor_disciplina_turma.id_disciplina = disciplina.id_disciplina
                          WHERE professor_disciplina_turma.id_professor = :id_professor;');
+//Pendencia de filtar as turmas e as aulas 
+  $SQL -> bindValue(":id_professor", $ID_Professor);
+
+  $SQL->execute();
+
+  return $SQL -> fetchAll();
+}
+
+function ListaTurmasDeDisciplinaDoProfessor($ID_Professor, $ID_Disciplina)
+{
+  $BD = CriaConexaoBD();
+
+  $SQL = $BD -> prepare('SELECT
+                          professor_disciplina_turma.id_turma AS ID_Turma,
+                          turma.nome AS Nome
+                         FROM professor_disciplina_turma
+                         RIGHT JOIN professor ON professor.id_professor = professor_disciplina_turma.id_professor
+                         RIGHT JOIN turma ON turma.id_turma = professor_disciplina_turma.id_turma
+                         LEFT JOIN disciplina ON professor_disciplina_turma.id_disciplina = disciplina.id_disciplina
+                         WHERE professor_disciplina_turma.id_professor = :id_professor AND
+                               professor_disciplina_turma.id_disciplina = :id_disciplina;');
 
   $SQL -> bindValue(":id_professor", $ID_Professor);
+  $SQL -> bindValue(":id_disciplina", $ID_Disciplina);
 
   $SQL->execute();
 

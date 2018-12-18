@@ -83,7 +83,7 @@ function ListaInfoProfessor($Login_Usuario)
 
   $Info_Usuario = $BD ->prepare('SELECT
                                   usuario.login AS Login,
-                                  usuario.id_usuario As ID_usuario,
+                                  usuario.id_usuario As id_usuario,
                                   usuario.nome AS Nome,
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,
@@ -112,6 +112,7 @@ function ListaInfoFuncionario($Login)
 
   $Info_Usuario = $BD ->prepare('SELECT
                                   usuario.login AS Login,
+                                  usuario.id_usuario As id_usuario,
                                   usuario.nome AS Nome,
                                   usuario.senha AS Senha,
                                   usuario.email AS Email,

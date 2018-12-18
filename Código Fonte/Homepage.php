@@ -52,7 +52,7 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
     <a class="Celula" href="Secretaria.php"> Perfil </a>
     <a class="Celula" href="Gerenciamento_de_Turmas.php"> Turmas </a>
     <a class="Celula" href="Gerenciamento_de_Disciplina.php"> Diciplinas </a>
-    <a class="Celula" href="Turmas-Disciplinas.php" > Disciplinas das turmas</a>
+    <a class="Celula" href="Professor_Disciplina_Turma.php" > Disciplinas das turmas</a>
     <a class="Celula" href="Seleção_de_Boletim.php" > Editar notas </a>
   </div>
 
