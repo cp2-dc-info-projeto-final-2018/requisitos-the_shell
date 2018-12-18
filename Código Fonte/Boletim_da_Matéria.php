@@ -22,7 +22,9 @@ $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
 
-var_dump($Disciplina);
+if (! $Classe_Usuario == 2 && ! $Classe_Usuario == 3) {
+  header("Acesso_Negado.php");
+}
 
 ?>
 

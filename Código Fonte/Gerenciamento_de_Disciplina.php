@@ -30,6 +30,11 @@ if (isset($_SESSION['erros'])) {
 
 unset($_SESSION['erros']);
 
+if (! $Classe_Usuario == 3) {
+  header("Acesso_Negado.php");
+}
+
+
 ?>
 
 <head>

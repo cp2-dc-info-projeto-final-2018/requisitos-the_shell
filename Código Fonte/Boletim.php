@@ -11,12 +11,12 @@ $Usuario_Logado = $_SESSION['Usuário'];
 $Classe_Usuario = $Usuario_Logado['id_classe'];
 $ID_Turma = $Usuario_Logado['ID_Turma'];
 
-#if ($Classe_Usuario == 1) {
+if ($Classe_Usuario == 1) {
   $ID_Aluno = $Usuario_Logado['id_usuario'];
-#}
-#else {
-#  header("Acesso_Negado.php");
-#}
+}
+else {
+  header("Acesso_Negado.php");
+}
 
 $Disciplinas = ListaDisciplinasDaTurma($ID_Turma);
 
