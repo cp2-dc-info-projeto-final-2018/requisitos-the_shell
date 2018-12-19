@@ -136,4 +136,10 @@ padding-left: 5px;
   padding: 5px;
 }
 
-#Botao_Sair
+#Botao_Sair {
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: Aquamarine;
+  padding: 8px;
+  margin: 5px;
+}

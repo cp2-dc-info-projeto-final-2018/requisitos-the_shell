@@ -152,7 +152,6 @@ function TurmaSelecionada(ID_Turma)
 
       <input id="Gerar_Boletim" name="Gerar_Boletim" type="submit" value="Gerar Boletim">
 
-      <a href="Sair.php">Sair</a>
     </form>
   </fieldset>
 
