@@ -7,6 +7,9 @@ require_once("Controlador/TabelaSecretaria.php");
 
 session_start();
 
+$UsuarioLogado = $_SESSION['Usuário'];
+$Classe_Usuario = $UsuarioLogado['id_classe'];
+
 #$Login = $_SESSION["Usuário"];
 $UsuarioLogado = $_SESSION['Usuário'];
 
@@ -21,11 +24,43 @@ $UsuarioLogado = $_SESSION['Usuário'];
 </head>
 
 <body>
+  <?php if ($Classe_Usuario == 1) { ?>
 
-	<div id="Cabecalho">
-		<h2 id="Nome_do_Colegio">Colégio Pedro II</h2>
-		<h2 id="Nome_do_Software">SHELL - Notas</h2>
-	</div>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Aluno.php">Perfil</a>
+      <a class="Celula" href="Boletim.php">Boletim</a>
+    </div>
+
+  <?php } else if ($Classe_Usuario == 2) { ?>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Professor.php">Perfil</a>
+      <a class="Celula" href="Gerenciamento_de_Turmas.php">Turmas</a>
+      <a class="Celula" href="Seleção_de_Boletim.php">Notas</a>
+    </div>
+
+  <?php } else if ($Classe_Usuario == 3) { ?>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Secretaria.php">Perfil</a>
+      <a class="Celula" href="Cadastro_de_Usuario.php">Cadastrar Usuários</a>
+      <a class="Celula" href="Gerenciamento_de_Disciplina.php">Disciplinas</a>
+      <a class="Celula" href="Gerenciamento_de_Turmas.php">Turmas</a>
+      <a class="Celula" href="Gerenciamento_de_Professores.php">Professores</a>
+      <a class="Celula" href="Gerenciamento_de_Secretaria.php">Secretaria</a>
+      <a class="Celula" href="Professor_Disciplina_Turma.php">Turmas e Professores</a>
+      <a class="Celula" href="Seleção_de_Boletim.php">Notas</a>
+    </div>
+
+  <?php } ?>
+
+  <br>
+  <br>
+  <br>
 
 	<div id="Direita">
 

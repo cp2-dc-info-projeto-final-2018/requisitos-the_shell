@@ -1,0 +1,80 @@
+body {
+	background-color: powderblue;
+	background-image: url("Imagens/Light Blue Background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#Rodape {
+		background-image: url("Imagens/Pinellas Blue Background.jpg");
+		background-size: cover;
+		border: 5px groove black;
+		background-color: #64eae1;
+		padding: 10px 0px 90px 10px;
+		font-family: arial;
+		font-size: 15px;
+    margin-top: 50px;
+}
+
+.Barra_de_Navegacao {
+    float: left;
+    background-color: Aquamarine;
+    overflow: hidden;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 95%;
+    border: 1px solid black;
+    font-family: arial;
+    margin-bottom: 15px;
+    position: fixed;
+}
+
+.Barra_de_Navegacao #SHELL {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: black;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.Barra_de_Navegacao .Celula:hover {
+    background-color: cyan;
+    border: 1px solid black;
+    color: black;
+}
+
+.Barra_de_Navegacao .Celula {
+    background-color: Aquamarine;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+#Professores {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  font-family: arial;
+}
+
+.Nome_Coluna {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+	background-color: lightgreen;
+}
+
+.Celulas {
+  border: 1px solid black;
+  padding: 8px;
+  width: 200px;
+	background-color: white;
+}

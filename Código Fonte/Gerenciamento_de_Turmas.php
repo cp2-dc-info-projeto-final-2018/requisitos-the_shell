@@ -7,12 +7,10 @@ function ExcluiTurma(id_turma, funcao)
   location.href = `Controlador/Excluir.php?id_turma=${id_turma}&excluir=${funcao}`;
 }
 
-
 function AlteraTurma(id_turma)
 {
   location.href = `Controlador/PageEdição.php`;
 }
-
 
 </script>
 
@@ -25,6 +23,9 @@ require_once("Controlador/TabelaTurmas.php");
 $Turmas = ListaTurmas();
 
 session_start();
+
+$UsuarioLogado = $_SESSION['Usuário'];
+$Classe_Usuario = $UsuarioLogado['id_classe'];
 
 $Erros = null;
 
@@ -43,11 +44,43 @@ unset($_SESSION['erros']);
 </head>
 
 <body>
+  <?php if ($Classe_Usuario == 1) { ?>
 
-  <div class="Cabecalho">
-    <h1 id="Nome_do_Colegio">Colégio Pedro II</h1>
-    <h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
-  </div>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Aluno.php">Perfil</a>
+      <a class="Celula" href="Boletim.php">Boletim</a>
+    </div>
+
+  <?php } else if ($Classe_Usuario == 2) { ?>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Professor.php">Perfil</a>
+      <a class="Celula" href="Gerenciamento_de_Turmas.php">Turmas</a>
+      <a class="Celula" href="Seleção_de_Boletim.php">Notas</a>
+    </div>
+
+  <?php } else if ($Classe_Usuario == 3) { ?>
+    <div class="Barra_de_Navegacao">
+      <a id="SHELL">SHELL</a>
+      <a class="Celula" href="Homepage.php">Home</a>
+      <a class="Celula" href="Secretaria.php">Perfil</a>
+      <a class="Celula" href="Cadastro_de_Usuario.php">Cadastrar Usuários</a>
+      <a class="Celula" href="Gerenciamento_de_Disciplina.php">Disciplinas</a>
+      <a class="Celula" href="Gerenciamento_de_Turmas.php">Turmas</a>
+      <a class="Celula" href="Gerenciamento_de_Professores.php">Professores</a>
+      <a class="Celula" href="Gerenciamento_de_Secretaria.php">Secretaria</a>
+      <a class="Celula" href="Professor_Disciplina_Turma.php">Turmas e Professores</a>
+      <a class="Celula" href="Seleção_de_Boletim.php">Notas</a>
+    </div>
+
+  <?php } ?>
+
+  <br>
+  <br>
+  <br>
 
   <?php if ($Erros != null) { ?>
 

@@ -16,6 +16,32 @@ body {
     margin-top: 50px;
 }
 
+#Alunos {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: auto;
+}
+
+#Turma {
+  font-family: arial;
+  text-align: center;
+  font-size: 30px;
+}
+
+.Celulas {
+  border: 1px solid black;
+  padding: 15px;
+  font-family: arial;
+  background-color: white;
+}
+
+.Nome_Coluna {
+  border: 1px solid black;
+  padding: 7px;
+  font-family: arial;
+  background-color: lightgreen;
+}
+
 .Barra_de_Navegacao {
     float: left;
     background-color: Aquamarine;
