@@ -146,6 +146,16 @@ else if ($Classe_Usuario == 3)
 
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <a id="Botao_Sair" href="Sair.php">Sair</a>
 
 </body>
 
