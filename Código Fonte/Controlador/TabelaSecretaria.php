@@ -11,7 +11,7 @@ function CadastraSecretaria($ID_Usuario, $dadosNovoSecretaria)
 						   					 (:id_secretaria, :siape, 3);');
 
 	$SQL -> bindValue(":id_secretaria", $ID_Usuario);
-	$SQL -> bindValue(":siape", $dadosNovoSecretaria['Siape']);
+	$SQL -> bindValue(":siape", $dadosNovoSecretaria['Siape_Secretaria']);
 
 	$SQL -> execute();
 }

@@ -27,6 +27,6 @@ $Request = filter_var_array(
 
 CadastraNotas($ID_Aluno, $ID_Disciplina, $Request);
 
-header("Location: ../Lançamento_de_Notas.php?id_aluno=$ID_Aluno&id_disciplina=$ID_Disciplina&id_turma=$ID_Turma");
+header("Location: ../Boletim_da_Matéria.php?id_disciplina=$ID_Disciplina&id_turma=$ID_Turma");
 
 ?>

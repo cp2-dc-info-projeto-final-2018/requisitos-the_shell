@@ -25,8 +25,6 @@ $Notas_da_Turma = ListaNotasDaTurma($ID_Disciplina, $ID_Turma);
 $Disciplina = ListaDisciplinaPorID($ID_Disciplina);
 $Turma = ListaTurmaPorID($ID_Turma);
 
-var_dump($Disciplina);
-
 ?>
 
 <html>
@@ -93,8 +91,8 @@ var_dump($Disciplina);
     {
       $Boletim_do_Aluno = ListaBoletimDoAluno($Alunos_da_Turma[$i]["ID_Usuario"], $ID_Disciplina); ?>
         <tr class="Linhas">
-          <th class="Celulas"><a> <?= $Alunos_da_Turma[$i]["Nome"] ?></a></th>
-  			  <th class="Celulas">
+          <td class="Celulas"><a> <?= $Alunos_da_Turma[$i]["Nome"] ?></a></th>
+  			  <td class="Celulas">
             <?php
             if (empty($Boletim_do_Aluno["Pri_Cert"]))
             {
@@ -104,8 +102,8 @@ var_dump($Disciplina);
             {
               echo $Boletim_do_Aluno["Pri_Cert"];
             }  ?>
-          </th>
-  			  <th class="Celulas">
+          </td>
+  			  <td class="Celulas">
             <?php
             if (empty($Boletim_do_Aluno["Seg_Cert"]))
             {
@@ -115,8 +113,8 @@ var_dump($Disciplina);
             {
               echo $Boletim_do_Aluno["Seg_Cert"];
             } ?>
-          </th>
-          <th class="Celulas">
+          </td>
+          <td class="Celulas">
             <?php
             if (empty($Boletim_do_Aluno["Ter_Cert"]))
             {
@@ -126,8 +124,8 @@ var_dump($Disciplina);
             {
               echo $Boletim_do_Aluno["Ter_Cert"];
             } ?>
-          </th>
-  			  <th class="Celulas">
+          </td>
+  			  <td class="Celulas">
             <?php
             if (empty($Boletim_do_Aluno["Media"]))
             {
@@ -137,7 +135,7 @@ var_dump($Disciplina);
             {
               echo $Boletim_do_Aluno["Media"];
             } ?>
-          </th>
+          </td>
   		  </tr>
     <?php } ?>
 

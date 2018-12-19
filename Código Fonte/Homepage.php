@@ -10,7 +10,27 @@ require_once("Controlador/TabelaSecretaria.php");
 session_start();
 
 $UsuarioLogado = $_SESSION['Usuário'];
+
 $Classe_Usuario = $UsuarioLogado['id_classe'];
+$Login_Usuario = $UsuarioLogado['Login'];
+$Nome_Usuario = $UsuarioLogado['Nome'];
+$Email_Usuario = $UsuarioLogado['Email'];
+$Tel_Usuario = $UsuarioLogado['Tel'];
+$Data_Nasc_Usuario = $UsuarioLogado['Data_Nasc'];
+
+if ($Classe_Usuario == 1)
+{
+  $Matricula_Usuario = $UsuarioLogado['Matricula'];
+  $Turma_Usuario = $UsuarioLogado['Turma'];
+}
+else if ($Classe_Usuario == 2)
+{
+  $Siape_Usuario = $UsuarioLogado['Siape'];
+}
+else if ($Classe_Usuario == 3)
+{
+  $Siape_Usuario = $UsuarioLogado['Siape'];
+}
 
 ?>
 
@@ -61,141 +81,71 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
   <br>
   <br>
 
-  <h1>Bem vindo à Concha do Trovão, <?= $UsuarioLogado['Nome'] ?> </h1>
+  <h1 id="Bem_Vindo">Bem vindo ao SHELL, <?= $Nome_Usuario ?>. </h1>
 
-  <div id="Cabecalho" align="center">
-	<h2 id="Nome_do_Software">Home Page</h2>
-	</div>
-  <body>
-	<a href="Sair.php"><button>Sair</button></a>
+  <br>
+  <br>
 
-    <br> <n>
-    Projeto Final do Curso Técnico em Informática do Colégio Pedro II – Campus Duque de Caxias – 2018 </n>
+  <div id="Informaçoes_de_Usuario">
+    <h3 id="Info_h3">Informações de Usuário</h3>
+    <label><b>Login:</b> <?= $Login_Usuario ?></label>
     <br>
-
-   # Integrantes:  <br>
-
-   Maria Jose Villamizar, Gabriel Rodruigues Nunes, João Victor de Aguiar Nery, Carlos Eduardo França, Danilo Alexandre
-   <br>
-   <br>
-
-   # Sumário
-   - [1* sessão - Proposta](#1*-sessão---Proposta)
-   - [2* sessão - CDU](#2*-sessão---CDU)
-   - [3* sessão - Modelagem](#3*-sessão---Modelagem)
-   - [4* sessão - Manual](#4*-sessão---Manual)
-   <br>
-
-   # Propostas
-     **descrição:** Sistema voltado para o gerenciamneto de notas em geral, focado na facilidade de permitir o acesso a notas por alunos, professores e outras entidades.
-
-    **stakeholders:** Secretaria e Direção
     <br>
-
-    # CDU
-      **diagramas de cdu
-      <br>
-
-    # Modelagem
-      **diagrama de classes:
-      <br>
-
-     **Banco de dados:**
-     <br>
-
-     Todas as tabelas:
-      - Usuario
-      - Turma
-      - Professor
-      - Aluno
-      - Secretaria
-      - Professor_Turma
-      - Disciplina
-      - Turma_Disciplina
-      - Classe
-      - Boletim
-      <br>
-
-
-    # Manual
-      **Sistema de cadastro e Login:**
-
-      ... Cadastro será realizado pela secretaria, que será responsavel de registrar devidos individuos, turmas, avaliações e disciplina no sistema, passando as informações e carateristicas das mesmas.
-
-      ...Já o login irá ser realizado por cada individuo, de acordo com o que ele assinale o que é pedido na página.
-
-      **Sistema de recupera senha:**
-
-     ...Na pagina de Login haverá um botão escrito "esqueci minha senha", que irá fazer uma serie de perguntas de segurança para o caso de um usuario precisar recuperar sua devida senha.
-
-     **sistema de visualização de notas:**
-
-     ...Cada entidade  terá acesso a visualização de notas, em cada perfil estará um botão que da acesso as médias.
-
-      **Sistema de gerenciamento de notas:**
-
-      ...Algumas entidades terão privilégios unicos, como o de lançar e alterar notas.
-
-      **Sistema de gerenciamento de turma, aluno e professores:**
-
-      ...A secretaria irá ser responsavel por gerenciar cada informação de cada entidade.
-
-      **Sistema de gerenciamento de disciplinas:**
-
-     ...Caso determinada disciplina precisar ter certas alterações
-     <br>
-
-    # Requisitos funcionais e não funcionais
     <br>
-
-    # Sumário RF
-   - [1* RF - Sistema de Acesso](#1*-RF---Proposta)
-   - [2* RF - Privilégio de acessos](#2*-RF---Privilégios)
-   - [3* RF - Mapa de notas](#3*-RF---Mapa)
-   - [4* RF - Status do aluno](#4*-RF---Status)
-   <br>
-
-     **Requisitos funcionais:**
-
-
-      - Sistema de Acesso
-      - Privilégio de acessos
-      - Mapa de notas
-      - Status do aluno
-      <br>
-
-       # Sumário RNF
-   - [1* RNF - Tipos de acessos](#1*-RNF---TiposDeAcessos)
-   - [2* RNF - Segurança tipo HTTPS](#2*-RNF---Segurança)
-   - [3* RNF - Sistema de "esqueci minha senha"](#3*-RNF---PercaSenha)
-   <br>
-
-     Requisitos não funcionais:
-     <br>
-
-      - Tipos de acessos(Aluno, Secretaria e Professor)
-      - Segurança tipo HTTPS
-      - Sistema de "esqueci minha senha"
-      <br>
-
-
-     Diagramas e suas Entidades
-     <br>
-
-  Entidades:
-     - Aluno
-     - Professor
-     - Secretaria
-     - Turma
-     - Usuario
-     <br>
-
-
-
-  <div id="Rodape">
-    <h2>Desenvolvedores</h2>
-    <h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
+    <label><b>Nome:</b> <?= $Nome_Usuario ?></label>
+    <br>
+    <br>
+    <br>
+    <label><b>Email:</b> <?= $Email_Usuario ?></label>
+    <br>
+    <br>
+    <br>
+    <label><b>Telefone:</b> <?= $Tel_Usuario ?></label>
+    <br>
+    <br>
+    <br>
+    <label><b>Data de Nascimento:</b> <?= $Data_Nasc_Usuario ?></label>
   </div>
+
+
+
+  <div id="Informaçoes_de_Classe">
+    <h3 id="Info_h3">
+      Informações de
+      <?php
+
+      if ($Classe_Usuario == 1)
+      {
+        echo "Aluno";
+      }
+      else if ($Classe_Usuario == 2)
+      {
+        echo "Professor";
+      }
+      else if ($Classe_Usuario == 3) {
+        echo "Secretaria";
+      }
+
+      ?>
+    </h3>
+    <?php if ($Classe_Usuario == 1) { ?>
+      <label><b>Matrícula:</b> <?= $Matricula_Usuario ?></label>
+      <br>
+      <br>
+      <label><b>Turma:</b> <?= $Turma_Usuario ?></label>
+    <?php } ?>
+
+    <?php if ($Classe_Usuario == 2) { ?>
+      <label><b>Siape:</b> <?= $Siape_Usuario ?></label>
+    <?php } ?>
+
+    <?php if ($Classe_Usuario == 3) { ?>
+      <label><b>Siape:</b> <?= $Siape_Usuario ?></label>
+    <?php } ?>
+  </div>
+
+  <br>
+  <br>
 
 </body>
 

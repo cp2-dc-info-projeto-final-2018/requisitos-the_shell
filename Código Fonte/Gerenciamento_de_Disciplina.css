@@ -1,8 +1,6 @@
 body {
 	background-color: powderblue;
-	background-image: url("Imagens/Light Blue Background.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
+	padding: 0;
 }
 
 #Rodape {
@@ -106,7 +104,6 @@ body {
     width: 95%;
     border: 1px solid black;
     font-family: arial;
-    margin-bottom: 15px;
     position: fixed;
 }
 
