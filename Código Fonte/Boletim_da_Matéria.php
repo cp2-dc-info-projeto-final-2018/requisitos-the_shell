@@ -143,14 +143,8 @@ $Turma = ListaTurmaPorID($ID_Turma);
 	</table>
 
 	<a id="Botao_Alterar_Notas" href="Lançamento_de_Notas.php?id_disciplina=<?= $Disciplina['id_disciplina'] ?>&id_turma=<?= $Turma['id_turma'] ?>">Alterar Notas</a>
+  <a id="Botao_Gerador_de_Boletim" href="Gerador_de_Boletim.php?id_turma=<?= $Turma['id_turma'] ?>">Gerador de Boletim</a>
 
-
-	<div id="Rodape">
-		<h4 class="Desenvolvedores">Desenvolvedores</h4>
-		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
-	</div>
-
-	#tela de selecçao
 
 </body>
 

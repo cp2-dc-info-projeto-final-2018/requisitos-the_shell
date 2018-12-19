@@ -207,13 +207,6 @@ function ExibeExtraInfo(Valor)
 	  </form>
   </div>
 
-	<br>
-
-	<div id="Rodape">
-		<h2>Desenvolvedores</h2>
-		<h4> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</h4>
-	</div>
-
 </body>
 
 </html>

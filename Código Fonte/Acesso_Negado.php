@@ -52,6 +52,9 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
 
   <?php } ?>
 
+  <br>
+  <br>
+  <br>
 
   <h1 id="Acesso_Negado">Acesso Negado</h1>
 
@@ -62,11 +65,6 @@ $Classe_Usuario = $UsuarioLogado['id_classe'];
   <br>
   <br>
   <br>
-
-  <div id="Rodape">
-		<h4 class="Desenvolvedores">Desenvolvedores</h4>
-		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
-	</div>
 
 </body>
 

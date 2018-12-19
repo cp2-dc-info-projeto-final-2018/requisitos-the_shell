@@ -8,7 +8,7 @@ session_start();
 
 $Erro = null;
 
-if (isset($_SESSION['Erro'])) 
+if (isset($_SESSION['Erro']))
 {
     $Erro = $_SESSION['Erro'];
 }
@@ -19,14 +19,12 @@ unset($_SESSION['Erro']);
 
 <head>
   <meta charset="utf-8"/>
-  <title>Página de Login</title>
+  <title>SHELL - Login</title>
   <link rel="stylesheet" type="text/css" href="Login.css">
 </head>
 
 <body>
-
 	<div class="Cabecalho">
-		<h1 id="Nome_do_Colegio">Colégio Pedro II</h1>
 		<h2 id="Nome_do_Software"><font face="arial">SHELL</font></h2>
 	</div>
 

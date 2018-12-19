@@ -41,7 +41,25 @@ body {
   text-decoration: none;
   font-family: arial;
   font-size: 25px;
+	float: left;
 }
+
+#Botao_Gerador_de_Boletim {
+  padding: 20px;
+  background-color: #49ff65;
+  border: 3px double black;
+  border-radius: 5px;
+  margin: auto;
+	margin-right: 100px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+  width: 20%;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 25px;
+	float: right;
+}
+
 
 #Botao_Alterar_Notas:link {
   color: black;

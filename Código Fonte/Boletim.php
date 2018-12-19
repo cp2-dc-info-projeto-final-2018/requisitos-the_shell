@@ -112,10 +112,6 @@ for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) {
     } ?>
 	</table>
 
-  <div id="Rodape">
-		<h4 class="Desenvolvedores">Desenvolvedores</h4>
-		<p class="Desenvolvedores"> Carlos Eduardo de França, Danilo Alexandre, Gabriel Rodrigues, João Víctor de Aguiar Nery, Maria Jose.</p>
-	</div>
 </body>
 
 </html>

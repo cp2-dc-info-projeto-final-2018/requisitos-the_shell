@@ -6,6 +6,8 @@ require_once("Controlador/TabelaUsuários.php");
 require_once("Controlador/TabelaTurmas.php");
 require_once("Controlador/TabelaProfessor_Disciplina_Turma.php");
 
+session_start();
+
 $Erros = null;
 
 $Turmas = ListaTurmas();

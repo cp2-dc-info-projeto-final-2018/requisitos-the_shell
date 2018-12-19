@@ -10,8 +10,6 @@ session_start();
 $UsuarioLogado = $_SESSION['Usuário'];
 $Classe_Usuario = $UsuarioLogado['id_classe'];
 
-$ID_Aluno = $_GET["id_aluno"];
-
 #$Aluno = ListaAlunoPorID($ID_Aluno);
 
 #$Info_Usuario = ListaUsuarioPorLogin($Login);

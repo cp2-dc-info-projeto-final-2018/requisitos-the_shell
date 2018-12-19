@@ -16,7 +16,8 @@ body {
 }
 
 #Div_Cadastro {
-		border: 2px solid black;
+		border: 1px solid black;
+		border-radius: 2px;
 		padding: 73px;
 		font-size: 20px;
 
