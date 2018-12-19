@@ -60,46 +60,46 @@ var_dump($Disciplina);
           <th class="Celulas"><a> <?= $Alunos_da_Turma[$i]["Nome"] ?></a></th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno[$i]["Pri_Cert"]))
+            if (empty($Boletim_do_Aluno["Pri_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno[$i]["Pri_Cert"];
+              echo $Boletim_do_Aluno["Pri_Cert"];
             }  ?>
           </th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno[$i]["Seg_Cert"]))
+            if (empty($Boletim_do_Aluno["Seg_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno[$i]["Seg_Cert"];
+              echo $Boletim_do_Aluno["Seg_Cert"];
             } ?>
           </th>
           <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno[$i]["Ter_Cert"]))
+            if (empty($Boletim_do_Aluno["Ter_Cert"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno[$i]["Ter_Cert"];
+              echo $Boletim_do_Aluno["Ter_Cert"];
             } ?>
           </th>
   			  <th class="Celulas">
             <?php
-            if (empty($Boletim_do_Aluno[$i]["Media"]))
+            if (empty($Boletim_do_Aluno["Media"]))
             {
               echo "0.0";
             }
             else
             {
-              echo $Boletim_do_Aluno[$i]["Media"];
+              echo $Boletim_do_Aluno["Media"];
             } ?>
           </th>
   		  </tr>

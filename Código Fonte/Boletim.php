@@ -8,11 +8,11 @@ require_once("Controlador/TabelaBoletim.php");
 session_start();
 
 $Usuario_Logado = $_SESSION['Usuário'];
-$Classe_Usuario = $Usuario_Logado['id_classe_usuario'];
-$ID_Turma = $Usuario_Logado['id_turma'];
+$Classe_Usuario = $Usuario_Logado['id_classe'];
+$ID_Turma = $Usuario_Logado['ID_Turma'];
 
 #if ($Classe_Usuario == 1) {
-  $ID_Aluno = $Usuario_Logado['id_aluno'];
+  $ID_Aluno = $Usuario_Logado['id_usuario'];
 #}
 #else {
 #  header("Acesso_Negado.php");
@@ -20,8 +20,8 @@ $ID_Turma = $Usuario_Logado['id_turma'];
 
 $Disciplinas = ListaDisciplinasDaTurma($ID_Turma);
 
-for ($i = 0; $i <= (count($Disciplinas)); $i++) {
-  $Boletim[$i] = ListaBoletimDoAluno($ID_Aluno, $Disciplinas[$i]);
+for ($i = 0; $i <= (count($Disciplinas) - 1); $i++) {
+  $Boletim[$i] = ListaBoletimDoAluno($ID_Aluno, $Disciplinas[$i]["ID_Disciplina"]);
 }
 
 ?>
@@ -35,7 +35,7 @@ for ($i = 0; $i <= (count($Disciplinas)); $i++) {
 </head>
 
 <body>
-  <h3><?= $Usuario_Logado['nome'] ?>
+  <h3><?= $Usuario_Logado['Nome'] ?>
   <table id="Boletim">
 		<tr>
       <th class="Nome_Coluna">Disciplina</th>
@@ -47,7 +47,7 @@ for ($i = 0; $i <= (count($Disciplinas)); $i++) {
     <?php
     for ($i = 0; $i <= (count($Disciplinas) - 1); $i++)
     {
-      if (! empty($Boletim))
+      if (! empty($Boletim[$i]))
       { ?>
 
         <tr class="Linhas">
@@ -63,7 +63,7 @@ for ($i = 0; $i <= (count($Disciplinas)); $i++) {
       else
       { ?>
         <tr class="Linhas">
-          <th class="Celulas"><a><?= $Disciplinas[$i] ?></a></th>
+          <th class="Celulas"><a><?= $Disciplinas[$i]["Disciplina"] ?></a></th>
   			  <th class="Celulas">0.0</th>
   			  <th class="Celulas">0.0</th>
           <th class="Celulas">0.0</th>
